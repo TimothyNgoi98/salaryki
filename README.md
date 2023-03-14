@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# SalaryKi
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Site for migrant workers to understand their salary rights.
 
 ## Available Scripts
 
