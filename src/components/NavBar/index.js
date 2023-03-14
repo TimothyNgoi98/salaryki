@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Typography, Box } from '@mui/material'
 
 const NavBar = () => {
     return(
-        <AppBar position='static'>
+        <AppBar position='static' pb = {4}>
             <Toolbar disableGutters >
                 <Box style={{ width: '100%' }} sx={{ display: 'flex', justifyContent: 'space-evenly',m: 1}}>
                     <Box sx={{flexDirection:'column'}}>
@@ -20,17 +20,6 @@ const NavBar = () => {
                     </Box>
                 </Box>
             </Toolbar>
-            {/* <Grid container spacing={7} direction='row' justifyContent='space-evenly'>
-                <Grid item>
-                    Hello
-                </Grid>
-                <Grid item>
-                    Hello
-                </Grid>
-                <Grid item>
-                    Hello
-                </Grid>
-            </Grid> */}
         </AppBar>
     )
 }
