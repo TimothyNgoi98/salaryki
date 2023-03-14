@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid, Typography  } from '@mui/material'
 
+
 const TitleBar = () => {
     return (
         <Grid container direction="row" alignItems="flex-end" justifyContent="center" bgcolor={'background.title'} >
