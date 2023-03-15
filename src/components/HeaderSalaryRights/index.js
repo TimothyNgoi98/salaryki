@@ -14,16 +14,16 @@ const HeaderSalaryRights = () => {
                         <Grid item xs={7}>
                             <Box sx={{flexDirection:'column'}}>
                                 <Typography variant='subtitle2'>
-                                    Understand your rights with <Box fontWeight='bold' displayu='inline'>SalaryKi</Box>
+                                    Understand your rights with <Box fontWeight='bold' display='inline-block'>SalaryKi</Box>
                                 </Typography>
                                 <br/>
                                 <Typography variant='subtitle2'>
-                                    SalaryKi এর সাথে আপনার বেতনের অধিকারগুলি বুঝুন।
+                                    <Box fontWeight='bold' display='inline-block'>SalaryKi </Box> এর সাথে আপনার বেতনের অধিকারগুলি বুঝুন।
                                 </Typography>
                             </Box>
                         </Grid>
-                        <Card1/>
                     </Grid>
+                    <Card1/>
                 </Paper>
             </Grid>
     )

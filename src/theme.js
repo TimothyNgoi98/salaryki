@@ -19,19 +19,18 @@ const theme = createTheme({
             main: "#FFFFFF"
           },
         background: {
-            default: '#FFFFFF',
-            title: '#000000'
+            title: '#000000',
+            card: '#000000'
         }
     },
     typography: {
         fontFamily: 'Roboto',
         h4: {
             color: '#FFFFFF'
+        },
+        subtitle1: {
+            color: '#FFFFFF',
         }
-        // subtitle1: {
-        //     color: '#00000',
-        //     padding: "10px"
-        // }
         
     },
     // components: {

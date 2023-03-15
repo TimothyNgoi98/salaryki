@@ -5,7 +5,7 @@ const NavBar = () => {
     return(
         <AppBar position='static' pb = {4}>
             <Toolbar disableGutters >
-                <Box style={{ width: '100%' }} sx={{ display: 'flex', justifyContent: 'space-evenly',m: 1}}>
+                <Box style={{ width: '100%' }} sx={{ display: 'flex', justifyContent: 'space-evenly', m: 1}}>
                     <Box sx={{flexDirection:'column'}}>
                         <Typography variant='subtitle2' align="center">Salary Rights</Typography>
                         <Typography>বেতন অধিকার</Typography>
