@@ -1,25 +1,154 @@
 import React from "react";
-import { Card, Grid, Typography, Box } from "@mui/material";
+import { useState } from 'react';
+import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button } from "@mui/material";
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+import money from '../../images/money.jpg'
+import salaryCalculator from '../../images/salaryCalculator.jpg'
+import salaryInfo from '../../images/salaryInfo.jpg'
 
-const Card1 = () => {
-    return(
-        <Grid container pt={2} pb = {1}>
-            <Card sx={{backgroundColor:'background.card', width:'95%', margin:'auto'}}>
+
+
+const steps = [
+    {
+        labelEnglish: "Understand your salary",
+        labelIndian: "আপনার বেতন বুঝে নিন",
+        image: money,
+        descriptionEnglish: "Your boss must pay you salary every month, latest by the 7th of the next month. You can find your salary details in your IPA.",
+        descriptionIndian: "আপনার বসকে প্রতি মাসে আপনাকে বেতন দিতে হবে, পরবর্তী মাসের 7 তারিখের মধ্যে। আপনি আপনার IPA-তে আপনার বেতনের বিবরণ খুঁজে পেতে পারেন"
+    },
+    {
+        labelEnglish: "IPA Salary",
+        labelIndian: "আপনার বেতন বুঝে নিন",
+        image: salaryInfo,
+        image2: salaryCalculator,
+        descriptionEnglish: "Your monthly salary is in employment details page of IPA. Deductions could include housing fees, for example.",
+        descriptionIndian: "আপনার মাসিক বেতন IPA-এর কর্মসংস্থান বিবরণ পৃষ্ঠায় রয়েছে। কর্তনের মধ্যে আবাসন ফি অন্তর্ভুক্ত থাকতে পারে, উদাহরণস্বরূপ"
+    },
+    {
+        labelEnglish: "Daily basic pay",
+        labelIndian: "দৈনিক মৌলিক বেতন",
+        image: {},
+        descriptionEnglish: "Your daily basic pay is used to calculate work done on rest day/public holiday.",
+        descriptionIndian: " আপনার দৈনিক মৌলিক বেতন বিশ্রামের দিন/পাবলিক ছুটির দিনে করা কাজ গণনা করতে ব্যবহৃত হয়"
+    },
+    {
+        labelEnglish: "Daily basic pay",
+        labelIndian: "দৈনিক মৌলিক বেতন",
+        image: {},
+        descriptionEnglish: "Your daily basic pay is used to calculate work done on rest day/public holiday.",
+        descriptionIndian: "আপনার দৈনিক মৌলিক বেতন বিশ্রামের দিন/পাবলিক ছুটির দিনে করা কাজ গণনা করতে ব্যবহৃত হয়"
+    },
+    {
+        labelEnglish: "Salary deductions",
+        labelIndian: "বেতন কর্তন",
+        image: {},
+        descriptionEnglish: "Your boss cannot cut your IPA salary without your written permission! Your boss is not allowed to cut salary for these cases: Work pass renewal Medical insurance/fees Repatriation (send home) Others",
+        descriptionIndian: "আপনার বস আপনার লিখিত অনুমতি ছাড়া আপনার IPA বেতন কাটতে পারবেন না! আপনার বসকে এই ক্ষেত্রে বেতন কাটার অনুমতি নেই: কাজের পাস নবায়ন চিকিৎসা বীমা/ফি প্রত্যাবাসন (বাসায় পাঠান) অন্যান্য"
+    },
+    {
+        labelEnglish: "Count your salary!",
+        labelIndian: "আপনার বেতন গণনা!",
+        image: {},
+        descriptionEnglish: "It is good to track how many hours and days you work every month, and if you are getting paid correct salary. Here are some good habits to follow: Keep/take photo of timecards and all payslips Write down your work hours every day in a diary Count at the end of the month if your salary and work hours are ok",
+        descriptionIndian: "আপনি প্রতি মাসে কত ঘন্টা এবং দিন কাজ করেন এবং আপনি সঠিক বেতন পাচ্ছেন কিনা তা ট্র্যাক করা ভাল। এখানে অনুসরণ করার জন্য কিছু ভাল অভ্যাস আছে: টাইমকার্ড এবং সমস্ত পেস্লিপের ছবি রাখুন/তুলুন প্রতিদিন আপনার কাজের সময় একটি ডায়েরিতে লিখুন আপনার বেতন এবং কাজের সময় ঠিক থাকলে মাসের শেষে গণনা করুন"
+    }
+]
+
+function Card1() {
+    //exapand button
+    const [expanded, setExpanded] = useState(false);
+    const handleExpandClick = () => {
+        setExpanded(!expanded);
+    };
+
+    //steps
+    const [activeStep, setActiveStep] = useState(0);
+    const maxSteps = steps.length;
+
+    const handleNext = () => {
+        setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    };
+
+    const handleBack = () => {
+        setActiveStep((prevActiveStep) => prevActiveStep - 1);
+    };
+
+
+
+
+    return (
+        <Grid container pt={2} pb={1}>
+            <Card sx={{ backgroundColor: 'background.card', width: '95%', margin: 'auto', borderRadius: '12px' }}>
                 <Grid container direction='row' justifyContent="space-between">
                     <Grid item xs={9}>
-                        <Box sx={{flexDirection:'column'}} ml = {1} p={1}>
+                        <Box sx={{ flexDirection: 'column' }} ml={1} p={1}>
                             <Typography variant='subtitle1'>Salary Rights</Typography>
                             <Typography variant='subtitle1'>বেতন অধিকার</Typography>
                         </Box>
                     </Grid>
                     <Grid item xs={3} align='center'>
-                        <Box mt = {3}>
-                            <PlayArrowIcon color="primary"/>
-                        </Box>
+                        <Grid container direction="column" justifyContent="center" alignItems="center" mt={1}>
+                            <Grid item>
+                                :nbsp;
+                            </Grid>
+                            <Grid item>
+                                <PlayArrowIcon color="primary" expand={expanded} onClick={handleExpandClick} />
+                            </Grid>
+                            <Grid item>
+                                :nbsp;
+                            </Grid>
+                        </Grid>
                     </Grid>
                 </Grid>
             </Card>
+            <Collapse in={expanded} sx={{ width: '95%', margin: 'auto' }}>
+                <Grid container sx={{ border: 'solid black', borderRadius: '6px' }} mt={2} justifyContent="center" alignItems="center">
+                    <Box sx={{ flexDirection: 'column' }}>
+                        <Grid container
+                            direction="column"
+                            justifyContent="center"
+                            alignItems="center">
+                            <Typography variant="h6" mt={2} fontWeight="bold">
+                                {steps[activeStep].labelEnglish}
+                            </Typography>
+                            <Typography variant="h6" fontWeight="bold">
+                                {steps[activeStep].labelIndian}
+                            </Typography>
+                            <Box component="img" src={steps[activeStep].image} mt={2} sx={{ borderRadius: "6px" }} />
+                            
+                            <Grid pt={1} p={3}>
+                                <Typography variant="subtitle1">
+                                    {steps[activeStep].descriptionEnglish}
+                                </Typography>
+                                <br />
+                                <Typography variant="subtitle1">
+                                    {steps[activeStep].descriptionIndian}
+                                </Typography>
+                            </Grid>
+                        </Grid>
+                        <MobileStepper
+                            variant="progress"
+                            steps={6}
+                            position="static"
+                            activeStep={activeStep}
+                            sx={{ maxWidth: 400, flexGrow: 1 }}
+                            backButton={
+                                <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+                                    <KeyboardArrowLeft sx={{color:"black"}}/>
+                                </Button>
+                            }
+                            nextButton={
+                                <Button size="small" onClick={handleNext} disabled={activeStep === (maxSteps - 1)}>
+                                    <KeyboardArrowRight sx={{color:"black"}}/>
+                                </Button>
+                            }
+                            
+                        />
+                    </Box>
+                </Grid>
+            </Collapse>
         </Grid>
     )
 }

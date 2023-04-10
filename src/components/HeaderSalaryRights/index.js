@@ -3,29 +3,35 @@ import { Paper, Grid, Box, Typography } from "@mui/material";
 import man1 from '../../images/man1.jpg'
 import Card1 from "../Card";
 
-const HeaderSalaryRights = () => {
-    return(
-            <Grid container pt={4} justifyContent='center' sx={{maxWidth: '85%', margin: 'auto'}}>
-                <Paper sx={{width:'100%', height: 'auto', borderRadius: '10px'}} elevation={4}>
-                    <Grid container alignItems='center' p={2}>
-                        <Grid item xs={4}>
-                            <Box component="img" src={man1} alignItems='center' justifyContent='center'/>
-                        </Grid>
-                        <Grid item xs={7}>
-                            <Box sx={{flexDirection:'column'}}>
-                                <Typography variant='subtitle2'>
-                                    Understand your rights with <Box fontWeight='bold' display='inline-block'>SalaryKi</Box>
-                                </Typography>
-                                <br/>
-                                <Typography variant='subtitle2'>
-                                    <Box fontWeight='bold' display='inline-block'>SalaryKi </Box> এর সাথে আপনার বেতনের অধিকারগুলি বুঝুন।
-                                </Typography>
-                            </Box>
+function HeaderSalaryRights() {
+    return (
+        <Grid container pt={4} justifyContent='center' sx={{ maxWidth: '85%', margin: 'auto' }}>
+            <Paper sx={{ width: '100%', height: 'auto', borderRadius: '8px' }} elevation={4}>
+                <Grid container alignItems='center' p={2} pl = {0}>
+                    <Grid item xs={4}>
+                        <Grid container justifyContent="center" alignItems="flex-start">
+                            <Box component="img" src={man1} sx={{
+                                height: { xs: '100%', sm: "85%", md: "75%", lg: "65%", xl: "50%" },
+                                width: { xs: '50%', sm: "45%", md: "35%", lg: "25%", xl: "20%" },
+                            }} />
+                        {/* <img src={man1} alt="hello" style = {{height: '100%', width:'100%', objectFit: 'cover', backgroundSize: 'contain', paddingLeft:2}}/> */}
                         </Grid>
                     </Grid>
-                    <Card1/>
-                </Paper>
-            </Grid>
+                    <Grid item xs={8}>
+                        <Box sx={{ flexDirection: 'column' }}>
+                            <Typography variant='h6'>
+                                Understand your rights with <Box fontWeight='bold' display='inline-block'>SalaryKi</Box>
+                            </Typography>
+                            <br/>
+                            <Typography variant='h6'>
+                                <Box fontWeight='bold' display='inline-block'>SalaryKi </Box> এর সাথে আপনার বেতনের অধিকারগুলি বুঝুন।
+                            </Typography>
+                        </Box>
+                    </Grid>
+                </Grid>
+                <Card1/>
+            </Paper>
+        </Grid>
     )
 }
 

@@ -1,17 +1,4 @@
 import { createTheme } from "@mui/material/styles";
-// import TelegrafUltraBold from './fonts/Telegraf-UltraBold.woff2'
-
-// const telegraf = {
-//     fontFamily: 'Telegraf',
-//     fontStyle: 'normal',
-//     fontDisplay: 'swap',
-//     fontWeight: 700,
-//     src: `
-//     local('Telegraf')
-//     local('Telegraf-UltraBold'),
-//     url(${TelegrafUltraBold}) format('woff2')
-//     `,
-// };
 
 const theme = createTheme({
     palette: {
@@ -27,25 +14,46 @@ const theme = createTheme({
         fontFamily: 'Roboto',
         h4: {
             color: '#FFFFFF'
-        },
-        subtitle1: {
-            color: '#FFFFFF',
         }
-        
-    },
-    // components: {
-    //     MuiCssBaseline: {
-    //         styleOverrides: `
-    //             @font-face {
-    //                 font-family: 'Telegraf';
-    //                 font-style: normal;
-    //                 font-display: swap;
-    //                 font-weight: 700;
-    //                 src: local('Telegraf'), local('Telegraf-UltraBold'), url(${TelegrafUltraBold}) format('woff2');
-    //             }
-    //         `
-    //     }
-    // }
+    }
 })
+
+theme.typography.h4 = {
+    fontSize: '34px',
+    fontWeight: 'normal',
+    [theme.breakpoints.between('xs', 'sm')]: {
+        fontSize: '20px',
+    },
+    [theme.breakpoints.between('sm', 'md')]: {
+        fontSize: '24px',
+    }
+}
+
+theme.typography.subtitle1 = {
+    fontSize: '20px',
+    fontWeight: 'normal',
+    [theme.breakpoints.between('xs', 'sm')]: {
+        fontSize: '11px',
+    },
+    [theme.breakpoints.between('sm', 'md')]: {
+        fontSize: '14px',
+    }
+}
+
+theme.typography.h6 = {
+    fontSize: '22px',
+    fontWeight: 'normal',
+    [theme.breakpoints.between('xs', 'sm')]: {
+        fontSize: '14px',
+    },
+    [theme.breakpoints.between('sm', 'md')]: {
+        fontSize: '18px',
+    }
+}
+
+// theme.Box.img = {
+//     width: '100px'
+// }
+
 
 export default theme

@@ -1,22 +1,22 @@
 import React from 'react'
 import { AppBar, Toolbar, Typography, Box } from '@mui/material'
 
-const NavBar = () => {
+function NavBar() {
     return(
         <AppBar position='static' pb = {4}>
             <Toolbar disableGutters >
                 <Box style={{ width: '100%' }} sx={{ display: 'flex', justifyContent: 'space-evenly', m: 1}}>
                     <Box sx={{flexDirection:'column'}}>
-                        <Typography variant='subtitle2' align="center">Salary Rights</Typography>
-                        <Typography>বেতন অধিকার</Typography>
+                        <Typography variant='subtitle1' align="center">Salary Rights</Typography>
+                        <Typography variant='subtitle1'>বেতন অধিকার</Typography>
                     </Box>
                     <Box sx={{flexDirection:'column'}} >
-                        <Typography variant='subtitle2' align="center">Get Help</Typography>
-                        <Typography>সাহায্য পান</Typography>
+                        <Typography variant='subtitle1' align="center">Get Help</Typography>
+                        <Typography variant='subtitle1'>সাহায্য পান</Typography>
                     </Box>
                     <Box sx={{flexDirection:'column'}} >
-                        <Typography align="center" variant='subtitle2'>FAQ</Typography>
-                        <Typography>সচরাচর জিজ্ঞাস্য</Typography>
+                        <Typography variant='subtitle1' align="center">FAQ</Typography>
+                        <Typography variant='subtitle1'>সচরাচর জিজ্ঞাস্য</Typography>
                     </Box>
                 </Box>
             </Toolbar>

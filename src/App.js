@@ -1,5 +1,5 @@
 import './App.css';
-import { ThemeProvider } from "@mui/material/styles";
+import { ThemeProvider, Box } from "@mui/material";
 import theme from "./theme";
 import TitleBar from "./components/TitleBar";
 import NavBar from './components/NavBar';
@@ -10,9 +10,11 @@ function App() {
   return (
     <ThemeProvider theme = {theme}>
       <CssBaseline />
-      <TitleBar/>
-      <NavBar/>
-      <HeaderSalaryRights/>
+      <Box>
+        <TitleBar/>
+        <NavBar/>
+        <HeaderSalaryRights/>
+      </Box>
     </ThemeProvider>
   );
 }
