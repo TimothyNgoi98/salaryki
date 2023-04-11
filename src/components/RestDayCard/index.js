@@ -11,7 +11,27 @@ import youAsk from '../../images/youAsk.jpg'
 
 const steps = [
     {
-
+        labelEnglish:"Weekly rest day",
+        labelIndian:"সাপ্তাহিক বিশ্রামের দিন",
+        image: vibingSun,
+        descriptionEnglish:"Your boss must provide 1 (unpaid) rest day per week.",
+        descriptionIndian:"আপনার নিয়োগকর্তাকে অবশ্যই প্রতি সপ্তাহে 1টি (অপেইড) বিশ্রাম দিন প্রদান করতে হবে।",
+        linkEnglish: "MOM rest day calculator",
+        linkIndian: "বিশ্রামের দিন ক্যালকুলেটর"
+    },
+    {
+        labelEnglish:"Rest day work pay",
+        labelIndian:"বিশ্রাম দিনের কাজের বেতন",
+        image: bossAsk,
+        descriptionEnglish:"If boss ask you work on rest day, boss must pay you like this.",
+        descriptionIndian:"যদি বস আপনাকে বিশ্রামের দিনে কাজ করতে বলে, তাহলে তারা আপনাকে এইভাবে অর্থ প্রদান করবে।",
+    },
+    {
+        labelEnglish:"Rest day work pay",
+        labelIndian:"বিশ্রাম দিনের কাজের বেতন",
+        image: youAsk,
+        descriptionEnglish:"If you ask to work on rest day, boss must pay you like this.",
+        descriptionIndian:"আপনি যদি বিশ্রামের দিনে কাজ করতে বলেন, আপনার বস আপনাকে অবশ্যই এইভাবে অর্থ প্রদান করবেন",
     }
 ]
 function RestDayCard() {

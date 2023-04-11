@@ -2,6 +2,35 @@ import React from "react";
 import { useState } from 'react';
 import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button } from "@mui/material";
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+import goHoliday from '../../images/goHoliday.jpg'
+import chartYears from '../../images/chartYears.jpg'
+import compensationUnpaid from '../../images/compensationUnpaid.jpg'
+
+const steps = [
+    {
+        labelEnglish:"",
+        labelIndian:"",
+        image: goHoliday,
+        descriptionEnglish:"You have paid annual leave if you have worked for at least 3 months.",
+        descriptionIndian:"আপনি যদি কমপক্ষে 3 মাস কাজ করে থাকেন তবে আপনি বার্ষিক ছুটি পরিশোধ করেছেন।",
+    },
+    {
+        labelEnglish:"Compensation for unused leave",
+        labelIndian:"অব্যবহৃত ছুটির জন্য ক্ষতিপূরণ",
+        image: chartYears,
+        descriptionEnglish:"How much leave you can take depends on how many years you have worked.",
+        descriptionIndian:"আপনি কতটা ছুটি নিতে পারবেন তা নির্ভর করে আপনি কত বছর কাজ করেছেন তার উপর।",
+    },
+    {
+        labelEnglish:"Compensation for unused leave",
+        labelIndian:"অব্যবহৃত ছুটির জন্য ক্ষতিপূরণ",
+        image: compensationUnpaid,
+        descriptionEnglish:"Your boss must pay you for unused annual leave!",
+        descriptionIndian:"আপনার নিয়োগকর্তা আপনাকে অব্যবহৃত বার্ষিক ছুটির জন্য অর্থ প্রদান করতে হবে!",
+    }
+]
 
 function AnnualLeaveCard() {
 
@@ -9,6 +38,17 @@ function AnnualLeaveCard() {
     const [expanded, setExpanded] = useState(false);
     const handleExpandClick = () => {
         setExpanded(!expanded);
+    };
+    //steps
+    const [activeStep, setActiveStep] = useState(0);
+    const maxSteps = steps.length;
+
+    const handleNext = () => {
+        setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    };
+
+    const handleBack = () => {
+        setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
 
     return (
@@ -38,6 +78,58 @@ function AnnualLeaveCard() {
                     </Grid>
                 </Grid>
             </Card>
+            <Collapse in={expanded} sx={{ width: '95%', margin: 'auto' }}>
+                <Grid container sx={{ border: 'solid #8A23AD', borderRadius: '6px' }} mt={2} justifyContent="center" alignItems="center">
+                    <Box sx={{ flexDirection: 'column' }}>
+                        <Grid container
+                            direction="column"
+                            justifyContent="center"
+                            alignItems="center">
+                            <Typography variant="h6" mt={2} fontWeight="bold">
+                                {steps[activeStep].labelEnglish}
+                            </Typography>
+                            <Typography variant="h6" fontWeight="bold">
+                                {steps[activeStep].labelIndian}
+                            </Typography>
+                            <Box component="img" src={steps[activeStep].image} mt={2} sx={{ borderRadius: "6px" }} />
+                            <Grid pt={1} p={3}>
+                                <Typography variant="subtitle1">
+                                    {steps[activeStep].descriptionEnglish}
+                                </Typography>
+                                <br />
+                                <Typography variant="subtitle1">
+                                    {steps[activeStep].descriptionIndian}
+                                </Typography>
+                            </Grid>
+                            <MobileStepper
+                                variant="progress"
+                                steps={maxSteps}
+                                position="static"
+                                activeStep={activeStep}
+                                sx={{ maxWidth: 800, flexGrow: 1 }}
+                                backButton={
+                                    <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+                                        {activeStep === 0 ?
+                                            <KeyboardArrowLeft sx={{ display: 'none', color: "black" }} />
+                                            :
+                                            <KeyboardArrowLeft sx={{ color: "black" }} />
+                                        }
+                                    </Button>
+                                }
+                                nextButton={
+                                    <Button size="small" onClick={handleNext} disabled={activeStep === (maxSteps - 1)}>
+                                        {activeStep === (maxSteps - 1) ?
+                                            <KeyboardArrowRight sx={{ display: 'none', color: "black" }} />
+                                            :
+                                            <KeyboardArrowRight sx={{ color: "black" }} />
+                                        }
+                                    </Button>
+                                }
+                            />
+                        </Grid>
+                    </Box>
+                </Grid>
+            </Collapse>
         </Grid>
     )
 }
