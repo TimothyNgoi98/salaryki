@@ -1,7 +1,7 @@
 import React from "react";
 import { Paper, Grid, Box, Typography } from "@mui/material";
 import man1 from '../../images/man1.jpg'
-import Card1 from "../Card";
+import SalaryCard from "../SalaryCard";
 
 function HeaderSalaryRights() {
     return (
@@ -29,7 +29,7 @@ function HeaderSalaryRights() {
                         </Box>
                     </Grid>
                 </Grid>
-                <Card1/>
+                <SalaryCard/>
             </Paper>
         </Grid>
     )

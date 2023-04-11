@@ -7,7 +7,12 @@ const theme = createTheme({
           },
         background: {
             title: '#000000',
-            card: '#000000'
+            card: '#000000',
+            cardOverTime: "#3C7DE0",
+            cardHoliday: "#0AA879",
+            cardRest: '#DD6610',
+            cardAnnualLeave: '#8A23AD',
+            cardNoticePeriod: '#6D4B38'
         }
     },
     typography: {

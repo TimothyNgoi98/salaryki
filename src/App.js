@@ -4,6 +4,7 @@ import theme from "./theme";
 import TitleBar from "./components/TitleBar";
 import NavBar from './components/NavBar';
 import HeaderSalaryRights from './components/HeaderSalaryRights';
+import EmploymentRightsSection from './components/EmploymentRightsSection';
 import CssBaseline from "@mui/material/CssBaseline";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <TitleBar/>
         <NavBar/>
         <HeaderSalaryRights/>
+        <EmploymentRightsSection/>
       </Box>
     </ThemeProvider>
   );
