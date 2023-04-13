@@ -89,7 +89,7 @@ function GetHelp() {
                                 শেষ বর্ষের ছাত্র তার শেষ বছরের থিসিসের অংশ হিসাবে। SalaryKi হল কয়েক মাসের স্বেচ্ছাসেবী এবং TWC2 এর সাথে সহযোগিতার ফল, এবং অভিবাসী কর্মীদের কাছে 
                                 গুরুত্বপূর্ণ বেতন এবং কর্মসংস্থানের তথ্য সহজলভ্যভাবে উপস্থাপন করার লক্ষ্য
                             </Typography>
-                            <Box component="img" src = {footer} mt = {2} sx={{maxWidth:'100%'}}/>
+                            <Box component="img" src = {footer} mt = {3} sx={{maxWidth:'100%'}}/>
                         </Grid>
                     </Grid>
                 </Paper>

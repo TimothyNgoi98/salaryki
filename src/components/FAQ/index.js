@@ -6,9 +6,7 @@ function FAQ() {
         <>
             <Grid container pt={4} spacing={2} sx={{ maxWidth: '85%', margin: 'auto' }}>
                 <Paper sx={{ width: '100%', height: 'auto', borderRadius: '8px' }} elevation={4} mb={2}>
-                    <Grid container direction="column"
-                        justifyContent="center"
-                        alignItems="center" pt={2}>
+                    <Grid container direction="column" justifyContent="center" alignItems="center" pt={2}>
                         <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                             <Grid container justifyContent="center"
                                 alignItems="center">
@@ -25,16 +23,15 @@ function FAQ() {
                                     আমার বেতনের সমস্যা আছে, কিন্তু আমি আমার বসকে বলতে ভয় পাচ্ছি। আমি ভয় পাচ্ছি যে আমি আরও সমস্যা পাব, বা ফেরত পাঠানো হবে
                                 </Typography>
                             </Box>
-                            <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: 'background.cardOverTime' }} mt={2}>
+                            <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: 'background.cardOverTime', borderBottom: 1, borderColor:'black'}} mt={2}>
                                 <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
                                     A: We understand. This is quite common. Sometimes, workers wait until their work permit is almost finished before making salary claim because it can be safer. You should still talk to us at TWC2 so we can help you.
                                 </Typography>
-                                <Typography variant="subtitle1">
+                                <Typography variant="subtitle1" mb={4}>
                                     আমরা বুঝতে পেরেছি. এটি বেশ সাধারণ। কখনও কখনও, শ্রমিকরা বেতন দাবি করার আগে তাদের ওয়ার্ক পারমিট প্রায় শেষ না হওয়া পর্যন্ত অপেক্ষা করে কারণ এটি নিরাপদ হতে পারে। আপনার এখনও আমাদের সাথে TWC2 এ কথা বলা উচিত যাতে আমরা আপনাকে সাহায্য করতে পারি
                                 </Typography>
                             </Box>
                         </Grid>
-                        <Divider sx={{ bgcolor: "black" }} />
                         <Grid container p={3} pt={2} alignItems="center" justifyContent="center">
                             <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                                 <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
@@ -44,23 +41,22 @@ function FAQ() {
                                     আমি নতুন কোম্পানিতে কাজ করছি, কিন্তু আগের কোম্পানি এখনও আমাকে বেতন দেয়নি। আমার কি করা উচিৎ?
                                 </Typography>
                             </Box>
-                            <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: 'background.cardOverTime' }} mt={2}>
+                            <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: 'background.cardOverTime', borderBottom: 1, borderColor:'black' }} mt={2}>
                                 <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
                                     A: You can file a salary claim against your previous company. You must file a claim within 1 year after you were underpaid for it to be valid.                                
                                 </Typography>
-                                <Typography variant="subtitle1">
+                                <Typography variant="subtitle1" mb={4}>
                                     আপনি আপনার আগের কোম্পানির বিরুদ্ধে বেতন দাবি করতে পারেন। বৈধ হওয়ার জন্য আপনাকে কম বেতনের পরে 1 বছরের মধ্যে একটি দাবি দায়ের করতে হবে                                
                                 </Typography>
                             </Box>
                         </Grid>
-                        <Divider sx={{ bgcolor: "black" }} />
                         <Grid container p={3} pt={2} alignItems="center" justifyContent="center">
                             <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                                 <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
                                     Q: My boss want to send me back when I have salary problem. What should I do?
                                 </Typography>
                                 <Typography variant="subtitle1">
-                                    আমার বেতন সমস্যা হলে আমার বস আমাকে ফেরত পাঠাতে চান। আমার কি করা উচিৎ?
+                                    আমি নতুন কোম্পানিতে কাজ করছি, কিন্তু আগের কোম্পানি এখনও আমাকে বেতন দেয়নি। আমার কি করা উচিৎ?
                                 </Typography>
                             </Box>
                             <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: 'background.cardOverTime' }} mt={2}>
