@@ -4,23 +4,33 @@ import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button } from "@m
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+import shakeHands from '../../images/shakeHands.jpg'
+import noticePerod from '../../images/noticePeriod.jpg'
+import termination from '../../images/termination.jpg'
 
-// const steps = [
-//     {
-//         labelEnglish:"Singapore public holidays",
-//         labelIndian:"সিঙ্গাপুর পাবলিক ছুটি",
-//         image: nationalDay,
-//         descriptionEnglish:"Singapore has 11 public holidays a year. You will be paid even if not working on PH!",
-//         descriptionIndian:"সিঙ্গাপুরে এক বছরে 11 টি পাবলিক ছুটি রয়েছে। P.H. এ কাজ না করলেও আপনাকে বেতন দেওয়া হবে!",
-//     },
-//     {
-//         labelEnglish:"Public holiday pay",
-//         labelIndian:"সরকারী ছুটি বেতন",
-//         image: phPay,
-//         descriptionEnglish:"If you are working on P.H., you get extra day of salary.",
-//         descriptionIndian:"আপনি যদি সরকারী ছুটিতে কাজ করেন তবে আপনাকে বেতনের অতিরিক্ত দিন দেওয়া হবে",
-//     }
-// ]
+const steps = [
+    {
+        labelEnglish:"What is notice period?",
+        labelIndian:"নোটিশ পিরিয়ড কি?",
+        image: shakeHands,
+        descriptionEnglish:"When you/your boss cancel your work contract, you must work for the notice period before you leave the company.",
+        descriptionIndian:"যখন আপনি/আপনার বস আপনার কাজের চুক্তি বাতিল করেন, তখন আপনাকে অবশ্যই কোম্পানি ছেড়ে যাওয়ার আগে নোটিশের সময়কালের জন্য কাজ করতে হবে।",
+    },
+    {
+        labelEnglish:"How long is notice period?",
+        labelIndian:"নোটিশ পিরিয়ড কতদিন?",
+        image: noticePerod,
+        descriptionEnglish:"If your contract no have notice period, the notice period depends on how long you work for company.",
+        descriptionIndian:"যখন আপনার বস আপনার কাজের চুক্তি বাতিল করে দেন, তখন আপনি কোম্পানি ছেড়ে যাওয়ার আগে তাকে অবশ্যই আপনাকে নোটিশ সময়ের জন্য কাজ করতে দিতে হবে।",
+    },
+    {
+        labelEnglish:"Termination without notice",
+        labelIndian:"বিজ্ঞপ্তি ছাড়াই সমাপ্তি",
+        image: termination,
+        descriptionEnglish:"If boss cancel your contract without notice, he must pay you “notice pay”.If you resign without notice, you must pay your boss “notice pay”. This is salary that you would have earned during the notice period.",
+        descriptionIndian:"যদি বস নোটিশ ছাড়াই আপনার চুক্তি বাতিল করেন, তাহলে তাকে অবশ্যই আপনাকে 'নোটিস পে' দিতে হবে। আপনি যদি নোটিশ ছাড়াই পদত্যাগ করেন, তাহলে আপনাকে অবশ্যই আপনার বসকে 'নোটিস পে' দিতে হবে।এটি সেই বেতন যা আপনি নোটিশের সময়কালে উপার্জন করতেন।",
+    }
+]
 
 function NoticePeriodCard() {
 
@@ -31,16 +41,16 @@ function NoticePeriodCard() {
     };
 
     //steps
-    // const [activeStep, setActiveStep] = useState(0);
-    // const maxSteps = steps.length;
+    const [activeStep, setActiveStep] = useState(0);
+    const maxSteps = steps.length;
 
-    // const handleNext = () => {
-    //     setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    // };
+    const handleNext = () => {
+        setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    };
 
-    // const handleBack = () => {
-    //     setActiveStep((prevActiveStep) => prevActiveStep - 1);
-    // };
+    const handleBack = () => {
+        setActiveStep((prevActiveStep) => prevActiveStep - 1);
+    };
     
 
     return (
@@ -70,7 +80,7 @@ function NoticePeriodCard() {
                     </Grid>
                 </Grid>
             </Card>
-            {/* <Collapse in={expanded} sx={{ width: '95%', margin: 'auto' }}>
+            <Collapse in={expanded} sx={{ width: '95%', margin: 'auto' }}>
                 <Grid container sx={{ border: 'solid #6D4B38', borderRadius: '6px' }} mt={2} justifyContent="center" alignItems="center">
                     <Box sx={{ flexDirection: 'column' }}>
                         <Grid container
@@ -121,7 +131,7 @@ function NoticePeriodCard() {
                         </Grid>
                     </Box>
                 </Grid>
-            </Collapse> */}
+            </Collapse>
         </Grid>
     )
 }
