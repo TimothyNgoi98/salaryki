@@ -10,12 +10,10 @@ import FAQ from "../components/FAQ";
 function Home() {
     return(
         <>
-            <TitleBar/>
-            <NavBar/>
-            <HeaderSalaryRights/>
+            {/* <HeaderSalaryRights/>
             <EmploymentRightsSection/>
             <GetHelp/>
-            <FAQ/>
+            <FAQ/> */}
         </>
     )
 }
