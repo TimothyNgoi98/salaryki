@@ -72,7 +72,7 @@ function SalaryCard() {
 
     return (
         <Grid container pt={2} pb={1}>
-            <Card sx={{ backgroundColor: 'background.card', width: '95%', margin: 'auto', borderRadius: '12px' }}>
+            <Card sx={{ backgroundColor: 'background.card', width: '95%', margin: 'auto', borderRadius: '12px' }} expand={expanded} onClick={handleExpandClick}>
                 <Grid container direction='row' justifyContent="space-between">
                     <Grid item xs={9}>
                         <Box sx={{ flexDirection: 'column' }} ml={1} mb = {1} p={1} pt ={2}>
@@ -87,7 +87,7 @@ function SalaryCard() {
                             </Grid>
                             <Grid item>
                                 <Button size = "large">
-                                    <PlayArrowIcon color="primary" expand={expanded} onClick={handleExpandClick} />
+                                    <PlayArrowIcon color="primary" sx={{transform: expanded ? 'rotate(90deg)' : 'none'}} />
                                 </Button>
                             </Grid>
                             <Grid item>

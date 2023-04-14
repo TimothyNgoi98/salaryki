@@ -46,7 +46,7 @@ function PublicHolidayCard() {
 
     return (
         <Grid container pt={2} pb={1}>
-            <Card sx={{ color: 'primary.main', backgroundColor: 'background.cardHoliday', width: '95%', margin: 'auto', borderRadius: '12px' }}>
+            <Card sx={{ color: 'primary.main', backgroundColor: 'background.cardHoliday', width: '95%', margin: 'auto', borderRadius: '12px' }} expand={expanded} onClick={handleExpandClick}>
                 <Grid container direction='row' justifyContent="space-between">
                     <Grid item xs={9}>
                         <Box sx={{ flexDirection: 'column' }} ml={1} mb={1} p={1} pt={2}>
@@ -61,7 +61,7 @@ function PublicHolidayCard() {
                             </Grid>
                             <Grid item>
                                 <Button size="large">
-                                    <PlayArrowIcon color="primary" expand={expanded} onClick={handleExpandClick} />
+                                    <PlayArrowIcon color="primary" sx={{transform: expanded ? 'rotate(90deg)' : 'none'}}/>
                                 </Button>
                             </Grid>
                             <Grid item sx={{ color: '#0AA879' }}>
