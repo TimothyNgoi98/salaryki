@@ -1,20 +1,23 @@
 import React from "react";
 import { Grid, Paper, Box, Typography } from "@mui/material";
-import salaryFlow from '../../images/salaryFlow.jpg'
+// import salaryFlow from '../../images/salaryFlow.jpg'
+import {ReactComponent as SalaryFlowSVG} from '../../images/salaryFlow2.svg'
 import bestBros from '../../images/bestBros.jpg'
 import callMe from '../../images/callMe.jpg'
 import locationUnknown from '../../images/locationUnknown.jpg'
 import www from '../../images/www.jpg'
 import facebook from '../../images/facebook.jpg'
 import footer from '../../images/footer.jpg'
+// import {ReactComponent as BestBrosSVG} from '../../images/bestBros2.svg'
 
 function GetHelp() {
     return (
         <>
             <Grid container pt={4} spacing={2} sx={{ maxWidth: '85%', margin: 'auto' }}>
-                <Paper sx={{ width: '100%', height: 'auto', borderRadius: '8px' }} elevation={4} mb={2}>
-                    <Grid container alignContent='center' justifyContent='center'>
-                        <Box component="img" src={salaryFlow} sx={{ width: '100%' }} p={1} />
+                <Paper sx={{ width: '100%', height: 'auto', borderRadius: '8px' }} elevation={4} mb={2} >
+                    <Grid container alignContent="center" justifyContent="center" pb = {1}>
+                        <SalaryFlowSVG sx={{ width: '100%', height: '100%' }}/>
+                        {/* <Box component="img" src={salaryFlow} sx={{ width: '100%' }} p={1} /> */}
                     </Grid>
                 </Paper>
             </Grid>
@@ -24,6 +27,8 @@ function GetHelp() {
                         justifyContent="center"
                         alignItems="center" pt={2}>
                         <Typography variant="subtitle1" sx={{ fontWeight: 'bold' }}>TWC2 (Transient Workers Count Too)</Typography>
+                        {/* <BestBrosSVG/> */}
+                        {/* <SvgIcon component={BestBrosSVG} viewBox="0 0 100 100"/> */}
                         <Box component="img" src={bestBros} sx={{ maxWidth: '90%', borderRadius: '6px' }} p={1} mt={1} />
                         <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end', alignContent: 'space-around' }} mt={2} mb={1}>
                             <Box component="img" src={callMe} sx={{ maxWidth: '32px', maxHeight:"32px"}} mr={2} />
