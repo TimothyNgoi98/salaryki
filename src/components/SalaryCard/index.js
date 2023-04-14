@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from 'react';
-import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button } from "@mui/material";
+import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button, List, ListItem, Link } from "@mui/material";
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
@@ -38,15 +38,39 @@ const steps = [
         labelEnglish: "Salary deductions",
         labelIndian: "বেতন কর্তন",
         image: deductPay,
-        descriptionEnglish: "Your boss cannot cut your IPA salary without your written permission! Your boss is not allowed to cut salary for these cases: Work pass renewal Medical insurance/fees Repatriation (send home) Others",
-        descriptionIndian: "আপনার বস আপনার লিখিত অনুমতি ছাড়া আপনার IPA বেতন কাটতে পারবেন না! আপনার বসকে এই ক্ষেত্রে বেতন কাটার অনুমতি নেই: কাজের পাস নবায়ন চিকিৎসা বীমা/ফি প্রত্যাবাসন (বাসায় পাঠান) অন্যান্য"
+        descriptionEnglishObject: {
+            headerDescription: "Your boss cannot cut your IPA salary without your written permission!",
+            descriptionBeginning: "Your boss is not allowed to cut salary for these cases:",
+            descriptionList: ["Work pass renewal", "Medical insurance/fees", "Repatriation (send home)", "Others"],
+            red: true,
+            link: "https://www.mom.gov.sg/employment-practices/salary/salary-deductions#:~:text=Your%20employer%20is%20not%20allowed%20to%20make%20deductions%20to%20your%20salaries%20under%20any%20circumstances%2C%20for%20the%20following%20purposes%20as%20specified%20in%20the%20Employment%20of%20Foreign%20Manpower%20Act%3A"
+        },
+        descriptionIndianObject: {
+            headerDescription: "আপনার বস আপনার লিখিত অনুমতি ছাড়া আপনার IPA বেতন কাটতে পারবেন না!",
+            descriptionBeginning: "আপনার বসকে এই ক্ষেত্রে বেতন কাটার অনুমতি নেই:",
+            descriptionList: ["কাজের পাস নবায়ন", "চিকিৎসা বীমা/ফি", "প্রত্যাবাসন (বাসায় পাঠান)", "অন্যান্য"],
+            red: true,
+            link: "https://www.mom.gov.sg/employment-practices/salary/salary-deductions#:~:text=Your%20employer%20is%20not%20allowed%20to%20make%20deductions%20to%20your%20salaries%20under%20any%20circumstances%2C%20for%20the%20following%20purposes%20as%20specified%20in%20the%20Employment%20of%20Foreign%20Manpower%20Act%3A"
+        }
+        // descriptionEnglish: "Your boss cannot cut your IPA salary without your written permission! Your boss is not allowed to cut salary for these cases: Work pass renewal Medical insurance/fees Repatriation (send home) Others",
+        // descriptionIndian: "আপনার বস আপনার লিখিত অনুমতি ছাড়া আপনার IPA বেতন কাটতে পারবেন না! আপনার বসকে এই ক্ষেত্রে বেতন কাটার অনুমতি নেই: কাজের পাস নবায়ন চিকিৎসা বীমা/ফি প্রত্যাবাসন (বাসায় পাঠান) অন্যান্য"
     },
     {
         labelEnglish: "Count your salary!",
         labelIndian: "আপনার বেতন গণনা!",
         image: countPay,
-        descriptionEnglish: "It is good to track how many hours and days you work every month, and if you are getting paid correct salary. Here are some good habits to follow: Keep/take photo of timecards and all payslips Write down your work hours every day in a diary Count at the end of the month if your salary and work hours are ok",
-        descriptionIndian: "আপনি প্রতি মাসে কত ঘন্টা এবং দিন কাজ করেন এবং আপনি সঠিক বেতন পাচ্ছেন কিনা তা ট্র্যাক করা ভাল। এখানে অনুসরণ করার জন্য কিছু ভাল অভ্যাস আছে: টাইমকার্ড এবং সমস্ত পেস্লিপের ছবি রাখুন/তুলুন প্রতিদিন আপনার কাজের সময় একটি ডায়েরিতে লিখুন আপনার বেতন এবং কাজের সময় ঠিক থাকলে মাসের শেষে গণনা করুন"
+        descriptionEnglishObject: {
+            headerDescription: "It is good to track how many hours and days you work every month, and if you are getting paid correct salary.",
+            descriptionBeginning: "Here are some good habits to follow:",
+            descriptionList: ["Keep/take photo of timecards and all payslips", "Write down your work hours every day in a diary", "Count at the end of the month if your salary and work hours are ok"]
+        },
+        descriptionIndianObject: {
+            headerDescription: "আপনি প্রতি মাসে কত ঘন্টা এবং দিন কাজ করেন এবং আপনি সঠিক বেতন পাচ্ছেন কিনা তা ট্র্যাক করা ভাল।",
+            descriptionBeginning: "এখানে অনুসরণ করার জন্য কিছু ভাল অভ্যাস আছে:",
+            descriptionList: ["টাইমকার্ড এবং সমস্ত পেস্লিপের ছবি রাখুন/তুলুন", "প্রতিদিন আপনার কাজের সময় একটি ডায়েরিতে লিখুন", "আপনার বেতন এবং কাজের সময় ঠিক থাকলে মাসের শেষে গণনা করুন"]
+        }
+        // descriptionEnglish: "It is good to track how many hours and days you work every month, and if you are getting paid correct salary. Here are some good habits to follow: Keep/take photo of timecards and all payslips Write down your work hours every day in a diary Count at the end of the month if your salary and work hours are ok",
+        // descriptionIndian: "আপনি প্রতি মাসে কত ঘন্টা এবং দিন কাজ করেন এবং আপনি সঠিক বেতন পাচ্ছেন কিনা তা ট্র্যাক করা ভাল। এখানে অনুসরণ করার জন্য কিছু ভাল অভ্যাস আছে: টাইমকার্ড এবং সমস্ত পেস্লিপের ছবি রাখুন/তুলুন প্রতিদিন আপনার কাজের সময় একটি ডায়েরিতে লিখুন আপনার বেতন এবং কাজের সময় ঠিক থাকলে মাসের শেষে গণনা করুন"
     }
 ]
 
@@ -75,9 +99,9 @@ function SalaryCard() {
             <Card sx={{ backgroundColor: 'background.card', width: '95%', margin: 'auto', borderRadius: '12px' }} expand={expanded} onClick={handleExpandClick}>
                 <Grid container direction='row' justifyContent="space-between">
                     <Grid item xs={9}>
-                        <Box sx={{ flexDirection: 'column' }} ml={1} mb = {1} p={1} pt ={2}>
-                            <Typography variant='h4' sx = {{color: "white"}}>Salary Rights</Typography>
-                            <Typography variant='h4' sx = {{color: "white"}}>বেতন অধিকার</Typography>
+                        <Box sx={{ flexDirection: 'column' }} ml={1} mb={1} p={1} pt={2}>
+                            <Typography variant='h4' sx={{ color: "white" }}>Salary Rights</Typography>
+                            <Typography variant='h4' sx={{ color: "white" }}>বেতন অধিকার</Typography>
                         </Box>
                     </Grid>
                     <Grid item xs={3} align='center'>
@@ -86,8 +110,8 @@ function SalaryCard() {
                                 :nbsp;
                             </Grid>
                             <Grid item>
-                                <Button size = "large">
-                                    <PlayArrowIcon color="primary" sx={{transform: expanded ? 'rotate(90deg)' : 'none'}} />
+                                <Button size="large">
+                                    <PlayArrowIcon color="primary" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }} />
                                 </Button>
                             </Grid>
                             <Grid item>
@@ -112,19 +136,88 @@ function SalaryCard() {
                             </Typography>
                             <Box component="img" src={steps[activeStep].image} mt={2} sx={{ borderRadius: "6px" }} />
                             {steps[activeStep].image2 ?
-                                <Box component = "img" src = {steps[activeStep].image2} mt={2} sx={{ borderRadius: "6px" }}/>
+                                <Box component="img" src={steps[activeStep].image2} mt={2} sx={{ borderRadius: "6px" }} />
                                 :
                                 <Box></Box>
                             }
-                            <Grid pt={1} p={3}>
-                                <Typography variant="subtitle1">
-                                    {steps[activeStep].descriptionEnglish}
-                                </Typography>
-                                <br />
-                                <Typography variant="subtitle1">
-                                    {steps[activeStep].descriptionIndian}
-                                </Typography>
-                            </Grid>
+                            {steps[activeStep].descriptionEnglish ?
+                                <Grid pt={1} p={3}>
+                                    <Typography variant="subtitle1">
+                                        {steps[activeStep].descriptionEnglish}
+                                    </Typography>
+                                    <br />
+                                    <Typography variant="subtitle1">
+                                        {steps[activeStep].descriptionIndian}
+                                    </Typography>
+                                </Grid>
+                                :
+                                <Grid pt={1} p={3}>
+                                    <Typography variant="subtitle1" mb={1}>
+                                        {steps[activeStep].descriptionEnglishObject['headerDescription']}
+                                    </Typography>
+                                    <Typography variant="subtitle1" sx={{color: steps[activeStep].descriptionEnglishObject['red'] ? '#FF0000': 'black' }}>
+                                        {steps[activeStep].descriptionEnglishObject['descriptionBeginning']}
+                                    </Typography>
+                                    <Grid container alignContent="center" justifyContent="flex-start">
+                                        <List sx={{ listStyleType: 'disc', pl: 3 }} disablePadding>
+                                            {steps[activeStep].descriptionEnglishObject['descriptionList'].map((description, index) => {
+                                                if (index === steps[activeStep].descriptionEnglishObject['descriptionList'].length - 1 && steps[activeStep].descriptionEnglishObject['link']) {
+                                                    return (
+                                                        <ListItem key={description} sx={{ display: 'list-item' }}>
+                                                            <Link href = {steps[activeStep].descriptionEnglishObject['link']} target="_blank" sx ={{color:"#0065FD", textDecoration: 'underline'}} >
+                                                                {description}
+                                                            </Link>
+                                                        </ListItem>
+                                                    )
+                                                } 
+                                                else {
+                                                    return (
+                                                        <ListItem key={description} sx={{ display: 'list-item', pb: 0 }}>
+                                                            <Typography variant="subtitle1">
+                                                                {description}
+                                                            </Typography>
+                                                        </ListItem>
+                                                    )
+                                                }
+                                            }
+                                        )}
+                                        </List>
+                                    </Grid>
+                                    <br /><br />
+                                    <Typography variant="subtitle1" mb={1}>
+                                        {steps[activeStep].descriptionIndianObject['headerDescription']}
+                                    </Typography>
+                                    <Typography variant="subtitle1" sx={{color: steps[activeStep].descriptionEnglishObject['red'] ? '#FF0000': 'black' }}>
+                                        {steps[activeStep].descriptionIndianObject['descriptionBeginning']}
+                                    </Typography>
+                                    <Grid container alignContent="center" justifyContent="flex-start">
+                                        <List sx={{ listStyleType: 'disc', pl: 3}} disablePadding>
+                                            {steps[activeStep].descriptionIndianObject['descriptionList'].map((description, index) => {
+                                                    if (index === steps[activeStep].descriptionIndianObject['descriptionList'].length - 1 && steps[activeStep].descriptionIndianObject['link']) {
+                                                        return (
+                                                            <ListItem key={description} sx={{ display: 'list-item' }}>
+                                                                <Link href = {steps[activeStep].descriptionIndianObject['link']} target="_blank" sx ={{color:"#0065FD", textDecoration: 'underline'}} >
+                                                                    {description}
+                                                                </Link>
+                                                            </ListItem>
+                                                        )
+                                                    } 
+                                                    else {
+                                                        return (
+                                                            <ListItem key={description} sx={{ display: 'list-item', pb: 0 }}>
+                                                                <Typography variant="subtitle1">
+                                                                    {description}
+                                                                </Typography>
+                                                            </ListItem>
+                                                        )
+                                                    }
+                                                }
+                                            )}
+                                        </List>
+                                    </Grid>
+                                </Grid>
+                            }
+
                             <MobileStepper
                                 variant="progress"
                                 steps={maxSteps}
@@ -143,7 +236,7 @@ function SalaryCard() {
                                 nextButton={
                                     <Button size="small" onClick={handleNext} disabled={activeStep === (maxSteps - 1)}>
                                         {activeStep === (maxSteps - 1) ?
-                                            <KeyboardArrowRight sx={{ display: 'none', color: "black" }}/>
+                                            <KeyboardArrowRight sx={{ display: 'none', color: "black" }} />
                                             :
                                             <KeyboardArrowRight sx={{ color: "black" }} />
                                         }

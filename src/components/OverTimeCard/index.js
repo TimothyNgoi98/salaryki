@@ -137,11 +137,11 @@ function OverTimeCard() {
                             }
                             {steps[activeStep].linkEnglish ?
                                 <>
-                                    <Button href = "https://www.mom.gov.sg/employment-practices/salary/calculate-overtime-pay" variant="text" sx ={{color:"#0065FD", textDecoration: 'underline'}}>
+                                    <Button href = "https://www.mom.gov.sg/employment-practices/salary/calculate-overtime-pay" target="_blank" variant="text" sx ={{color:"#0065FD", textDecoration: 'underline'}}>
                                         {steps[activeStep].linkEnglish}
                                     </Button>
 
-                                    <Typography href = "https://www.mom.gov.sg/employment-practices/salary/calculate-overtime-pay" variant="text" sx ={{color:"#0065FD", textDecoration: 'underline'}}>
+                                    <Typography href = "https://www.mom.gov.sg/employment-practices/salary/calculate-overtime-pay" target="_blank" variant="text" sx ={{color:"#0065FD", textDecoration: 'underline'}}>
                                         {steps[activeStep].linkIndian}
                                     </Typography>
                                 </> 
