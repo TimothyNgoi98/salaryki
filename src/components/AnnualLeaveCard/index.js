@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from 'react';
-import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button } from "@mui/material";
+import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button, Link } from "@mui/material";
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
@@ -10,25 +10,26 @@ import compensationUnpaid from '../../images/compensationUnpaid.jpg'
 
 const steps = [
     {
-        labelEnglish:"",
-        labelIndian:"",
+        labelEnglish: "",
+        labelIndian: "",
         image: goHoliday,
-        descriptionEnglish:"You have paid annual leave if you have worked for at least 3 months.",
-        descriptionIndian:"আপনি যদি কমপক্ষে 3 মাস কাজ করে থাকেন তবে আপনি বার্ষিক ছুটি পরিশোধ করেছেন।",
+        descriptionEnglish: "You have paid annual leave if you have worked for at least 3 months.",
+        descriptionIndian: "আপনি যদি কমপক্ষে 3 মাস কাজ করে থাকেন তবে আপনি বার্ষিক ছুটি পরিশোধ করেছেন।",
     },
     {
-        labelEnglish:"Compensation for unused leave",
-        labelIndian:"অব্যবহৃত ছুটির জন্য ক্ষতিপূরণ",
+        labelEnglish: "Compensation for unused leave",
+        labelIndian: "অব্যবহৃত ছুটির জন্য ক্ষতিপূরণ",
         image: chartYears,
-        descriptionEnglish:"How much leave you can take depends on how many years you have worked.",
-        descriptionIndian:"আপনি কতটা ছুটি নিতে পারবেন তা নির্ভর করে আপনি কত বছর কাজ করেছেন তার উপর।",
+        link: "https://www.mom.gov.sg/employment-practices/leave/annual-leave/eligibility-and-entitlement#:~:text=for%203%20months.-,Entitlement,-Your%20annual%20leave",
+        descriptionEnglish: "How much leave you can take depends on how many years you have worked.",
+        descriptionIndian: "আপনি কতটা ছুটি নিতে পারবেন তা নির্ভর করে আপনি কত বছর কাজ করেছেন তার উপর।",
     },
     {
-        labelEnglish:"Compensation for unused leave",
-        labelIndian:"অব্যবহৃত ছুটির জন্য ক্ষতিপূরণ",
+        labelEnglish: "Compensation for unused leave",
+        labelIndian: "অব্যবহৃত ছুটির জন্য ক্ষতিপূরণ",
         image: compensationUnpaid,
-        descriptionEnglish:"Your boss must pay you for unused annual leave!",
-        descriptionIndian:"আপনার নিয়োগকর্তা আপনাকে অব্যবহৃত বার্ষিক ছুটির জন্য অর্থ প্রদান করতে হবে!",
+        descriptionEnglish: "Your boss must pay you for unused annual leave!",
+        descriptionIndian: "আপনার নিয়োগকর্তা আপনাকে অব্যবহৃত বার্ষিক ছুটির জন্য অর্থ প্রদান করতে হবে!",
     }
 ]
 
@@ -68,7 +69,7 @@ function AnnualLeaveCard() {
                             </Grid>
                             <Grid item>
                                 <Button size="large">
-                                    <PlayArrowIcon color="primary" sx={{transform: expanded ? 'rotate(90deg)' : 'none'}} />
+                                    <PlayArrowIcon color="primary" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }} />
                                 </Button>
                             </Grid>
                             <Grid item sx={{ color: '#8A23AD' }}>
@@ -91,12 +92,19 @@ function AnnualLeaveCard() {
                             <Typography variant="h6" fontWeight="bold">
                                 {steps[activeStep].labelIndian}
                             </Typography>
-                            <Box component="img" src={steps[activeStep].image} mt={2} sx={{ borderRadius: "6px" }} />
+                            <Box component="img" src={steps[activeStep].image} mt={2} sx={{ borderRadius: "6px", maxWidth: "100%", p: 1 }} />
                             <Grid pt={1} p={3}>
-                                <Typography variant="subtitle1">
-                                    {steps[activeStep].descriptionEnglish}
-                                </Typography>
-                                <br />
+                                {steps[activeStep].link ?
+                                    <Link href={steps[activeStep].link} target="_blank" sx={{ color: "#0065FD", textDecoration: 'underline', mb: 1 }}>
+                                        <Typography variant="subtitle1" sx={{mb:2}}>
+                                            {steps[activeStep].descriptionEnglish}
+                                        </Typography>
+                                    </Link>
+                                    :
+                                    <Typography variant="subtitle1"  sx={{mb:2}}>
+                                        {steps[activeStep].descriptionEnglish}
+                                    </Typography>
+                                }
                                 <Typography variant="subtitle1">
                                     {steps[activeStep].descriptionIndian}
                                 </Typography>

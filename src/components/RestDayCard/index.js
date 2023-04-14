@@ -121,7 +121,7 @@ function RestDayCard() {
                             <Typography variant="h6" fontWeight="bold">
                                 {steps[activeStep].labelIndian}
                             </Typography>
-                            <Box component="img" src={steps[activeStep].image} mt={2} sx={{ borderRadius: "6px" }} />
+                            <Box component="img" src={steps[activeStep].image} mt={2} sx={{ borderRadius: "6px", maxWidth:"100%", p: 1 }} />
                             <Grid pt={1} p={3}>
                             {steps[activeStep].link ?
                                     <Link href = {steps[activeStep].link} target="_blank" sx ={{color:"#0065FD", textDecoration: 'underline'}}>
@@ -144,8 +144,7 @@ function RestDayCard() {
                                                 </Typography>
                                             </ListItem>
                                         )
-                                    }) :
-                                    <>
+                                    }) : <>
                                     </>}
                                 </List>
                                 <Typography variant="subtitle1">
