@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from 'react';
-import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button } from "@mui/material";
+import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button, Link, List, ListItem } from "@mui/material";
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import nationalDay from '../../images/nationalDay.jpg'
 import phPay from '../../images/phPay.jpg'
@@ -9,18 +9,32 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 
 const steps = [
     {
-        labelEnglish:"Singapore public holidays",
-        labelIndian:"সিঙ্গাপুর পাবলিক ছুটি",
+        labelEnglish: "Singapore public holidays",
+        labelIndian: "সিঙ্গাপুর পাবলিক ছুটি",
         image: nationalDay,
-        descriptionEnglish:"Singapore has 11 public holidays a year. You will be paid even if not working on PH!",
-        descriptionIndian:"সিঙ্গাপুরে এক বছরে 11 টি পাবলিক ছুটি রয়েছে। P.H. এ কাজ না করলেও আপনাকে বেতন দেওয়া হবে!",
+        descriptionEnglishObject: {
+            headerDescription: "Singapore has 11 public holidays a year.",
+            listComponent: ["You will be paid even if not working on PH!"]
+        },
+        descriptionIndianObject: {
+            headerDescription: "সিঙ্গাপুরে এক বছরে 11 টি পাবলিক ছুটি রয়েছে।",
+            listComponent: ["P.H. এ কাজ না করলেও আপনাকে বেতন দেওয়া হবে!"]
+        },
+        link: "https://www.mom.gov.sg/employment-practices/public-holidays-entitlement-and-pay#:~:text=The%2011%20public%20holidays",
     },
     {
-        labelEnglish:"Public holiday pay",
-        labelIndian:"সরকারী ছুটি বেতন",
+        labelEnglish: "Public holiday pay",
+        labelIndian: "সরকারী ছুটি বেতন",
         image: phPay,
-        descriptionEnglish:"If you are working on P.H., you get extra day of salary.",
-        descriptionIndian:"আপনি যদি সরকারী ছুটিতে কাজ করেন তবে আপনাকে বেতনের অতিরিক্ত দিন দেওয়া হবে",
+        descriptionEnglishObject: {
+            headerDescription: "If you are working on P.H., you get extra day of salary.",
+            listComponent: []
+        },
+        descriptionIndianObject: {
+            headerDescription: "আপনি যদি সরকারী ছুটিতে কাজ করেন তবে আপনাকে বেতনের অতিরিক্ত দিন দেওয়া হবে",
+            listComponent: []
+        },
+        link: "https://www.mom.gov.sg/employment-practices/public-holidays-entitlement-and-pay#:~:text=If%20you%20work%20on%20a%20public%20holiday%2C%20by%20default%2C%20your%20employer%20should%20pay%20you%20an%20additional%20day%27s%20pay."
     }
 ]
 
@@ -61,7 +75,7 @@ function PublicHolidayCard() {
                             </Grid>
                             <Grid item>
                                 <Button size="large">
-                                    <PlayArrowIcon color="primary" sx={{transform: expanded ? 'rotate(90deg)' : 'none'}}/>
+                                    <PlayArrowIcon color="primary" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }} />
                                 </Button>
                             </Grid>
                             <Grid item sx={{ color: '#0AA879' }}>
@@ -84,15 +98,54 @@ function PublicHolidayCard() {
                             <Typography variant="h6" fontWeight="bold">
                                 {steps[activeStep].labelIndian}
                             </Typography>
-                            <Box component="img" src={steps[activeStep].image} mt={2} sx={{ borderRadius: "6px" }} />
+                            <Box component="img" src={steps[activeStep].image} mt={2} sx={{ borderRadius: "6px", maxWidth: "100%", p: 1 }} />
                             <Grid pt={1} p={3}>
+                                {steps[activeStep].link ?
+                                    <Link href={steps[activeStep].link} target="_blank" sx={{ color: "#0065FD", textDecoration: 'underline' }}>
+                                        <Typography variant="subtitle1">
+                                            {steps[activeStep].descriptionEnglishObject['headerDescription']}
+                                        </Typography>
+                                    </Link>
+                                    :
+                                    <Typography variant="subtitle1">
+                                        {steps[activeStep].descriptionEnglishObject['headerDescription']}
+                                    </Typography>
+                                }
+                                <List sx={{ listStyleType: 'disc', pl: 3, mb: 3 }} disablePadding>
+                                    {steps[activeStep].descriptionEnglishObject['listComponent'].length !== 0 ?
+                                        steps[activeStep].descriptionEnglishObject['listComponent'].map(description => {
+                                            return (
+                                                <ListItem key={description} sx={{ display: 'list-item', pb: 0 }}>
+                                                    <Typography variant="subtitle1">
+                                                        {description}
+                                                    </Typography>
+                                                </ListItem>
+                                            )
+                                        }) :
+                                        <>
+                                        </>}
+                                </List>
                                 <Typography variant="subtitle1">
+                                    {steps[activeStep].descriptionIndianObject['headerDescription']}
+                                </Typography>
+                                <List sx={{ listStyleType: 'disc', pl: 3 }} disablePadding>
+                                    {steps[activeStep].descriptionIndianObject['listComponent'].map(description => {
+                                        return (
+                                            <ListItem key={description} sx={{ display: 'list-item' }}>
+                                                <Typography variant="subtitle1">
+                                                    {description}
+                                                </Typography>
+                                            </ListItem>
+                                        )
+                                    })}
+                                </List>
+                                {/* <Typography variant="subtitle1">
                                     {steps[activeStep].descriptionEnglish}
                                 </Typography>
                                 <br />
                                 <Typography variant="subtitle1">
                                     {steps[activeStep].descriptionIndian}
-                                </Typography>
+                                </Typography> */}
                             </Grid>
                             <MobileStepper
                                 variant="progress"

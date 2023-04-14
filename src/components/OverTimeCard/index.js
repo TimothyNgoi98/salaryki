@@ -24,8 +24,6 @@ const steps = [
             headerDescription: "M.O.M অনুযায়ী, সপ্তাহে স্বাভাবিক কাজের সময় 44 ঘন্টা।",
             listComponent: ["এর চেয়ে বেশি কাজ করা ওভারটাইম।"]
         }
-        // descriptionEnglish: "According to MOM, normal work hours per week is 44 hours. Work more than this is overtime/OT.",
-        // descriptionIndian: "M.O.M অনুযায়ী, সপ্তাহে স্বাভাবিক কাজের সময় 44 ঘন্টা। এর চেয়ে বেশি কাজ করা ওভারটাইম।",
     },
     {
         labelEnglish: "Weekly schedule",
@@ -39,8 +37,6 @@ const steps = [
             headerDescription: "এটি একটি সপ্তাহের সময়সূচীর একটি উদাহরণ।",
             listComponent: ["সোম-শুক্র সারাদিন কাজ", "শনিবার অর্ধেক দিন", "রবিবার বিশ্রামের দিন"]
         }
-        // descriptionEnglish: "This is an example of a week's schedule. Mon - Fri full day working. Saturday half day. Sunday rest day",
-        // descriptionIndian: "এটি একটি সপ্তাহের সময়সূচীর একটি উদাহরণ।. সোম-শুক্র সারাদিন কাজ. শনিবার অর্ধেক দিন. রবিবার বিশ্রামের দিন",
     },
     {
         labelEnglish: "Overtime calculation",
