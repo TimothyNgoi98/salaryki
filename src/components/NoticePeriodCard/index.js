@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from 'react';
-import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button } from "@mui/material";
+import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button, Link, List, ListItem } from "@mui/material";
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
@@ -10,25 +10,51 @@ import termination from '../../images/termination.jpg'
 
 const steps = [
     {
-        labelEnglish:"What is notice period?",
-        labelIndian:"নোটিশ পিরিয়ড কি?",
+        labelEnglish: "What is notice period?",
+        labelIndian: "নোটিশ পিরিয়ড কি?",
         image: shakeHands,
-        descriptionEnglish:"When you/your boss cancel your work contract, you must work for the notice period before you leave the company.",
-        descriptionIndian:"যখন আপনি/আপনার বস আপনার কাজের চুক্তি বাতিল করেন, তখন আপনাকে অবশ্যই কোম্পানি ছেড়ে যাওয়ার আগে নোটিশের সময়কালের জন্য কাজ করতে হবে।",
+        descriptionEnglishObject: {
+            headerDescription: "When you/your boss cancel your work contract, you must work for the notice period before you leave the company.",
+            listComponent: []
+        },
+        descriptionIndianObject: {
+            headerDescription: "যখন আপনি/আপনার বস আপনার কাজের চুক্তি বাতিল করেন, তখন আপনাকে অবশ্যই কোম্পানি ছেড়ে যাওয়ার আগে নোটিশের সময়কালের জন্য কাজ করতে হবে।",
+            listComponent: []
+        }
     },
     {
-        labelEnglish:"How long is notice period?",
-        labelIndian:"নোটিশ পিরিয়ড কতদিন?",
+        labelEnglish: "How long is notice period?",
+        labelIndian: "নোটিশ পিরিয়ড কতদিন?",
         image: noticePerod,
-        descriptionEnglish:"If your contract no have notice period, the notice period depends on how long you work for company.",
-        descriptionIndian:"যখন আপনার বস আপনার কাজের চুক্তি বাতিল করে দেন, তখন আপনি কোম্পানি ছেড়ে যাওয়ার আগে তাকে অবশ্যই আপনাকে নোটিশ সময়ের জন্য কাজ করতে দিতে হবে।",
+        descriptionEnglishObject: {
+            headerDescription: "If your contract no have notice period, the notice period depends on how long you work for company.",
+            listComponent: []
+        },
+        descriptionIndianObject: {
+            headerDescription: "যখন আপনার বস আপনার কাজের চুক্তি বাতিল করে দেন, তখন আপনি কোম্পানি ছেড়ে যাওয়ার আগে তাকে অবশ্যই আপনাকে নোটিশ সময়ের জন্য কাজ করতে দিতে হবে।",
+            listComponent: []
+        },
+        link: "https://www.mom.gov.sg/employment-practices/termination-of-employment/termination-with-notice#:~:text=No%20notice%20period%20in%20contract"
+        // descriptionEnglish:"If your contract no have notice period, the notice period depends on how long you work for company.",
+        // descriptionIndian:"যখন আপনার বস আপনার কাজের চুক্তি বাতিল করে দেন, তখন আপনি কোম্পানি ছেড়ে যাওয়ার আগে তাকে অবশ্যই আপনাকে নোটিশ সময়ের জন্য কাজ করতে দিতে হবে।",
     },
     {
-        labelEnglish:"Termination without notice",
-        labelIndian:"বিজ্ঞপ্তি ছাড়াই সমাপ্তি",
+        labelEnglish: "Termination without notice",
+        labelIndian: "বিজ্ঞপ্তি ছাড়াই সমাপ্তি",
         image: termination,
-        descriptionEnglish:"If boss cancel your contract without notice, he must pay you “notice pay”.If you resign without notice, you must pay your boss “notice pay”. This is salary that you would have earned during the notice period.",
-        descriptionIndian:"যদি বস নোটিশ ছাড়াই আপনার চুক্তি বাতিল করেন, তাহলে তাকে অবশ্যই আপনাকে 'নোটিস পে' দিতে হবে। আপনি যদি নোটিশ ছাড়াই পদত্যাগ করেন, তাহলে আপনাকে অবশ্যই আপনার বসকে 'নোটিস পে' দিতে হবে।এটি সেই বেতন যা আপনি নোটিশের সময়কালে উপার্জন করতেন।",
+        linkList: "https://www.mom.gov.sg/employment-practices/termination-of-employment/termination-without-notice#:~:text=This%20is%20money%20equivalent%20to%20the%20salary%20that%20you%20would%20have%20earned%20during%20the%20required%20notice%20period.",
+        descriptionEnglishObject: {
+            headerDescription: "If boss cancel your contract without notice, he must pay you “notice pay”.",
+            headerDescription2: "If you resign without notice, you must pay your boss “notice pay”.",
+            listComponent: ["This is salary that you would have earned during the notice period."]
+        },
+        descriptionIndianObject: {
+            headerDescription: "যদি বস নোটিশ ছাড়াই আপনার চুক্তি বাতিল করেন, তাহলে তাকে অবশ্যই আপনাকে 'নোটিস পে' দিতে হবে।",
+            headerDescription2: "আপনি যদি নোটিশ ছাড়াই পদত্যাগ করেন, তাহলে আপনাকে অবশ্যই আপনার বসকে 'নোটিস পে' দিতে হবে।",
+            listComponent: ["এটি সেই বেতন যা আপনি নোটিশের সময়কালে উপার্জন করতেন।"]
+        },
+        // descriptionEnglish:"If boss cancel your contract without notice, he must pay you “notice pay”.If you resign without notice, you must pay your boss “notice pay”. This is salary that you would have earned during the notice period.",
+        // descriptionIndian:"যদি বস নোটিশ ছাড়াই আপনার চুক্তি বাতিল করেন, তাহলে তাকে অবশ্যই আপনাকে 'নোটিস পে' দিতে হবে। আপনি যদি নোটিশ ছাড়াই পদত্যাগ করেন, তাহলে আপনাকে অবশ্যই আপনার বসকে 'নোটিস পে' দিতে হবে।এটি সেই বেতন যা আপনি নোটিশের সময়কালে উপার্জন করতেন।",
     }
 ]
 
@@ -51,7 +77,7 @@ function NoticePeriodCard() {
     const handleBack = () => {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
-    
+
 
     return (
         <Grid container pt={2} pb={1}>
@@ -70,7 +96,7 @@ function NoticePeriodCard() {
                             </Grid>
                             <Grid item>
                                 <Button size="large">
-                                    <PlayArrowIcon color="primary" sx={{transform: expanded ? 'rotate(90deg)' : 'none'}}/>
+                                    <PlayArrowIcon color="primary" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }} />
                                 </Button>
                             </Grid>
                             <Grid item sx={{ color: '#6D4B38' }}>
@@ -93,15 +119,73 @@ function NoticePeriodCard() {
                             <Typography variant="h6" fontWeight="bold">
                                 {steps[activeStep].labelIndian}
                             </Typography>
-                            <Box component="img" src={steps[activeStep].image} mt={2} sx={{ borderRadius: "6px" }} />
+                            <Box component="img" src={steps[activeStep].image} mt={2} sx={{ borderRadius: "6px", maxWidth:"100%", p: 1  }} />
                             <Grid pt={1} p={3}>
-                                <Typography variant="subtitle1">
+                                {steps[activeStep].link ?
+                                    <Link href={steps[activeStep].link} target="_blank" sx={{ color: "#0065FD", textDecoration: 'underline' }}>
+                                        <Typography variant="subtitle1">
+                                            {steps[activeStep].descriptionEnglishObject['headerDescription']}
+                                        </Typography>
+                                    </Link>
+                                    :
+                                    <Typography variant="subtitle1">
+                                        {steps[activeStep].descriptionEnglishObject['headerDescription']}
+                                    </Typography>
+                                }
+                                {steps[activeStep].descriptionEnglishObject['headerDescription2'] ? 
+                                <>
+                                    <br/>
+                                    <Typography variant="subtitle1" mb={1}>
+                                        {steps[activeStep].descriptionEnglishObject['headerDescription2']}
+                                    </Typography>
+                                    </>
+                                    :
+                                    null
+                                }
+                                {/* <Typography variant="subtitle1">
                                     {steps[activeStep].descriptionEnglish}
-                                </Typography>
-                                <br />
+                                </Typography> */}
+                                <List sx={{ listStyleType: 'disc', pl: 3, mb:3}} disablePadding>
+                                    {steps[activeStep].descriptionEnglishObject['listComponent'].length !== 0 ?
+                                        steps[activeStep].descriptionEnglishObject['listComponent'].map(description => {
+                                        return (
+                                            <ListItem key={description} sx={{ display: 'list-item', pb: 0}}>
+                                                <Link href = {steps[activeStep].linkList} target="_blank" sx ={{color:"#0065FD", textDecoration: 'underline'}}>
+                                                    <Typography variant="subtitle1">
+                                                        {description}
+                                                    </Typography>
+                                                </Link>
+                                            </ListItem>
+                                        )
+                                    }) : <>
+                                    </>}
+                                </List>
                                 <Typography variant="subtitle1">
-                                    {steps[activeStep].descriptionIndian}
+                                    {steps[activeStep].descriptionIndianObject['headerDescription']}
                                 </Typography>
+                                {steps[activeStep].descriptionIndianObject['headerDescription2'] ? 
+                                <>
+                                    <br/>
+                                    <Typography variant="subtitle1" mb={1}>
+                                        {steps[activeStep].descriptionIndianObject['headerDescription2']}
+                                    </Typography>
+                                    </>
+                                    :
+                                    null
+                                }
+                                <List sx={{ listStyleType: 'disc', pl: 3, mb:3}} disablePadding>
+                                    {steps[activeStep].descriptionIndianObject['listComponent'].length !== 0 ?
+                                        steps[activeStep].descriptionIndianObject['listComponent'].map(description => {
+                                        return (
+                                            <ListItem key={description} sx={{ display: 'list-item', pb: 0}}>
+                                                <Typography variant="subtitle1">
+                                                    {description}
+                                                </Typography>
+                                            </ListItem>
+                                        )
+                                    }) : <>
+                                    </>}
+                                </List>
                             </Grid>
                             <MobileStepper
                                 variant="progress"

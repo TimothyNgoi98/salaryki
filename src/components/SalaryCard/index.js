@@ -165,7 +165,9 @@ function SalaryCard() {
                                                     return (
                                                         <ListItem key={description} sx={{ display: 'list-item' }}>
                                                             <Link href = {steps[activeStep].descriptionEnglishObject['link']} target="_blank" sx ={{color:"#0065FD", textDecoration: 'underline'}} >
+                                                            <Typography variant="subtitle1">
                                                                 {description}
+                                                            </Typography>
                                                             </Link>
                                                         </ListItem>
                                                     )
@@ -197,7 +199,9 @@ function SalaryCard() {
                                                         return (
                                                             <ListItem key={description} sx={{ display: 'list-item' }}>
                                                                 <Link href = {steps[activeStep].descriptionIndianObject['link']} target="_blank" sx ={{color:"#0065FD", textDecoration: 'underline'}} >
-                                                                    {description}
+                                                                    <Typography variant="subtitle1">
+                                                                        {description}
+                                                                    </Typography>
                                                                 </Link>
                                                             </ListItem>
                                                         )
