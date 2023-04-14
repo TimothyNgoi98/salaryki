@@ -25,23 +25,23 @@ function NavBar() {
         <>
             <AppBar position='static' pb={4}>
                 <Toolbar disableGutters >
-                    <Box  style={{ width: '100%' }} sx={{ display: 'flex', justifyContent: 'space-evenly', m: 1 }}>
+                    <Box style={{ width: '100%' }} sx={{ display: 'flex', justifyContent: 'space-evenly', m: 1 }}>
                         <Button sx={{ color: "black" }} onClick={() => handleButtonClick('Salary Rights')}>
-                            <Box sx={{ flexDirection: 'column' }}>
-                                <Typography variant='subtitle1' align="center">Salary Rights</Typography>
-                                <Typography variant='subtitle1'>বেতন অধিকার</Typography>
+                            <Box sx={{ flexDirection: 'column', borderBottom: activeButton === "Salary Rights" && "2px solid black" }}>
+                                <Typography variant='subtitle1' sx={{ fontWeight: activeButton === 'Salary Rights' && "bold" }}>Salary Rights</Typography>
+                                <Typography variant='subtitle1' sx={{ fontWeight: activeButton === 'Salary Rights' && "bold" }}>বেতন অধিকার</Typography>
                             </Box>
                         </Button>
                         <Button sx={{ color: "black" }} onClick={() => handleButtonClick('Get Help')}>
-                            <Box sx={{ flexDirection: 'column' }} >
-                                <Typography variant='subtitle1' align="center">Get Help</Typography>
-                                <Typography variant='subtitle1'>সাহায্য পান</Typography>
+                            <Box sx={{ flexDirection: 'column', borderBottom: activeButton === "Get Help" && "2px solid black" }} >
+                                <Typography variant='subtitle1' sx={{ fontWeight: activeButton === 'Get Help' && "bold" }}>Get Help</Typography>
+                                <Typography variant='subtitle1' sx={{ fontWeight: activeButton === 'Get Help' && "bold" }}>সাহায্য পান</Typography>
                             </Box>
                         </Button>
                         <Button sx={{ color: "black" }} onClick={() => handleButtonClick('FAQ')}>
-                            <Box sx={{ flexDirection: 'column' }} >
-                                <Typography variant='subtitle1' align="center">FAQ</Typography>
-                                <Typography variant='subtitle1'>সচরাচর জিজ্ঞাস্য</Typography>
+                            <Box sx={{ flexDirection: 'column', borderBottom: activeButton === "FAQ" && "2px solid black" }} >
+                                <Typography variant='subtitle1' sx={{ fontWeight: activeButton === 'FAQ' && "bold" }}>FAQ</Typography>
+                                <Typography variant='subtitle1' sx={{ fontWeight: activeButton === 'FAQ' && "bold" }}>সচরাচর জিজ্ঞাস্য</Typography>
                             </Box>
                         </Button>
                     </Box>

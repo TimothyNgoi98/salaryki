@@ -36,7 +36,8 @@ theme.typography.h4 = {
 
 theme.typography.subtitle1 = {
     fontSize: '20px',
-    fontWeight: 'normal',
+    fontWeight: '500',
+
     [theme.breakpoints.between('xs', 'sm')]: {
         fontSize: '11px',
     },
