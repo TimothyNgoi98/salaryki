@@ -32,7 +32,7 @@ const steps = [
         labelIndian: "সাপ্তাহিক তালিকা",
         image: toBar,
         descriptionEnglishObject: {
-            headerDescription: "This is an example of a week’s schedule.",
+            headerDescription: "This is an example of what a full week's schedule looks like.",
             listComponent: ["Mon - Fri full day working", "Saturday half day", "Sunday rest day"]
         },
         descriptionIndianObject: {
@@ -136,7 +136,7 @@ function OverTimeCard() {
                             <Typography variant="h6" fontWeight="bold">
                                 {steps[activeStep].labelIndian}
                             </Typography>
-                            <Box component="img" src={steps[activeStep].image} mt={2} sx={{ borderRadius: "6px" }} />
+                            <Box component="img" src={steps[activeStep].image} mt={2} sx={{ borderRadius: "6px", maxWidth:"100%", p: 1}} />
                             <Grid pt={1} p={3}>
                                 {steps[activeStep].link ?
                                     <Link href = {steps[activeStep].link} target="_blank" sx ={{color:"#0065FD", textDecoration: 'underline'}}>
@@ -149,11 +149,11 @@ function OverTimeCard() {
                                         {steps[activeStep].descriptionEnglishObject['headerDescription']}
                                     </Typography>
                                 }
-                                <List sx={{ listStyleType: 'disc', pl: 3, pb:3}} disablePadding>
+                                <List sx={{ listStyleType: 'disc', pl: 3, mb:3}} disablePadding>
                                     {steps[activeStep].descriptionEnglishObject['listComponent'].length !== 0 ?
                                         steps[activeStep].descriptionEnglishObject['listComponent'].map(description => {
                                         return (
-                                            <ListItem key={description} sx={{ display: 'list-item' }}>
+                                            <ListItem key={description} sx={{ display: 'list-item', pb: 0}}>
                                                 <Typography variant="subtitle1">
                                                     {description}
                                                 </Typography>
