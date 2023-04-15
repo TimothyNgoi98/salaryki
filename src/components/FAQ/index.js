@@ -4,7 +4,7 @@ import { Grid, Paper, Box, Typography, Divider, Button} from "@mui/material";
 function FAQ() {
     return (
         <>
-            <Grid container pt={4} spacing={2} sx={{ maxWidth: '85%', margin: 'auto' }}>
+            <Grid container pt={4} spacing={2} sx={{ maxWidth: '85%', margin: 'auto' }} pb={2}>
                 <Paper sx={{ width: '100%', height: 'auto', borderRadius: '8px' }} elevation={4} mb={2}>
                     <Grid container direction="column" justifyContent="center" alignItems="center" pt={2}>
                         <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
