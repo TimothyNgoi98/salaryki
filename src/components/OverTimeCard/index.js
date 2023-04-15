@@ -1,9 +1,6 @@
 import React from "react";
 import { useState } from 'react';
 import { Grid, Box, Typography, Card, Button, Collapse, MobileStepper, Link, ListItem, List, SvgIcon } from "@mui/material";
-// import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-// import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-// import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import workNight from '../../images/workNight.jpg'
 import toBar from '../../images/ToBar.jpg'
 import calculateOT from '../../images/calculateOT.jpg'
@@ -45,6 +42,7 @@ const steps = [
         labelIndian: "ওভারটাইম গণনা",
         image: calculateOT,
         image2: rateOT,
+        link: "https://www.mom.gov.sg/employment-practices/hours-of-work-overtime-and-rest-days#:~:text=must%20pay%20you-,at%20least%201.5%20times,-the%20hourly%20basic",
         descriptionEnglishObject: {
             headerDescription: "Overtime pay rate is at least 1.5x per hour.",
             listComponent: []

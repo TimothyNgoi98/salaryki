@@ -1,13 +1,14 @@
 import React from "react";
 import { Grid, Paper, Box, Typography, Link } from "@mui/material";
 // import salaryFlow from '../../images/salaryFlow.jpg'
-import { ReactComponent as SalaryFlowSVG } from '../../images/salaryFlow2.svg'
+import { ReactComponent as SalaryFlowSVG } from '../../images/salaryflow3.svg'
 import bestBros from '../../images/bestBros.jpg'
 import callMe from '../../images/callMe.jpg'
 import locationUnknown from '../../images/locationUnknown.jpg'
 import www from '../../images/www.jpg'
 import facebook from '../../images/facebook.jpg'
 import footer from '../../images/footer.jpg'
+import massive from '../../images/massive_journey.png'
 // import {ReactComponent as BestBrosSVG} from '../../images/bestBros2.svg'
 
 function GetHelp() {
@@ -16,7 +17,8 @@ function GetHelp() {
             <Grid container pt={4} spacing={2} sx={{ maxWidth: '85%', margin: 'auto' }}>
                 <Paper sx={{ width: '100%', height: 'auto', borderRadius: '8px' }} elevation={4} mb={2} >
                     <Grid container alignContent="center" justifyContent="center" pb={1}>
-                        <SalaryFlowSVG />
+                        {/* <SalaryFlowSVG/> */}
+                        <Box component="img" src={massive} mt={2} sx={{ borderRadius: "6px", maxWidth: "100%", p: 1 }} />
                         {/* <Box component="img" src={salaryFlow} sx={{ width: '100%' }} p={1} /> */}
                     </Grid>
                 </Paper>

@@ -1,7 +1,12 @@
 import React from "react";
-import { Grid, Paper, Box, Typography, Button} from "@mui/material";
+import { Grid, Paper, Box, Typography, Button, Divider} from "@mui/material";
 
 function FAQ() {
+    const phoneNumber = 62977564;
+    const handleClick = () => {
+        window.location.href = `tel:${phoneNumber}`;
+      };
+
     return (
         <>
             <Grid container pt={4} spacing={2} sx={{ maxWidth: '85%', margin: 'auto' }} pb={2}>
@@ -14,8 +19,8 @@ function FAQ() {
                             </Grid>
                             <Typography variant="h6" sx={{ fontWeight: 'bold' }}>সচরাচর জিজ্ঞাস্য</Typography>
                         </Box>
-                        <Grid container p={3} pt={2} alignItems="center" justifyContent="center">
-                            <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                        <Grid container p={3} pt={2} alignItems="center" justifyContent="flex-start" sx = {{borderBottom: 1, borderColor:'black'}}>
+                            <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
                                 <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
                                     Q: I have salary problem, but I am scared to tell my boss. I am afraid I will get more problems, or get sent back.
                                 </Typography>
@@ -23,7 +28,7 @@ function FAQ() {
                                     আমার বেতনের সমস্যা আছে, কিন্তু আমি আমার বসকে বলতে ভয় পাচ্ছি। আমি ভয় পাচ্ছি যে আমি আরও সমস্যা পাব, বা ফেরত পাঠানো হবে
                                 </Typography>
                             </Box>
-                            <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: 'background.cardOverTime', borderBottom: 1, borderColor:'black'}} mt={2}>
+                            <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: 'background.cardOverTime'}} mt={2}>
                                 <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
                                     A: We understand. This is quite common. Sometimes, workers wait until their work permit is almost finished before making salary claim because it can be safer. You should still talk to us at TWC2 so we can help you.
                                 </Typography>
@@ -32,7 +37,8 @@ function FAQ() {
                                 </Typography>
                             </Box>
                         </Grid>
-                        <Grid container p={3} pt={2} alignItems="center" justifyContent="center">
+                        {/* <Divider variant = "fullWidth" sx = {{border: "4px solid black"}}/> */}
+                        <Grid container p={3} pt={2} alignItems="center" justifyContent="flex-start" sx = {{borderBottom: 1, borderColor:'black'}}>
                             <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                                 <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
                                     Q : I am working in new company, but previous company still have not paid me. What should I do?
@@ -41,7 +47,7 @@ function FAQ() {
                                     আমি নতুন কোম্পানিতে কাজ করছি, কিন্তু আগের কোম্পানি এখনও আমাকে বেতন দেয়নি। আমার কি করা উচিৎ?
                                 </Typography>
                             </Box>
-                            <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: 'background.cardOverTime', borderBottom: 1, borderColor:'black' }} mt={2}>
+                            <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: 'background.cardOverTime',  }} mt={2}>
                                 <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
                                     A: You can file a salary claim against your previous company. You must file a claim within 1 year after you were underpaid for it to be valid.                                
                                 </Typography>
@@ -50,7 +56,7 @@ function FAQ() {
                                 </Typography>
                             </Box>
                         </Grid>
-                        <Grid container p={3} pt={2} alignItems="center" justifyContent="center">
+                        <Grid container p={3} pt={2} alignItems="center" justifyContent="flex-start">
                             <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                                 <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
                                     Q: My boss want to send me back when I have salary problem. What should I do?
@@ -69,7 +75,7 @@ function FAQ() {
                             </Box>
                         </Grid>
                         <Grid container p={3} pt={2} alignItems="center" justifyContent="center">
-                            <Button variant="contained" sx={{backgroundColor:"#61C200", color:'white'}}>
+                            <Button variant="contained" sx={{backgroundColor:"#61C200", color:'white'}} onClick={handleClick}>
                                 Call TWC2
                             </Button>
                         </Grid>
