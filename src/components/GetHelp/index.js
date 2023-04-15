@@ -74,7 +74,7 @@ function GetHelp() {
                     </Grid>
                 </Paper>
             </Grid>
-            <Grid container pt={4} spacing={2} sx={{ maxWidth: '85%', margin: 'auto' }}>
+            <Grid container pt={4} pb = {2} spacing={2} sx={{ maxWidth: '85%', margin: 'auto' }}>
                 <Paper sx={{ width: '100%', height: 'auto', borderRadius: '8px' }} elevation={4} mb={2}>
                     {/* <Grid container alignContent='center' justifyContent='center'>
                         <Box component="img" src={salaryFlow} sx={{ width: '100%' }} p={1} />
