@@ -1,17 +1,18 @@
 import React from "react";
 import { useState } from 'react';
-import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button, List, ListItem, Link } from "@mui/material";
+import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button, List, ListItem, Link, SvgIcon } from "@mui/material";
 // import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+// import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
+// import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import money from '../../images/money.jpg'
 import salaryCalculator from '../../images/salaryCalculator.jpg'
 import salaryInfo from '../../images/salaryInfo.jpg'
 import ratePay from '../../images/ratePay.jpg'
 import deductPay from '../../images/deductPay.jpg'
 import countPay from '../../images/countPay.jpg'
-import {ReactComponent as Polygon } from '../../images/polygon.svg'
-
+import { ReactComponent as Polygon } from '../../images/polygon.svg'
+import { ReactComponent as Polygon2 } from '../../images/polygon2.svg'
+import { ReactComponent as Polygon3 } from '../../images/polygon3.svg'
 
 const steps = [
     {
@@ -113,7 +114,7 @@ function SalaryCard() {
                             </Grid>
                             <Grid item>
                                 <Button size="large" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }}>
-                                    <Polygon/>
+                                    <Polygon />
                                     {/* <PlayArrowIcon color="primary" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }} /> */}
                                 </Button>
                             </Grid>
@@ -158,7 +159,7 @@ function SalaryCard() {
                                     <Typography variant="subtitle1" mb={1}>
                                         {steps[activeStep].descriptionEnglishObject['headerDescription']}
                                     </Typography>
-                                    <Typography variant="subtitle1" sx={{color: steps[activeStep].descriptionEnglishObject['red'] ? '#FF0000': 'black' }}>
+                                    <Typography variant="subtitle1" sx={{ color: steps[activeStep].descriptionEnglishObject['red'] ? '#FF0000' : 'black' }}>
                                         {steps[activeStep].descriptionEnglishObject['descriptionBeginning']}
                                     </Typography>
                                     <Grid container alignContent="center" justifyContent="flex-start">
@@ -167,14 +168,14 @@ function SalaryCard() {
                                                 if (index === steps[activeStep].descriptionEnglishObject['descriptionList'].length - 1 && steps[activeStep].descriptionEnglishObject['link']) {
                                                     return (
                                                         <ListItem key={description} sx={{ display: 'list-item' }}>
-                                                            <Link href = {steps[activeStep].descriptionEnglishObject['link']} target="_blank" sx ={{color:"#0065FD", textDecoration: 'underline'}} >
-                                                            <Typography variant="subtitle1">
-                                                                {description}
-                                                            </Typography>
+                                                            <Link href={steps[activeStep].descriptionEnglishObject['link']} target="_blank" sx={{ color: "#0065FD", textDecoration: 'underline' }} >
+                                                                <Typography variant="subtitle1">
+                                                                    {description}
+                                                                </Typography>
                                                             </Link>
                                                         </ListItem>
                                                     )
-                                                } 
+                                                }
                                                 else {
                                                     return (
                                                         <ListItem key={description} sx={{ display: 'list-item', pb: 0 }}>
@@ -185,40 +186,40 @@ function SalaryCard() {
                                                     )
                                                 }
                                             }
-                                        )}
+                                            )}
                                         </List>
                                     </Grid>
                                     <br /><br />
                                     <Typography variant="subtitle1" mb={1}>
                                         {steps[activeStep].descriptionIndianObject['headerDescription']}
                                     </Typography>
-                                    <Typography variant="subtitle1" sx={{color: steps[activeStep].descriptionEnglishObject['red'] ? '#FF0000': 'black' }}>
+                                    <Typography variant="subtitle1" sx={{ color: steps[activeStep].descriptionEnglishObject['red'] ? '#FF0000' : 'black' }}>
                                         {steps[activeStep].descriptionIndianObject['descriptionBeginning']}
                                     </Typography>
                                     <Grid container alignContent="center" justifyContent="flex-start">
-                                        <List sx={{ listStyleType: 'disc', pl: 3}} disablePadding>
+                                        <List sx={{ listStyleType: 'disc', pl: 3 }} disablePadding>
                                             {steps[activeStep].descriptionIndianObject['descriptionList'].map((description, index) => {
-                                                    if (index === steps[activeStep].descriptionIndianObject['descriptionList'].length - 1 && steps[activeStep].descriptionIndianObject['link']) {
-                                                        return (
-                                                            <ListItem key={description} sx={{ display: 'list-item' }}>
-                                                                <Link href = {steps[activeStep].descriptionIndianObject['link']} target="_blank" sx ={{color:"#0065FD", textDecoration: 'underline'}} >
-                                                                    <Typography variant="subtitle1">
-                                                                        {description}
-                                                                    </Typography>
-                                                                </Link>
-                                                            </ListItem>
-                                                        )
-                                                    } 
-                                                    else {
-                                                        return (
-                                                            <ListItem key={description} sx={{ display: 'list-item', pb: 0 }}>
+                                                if (index === steps[activeStep].descriptionIndianObject['descriptionList'].length - 1 && steps[activeStep].descriptionIndianObject['link']) {
+                                                    return (
+                                                        <ListItem key={description} sx={{ display: 'list-item' }}>
+                                                            <Link href={steps[activeStep].descriptionIndianObject['link']} target="_blank" sx={{ color: "#0065FD", textDecoration: 'underline' }} >
                                                                 <Typography variant="subtitle1">
                                                                     {description}
                                                                 </Typography>
-                                                            </ListItem>
-                                                        )
-                                                    }
+                                                            </Link>
+                                                        </ListItem>
+                                                    )
                                                 }
+                                                else {
+                                                    return (
+                                                        <ListItem key={description} sx={{ display: 'list-item', pb: 0 }}>
+                                                            <Typography variant="subtitle1">
+                                                                {description}
+                                                            </Typography>
+                                                        </ListItem>
+                                                    )
+                                                }
+                                            }
                                             )}
                                         </List>
                                     </Grid>
@@ -230,22 +231,28 @@ function SalaryCard() {
                                 steps={maxSteps}
                                 position="static"
                                 activeStep={activeStep}
-                                sx={{ width: '95%', flexGrow: 1 }}
+                                sx={{ width: '100%', flexGrow: 1 }}
                                 backButton={
                                     <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
                                         {activeStep === 0 ?
-                                            <KeyboardArrowLeft sx={{ display: 'none', color: "black" }} />
+                                            <SvgIcon sx={{ display: 'none' }}>
+                                                <Polygon3 />
+                                            </SvgIcon>
                                             :
-                                            <KeyboardArrowLeft sx={{ color: "black" }} />
+                                            <SvgIcon>
+                                                <Polygon3 />
+                                            </SvgIcon>
                                         }
                                     </Button>
                                 }
                                 nextButton={
                                     <Button size="small" onClick={handleNext} disabled={activeStep === (maxSteps - 1)}>
                                         {activeStep === (maxSteps - 1) ?
-                                            <KeyboardArrowRight sx={{ display: 'none', color: "black" }} />
+                                            <Box sx={{ display: 'none' }}>
+                                                <Polygon2 />
+                                            </Box>
                                             :
-                                            <KeyboardArrowRight sx={{ color: "black" }} />
+                                            <Polygon2 />
                                         }
                                     </Button>
                                 }

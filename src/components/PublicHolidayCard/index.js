@@ -1,12 +1,14 @@
 import React from "react";
 import { useState } from 'react';
-import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button, Link, List, ListItem } from "@mui/material";
+import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button, Link, List, ListItem, SvgIcon } from "@mui/material";
 // import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import nationalDay from '../../images/nationalDay.jpg'
 import phPay from '../../images/phPay.jpg'
-import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import {ReactComponent as Polygon } from '../../images/polygon.svg'
+// import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
+// import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+import { ReactComponent as Polygon } from '../../images/polygon.svg'
+import { ReactComponent as Polygon2 } from '../../images/polygon2.svg'
+import { ReactComponent as Polygon3 } from '../../images/polygon3.svg'
 
 const steps = [
     {
@@ -76,7 +78,7 @@ function PublicHolidayCard() {
                             </Grid>
                             <Grid item>
                                 <Button size="large" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }}>
-                                    <Polygon/>
+                                    <Polygon />
                                     {/* <PlayArrowIcon color="primary" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }} /> */}
                                 </Button>
                             </Grid>
@@ -154,22 +156,28 @@ function PublicHolidayCard() {
                                 steps={maxSteps}
                                 position="static"
                                 activeStep={activeStep}
-                                sx={{ maxWidth: 800, flexGrow: 1 }}
+                                sx={{ width: '100%', flexGrow: 1 }}
                                 backButton={
                                     <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
                                         {activeStep === 0 ?
-                                            <KeyboardArrowLeft sx={{ display: 'none', color: "black" }} />
+                                            <SvgIcon sx={{ display: 'none' }}>
+                                                <Polygon3 />
+                                            </SvgIcon>
                                             :
-                                            <KeyboardArrowLeft sx={{ color: "black" }} />
+                                            <SvgIcon>
+                                                <Polygon3 />
+                                            </SvgIcon>
                                         }
                                     </Button>
                                 }
                                 nextButton={
                                     <Button size="small" onClick={handleNext} disabled={activeStep === (maxSteps - 1)}>
                                         {activeStep === (maxSteps - 1) ?
-                                            <KeyboardArrowRight sx={{ display: 'none', color: "black" }} />
+                                            <Box sx={{ display: 'none' }}>
+                                                <Polygon2 />
+                                            </Box>
                                             :
-                                            <KeyboardArrowRight sx={{ color: "black" }} />
+                                            <Polygon2 />
                                         }
                                     </Button>
                                 }
