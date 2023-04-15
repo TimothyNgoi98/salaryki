@@ -7,6 +7,7 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import shakeHands from '../../images/shakeHands.jpg'
 import noticePerod from '../../images/noticePeriod.jpg'
 import termination from '../../images/termination.jpg'
+import {ReactComponent as Polygon } from '../../images/polygon.svg'
 
 const steps = [
     {
@@ -95,8 +96,9 @@ function NoticePeriodCard() {
                                 :nbsp;
                             </Grid>
                             <Grid item>
-                                <Button size="large">
-                                    <PlayArrowIcon color="primary" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }} />
+                                <Button size="large" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }}>
+                                    <Polygon/>
+                                    {/* <PlayArrowIcon color="primary" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }} /> */}
                                 </Button>
                             </Grid>
                             <Grid item sx={{ color: '#6D4B38' }}>

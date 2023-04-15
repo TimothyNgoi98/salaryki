@@ -6,6 +6,7 @@ import nationalDay from '../../images/nationalDay.jpg'
 import phPay from '../../images/phPay.jpg'
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+import {ReactComponent as Polygon } from '../../images/polygon.svg'
 
 const steps = [
     {
@@ -74,8 +75,9 @@ function PublicHolidayCard() {
                                 :nbsp;
                             </Grid>
                             <Grid item>
-                                <Button size="large">
-                                    <PlayArrowIcon color="primary" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }} />
+                                <Button size="large" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }}>
+                                    <Polygon/>
+                                    {/* <PlayArrowIcon color="primary" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }} /> */}
                                 </Button>
                             </Grid>
                             <Grid item sx={{ color: '#0AA879' }}>

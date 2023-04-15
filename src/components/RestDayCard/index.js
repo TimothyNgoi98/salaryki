@@ -7,6 +7,7 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import vibingSun from '../../images/vibingSun.jpg'
 import bossAsk from '../../images/bossAsk.jpg'
 import youAsk from '../../images/youAsk.jpg'
+import {ReactComponent as Polygon } from '../../images/polygon.svg'
 
 
 const steps = [
@@ -97,8 +98,9 @@ function RestDayCard() {
                                 :nbsp;
                             </Grid>
                             <Grid item>
-                                <Button size="large">
-                                    <PlayArrowIcon color="primary" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }} />
+                                <Button size="large" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }}>
+                                    <Polygon/>
+                                    {/* <PlayArrowIcon color="primary" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }} /> */}
                                 </Button>
                             </Grid>
                             <Grid item sx={{ color: '#DD6610' }}>

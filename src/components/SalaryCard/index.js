@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from 'react';
 import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button, List, ListItem, Link } from "@mui/material";
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+// import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import money from '../../images/money.jpg'
@@ -10,6 +10,8 @@ import salaryInfo from '../../images/salaryInfo.jpg'
 import ratePay from '../../images/ratePay.jpg'
 import deductPay from '../../images/deductPay.jpg'
 import countPay from '../../images/countPay.jpg'
+import {ReactComponent as Polygon } from '../../images/polygon.svg'
+
 
 const steps = [
     {
@@ -110,8 +112,9 @@ function SalaryCard() {
                                 :nbsp;
                             </Grid>
                             <Grid item>
-                                <Button size="large">
-                                    <PlayArrowIcon color="primary" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }} />
+                                <Button size="large" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }}>
+                                    <Polygon/>
+                                    {/* <PlayArrowIcon color="primary" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }} /> */}
                                 </Button>
                             </Grid>
                             <Grid item>
@@ -227,7 +230,7 @@ function SalaryCard() {
                                 steps={maxSteps}
                                 position="static"
                                 activeStep={activeStep}
-                                sx={{ maxWidth: 800, flexGrow: 1 }}
+                                sx={{ width: '95%', flexGrow: 1 }}
                                 backButton={
                                     <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
                                         {activeStep === 0 ?

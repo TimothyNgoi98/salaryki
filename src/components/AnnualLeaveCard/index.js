@@ -7,6 +7,7 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import goHoliday from '../../images/goHoliday.jpg'
 import chartYears from '../../images/chartYears.jpg'
 import compensationUnpaid from '../../images/compensationUnpaid.jpg'
+import {ReactComponent as Polygon } from '../../images/polygon.svg'
 
 const steps = [
     {
@@ -68,8 +69,9 @@ function AnnualLeaveCard() {
                                 :nbsp;
                             </Grid>
                             <Grid item>
-                                <Button size="large">
-                                    <PlayArrowIcon color="primary" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }} />
+                                <Button size="large" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }}>
+                                    <Polygon/>
+                                    {/* <PlayArrowIcon color="primary" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }} /> */}
                                 </Button>
                             </Grid>
                             <Grid item sx={{ color: '#8A23AD' }}>

@@ -9,6 +9,7 @@ import toBar from '../../images/ToBar.jpg'
 import calculateOT from '../../images/calculateOT.jpg'
 import rateOT from '../../images/rateOT.jpg'
 import rateGuy from '../../images/rateGuy.jpg'
+import {ReactComponent as Polygon } from '../../images/polygon.svg'
 
 const steps = [
     {
@@ -108,8 +109,9 @@ function OverTimeCard() {
                                 :nbsp;
                             </Grid>
                             <Grid item>
-                                <Button size="large">
-                                    <PlayArrowIcon color="primary" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }} />
+                                <Button size="large" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }}>
+                                    <Polygon/>
+                                    {/* <PlayArrowIcon color="primary" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }} /> */}
                                 </Button>
                             </Grid>
                             <Grid item sx={{ color: '#3C7DE0' }}>
