@@ -8,7 +8,7 @@ import NoticePeriodCard from "../NoticePeriodCard";
 
 function EmploymentRightsSection() {
     return (
-        <Grid container pt={4} justifyContent='center' sx={{ maxWidth: '85%', margin: 'auto' }}>
+        <Grid container pt={4} pb = {3} justifyContent='center' sx={{ maxWidth: '85%', margin: 'auto' }}>
             <Paper sx={{ width: '100%', height: 'auto', borderRadius: '8px' }} elevation={4} mb = {2}>
                 <Grid container alignItems='center' pr={2} pl = {2} pt ={1}>
                     <Box sx={{ flexDirection: 'column' }}>

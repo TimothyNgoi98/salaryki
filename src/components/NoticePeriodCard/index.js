@@ -80,7 +80,7 @@ function NoticePeriodCard() {
 
 
     return (
-        <Grid container pt={2} pb={1}>
+        <Grid container pt={2} pb={2}>
             <Card sx={{ color: 'primary.main', backgroundColor: 'background.cardNoticePeriod', width: '95%', margin: 'auto', borderRadius: '12px' }} expand={expanded} onClick={handleExpandClick}>
                 <Grid container direction='row' justifyContent="space-between">
                     <Grid item xs={9}>
