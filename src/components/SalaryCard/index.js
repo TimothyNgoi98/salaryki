@@ -95,7 +95,7 @@ function SalaryCard() {
 
 
     return (
-        <Grid container pt={2} pb={1}>
+        <Grid container pt={2} pb={2}>
             <Card sx={{ backgroundColor: 'background.card', width: '95%', margin: 'auto', borderRadius: '12px' }} expand={expanded} onClick={handleExpandClick}>
                 <Grid container direction='row' justifyContent="space-between">
                     <Grid item xs={9}>
