@@ -1,15 +1,15 @@
 import React from "react";
 import { useState } from 'react';
-import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button, Link, SvgIcon  } from "@mui/material";
+import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button, Link, SvgIcon } from "@mui/material";
 // import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 // import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 // import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import goHoliday from '../../images/goHoliday.jpg'
 import chartYears from '../../images/chartYears.jpg'
 import compensationUnpaid from '../../images/compensationUnpaid.jpg'
-import {ReactComponent as Polygon } from '../../images/polygon.svg'
-import {ReactComponent as Polygon2 } from '../../images/polygon2.svg'
-import {ReactComponent as Polygon3 } from '../../images/polygon3.svg'
+import { ReactComponent as Polygon } from '../../images/polygon.svg'
+import { ReactComponent as Polygon2 } from '../../images/polygon2.svg'
+import { ReactComponent as Polygon3 } from '../../images/polygon3.svg'
 
 const steps = [
     {
@@ -72,7 +72,7 @@ function AnnualLeaveCard() {
                             </Grid>
                             <Grid item>
                                 <Button size="large" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }}>
-                                    <Polygon/>
+                                    <Polygon />
                                     {/* <PlayArrowIcon color="primary" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }} /> */}
                                 </Button>
                             </Grid>
@@ -100,12 +100,12 @@ function AnnualLeaveCard() {
                             <Grid pt={1} p={3}>
                                 {steps[activeStep].link ?
                                     <Link href={steps[activeStep].link} target="_blank" sx={{ color: "#0065FD", textDecoration: 'underline', mb: 1 }}>
-                                        <Typography variant="subtitle1" sx={{mb:2}}>
+                                        <Typography variant="subtitle1" sx={{ mb: 2 }}>
                                             {steps[activeStep].descriptionEnglish}
                                         </Typography>
                                     </Link>
                                     :
-                                    <Typography variant="subtitle1"  sx={{mb:2}}>
+                                    <Typography variant="subtitle1" sx={{ mb: 2 }}>
                                         {steps[activeStep].descriptionEnglish}
                                     </Typography>
                                 }
@@ -113,39 +113,39 @@ function AnnualLeaveCard() {
                                     {steps[activeStep].descriptionIndian}
                                 </Typography>
                             </Grid>
-                            <MobileStepper
-                                variant="progress"
-                                steps={maxSteps}
-                                position="static"
-                                activeStep={activeStep}
-                                sx={{ width: '100%', flexGrow: 1 }}
-                                backButton={
-                                    <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-                                        {activeStep === 0 ?
-                                            <SvgIcon sx={{ display: 'none'}}>
-                                                <Polygon3 />
-                                            </SvgIcon>
-                                            :
-                                            <SvgIcon>
-                                                <Polygon3/>    
-                                            </SvgIcon>
-                                        }
-                                    </Button>
-                                }
-                                nextButton={
-                                    <Button size="small" onClick={handleNext} disabled={activeStep === (maxSteps - 1)}>
-                                        {activeStep === (maxSteps - 1) ?
-                                            <Box sx={{ display: 'none'}}>
-                                                <Polygon2/>
-                                            </Box>
-                                            :
-                                            <Polygon2/>
-                                        }
-                                    </Button>
-                                }
-                            />
                         </Grid>
                     </Box>
+                    <MobileStepper
+                        variant="progress"
+                        steps={maxSteps}
+                        position="static"
+                        activeStep={activeStep}
+                        sx={{ width: '100%', flexGrow: 1, pt: 2, pb: 2 }}
+                        backButton={
+                            <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+                                {activeStep === 0 ?
+                                    <SvgIcon sx={{ display: 'none' }}>
+                                        <Polygon3 />
+                                    </SvgIcon>
+                                    :
+                                    <SvgIcon>
+                                        <Polygon3 />
+                                    </SvgIcon>
+                                }
+                            </Button>
+                        }
+                        nextButton={
+                            <Button size="small" onClick={handleNext} disabled={activeStep === (maxSteps - 1)}>
+                                {activeStep === (maxSteps - 1) ?
+                                    <Box sx={{ display: 'none' }}>
+                                        <Polygon2 />
+                                    </Box>
+                                    :
+                                    <Polygon2 />
+                                }
+                            </Button>
+                        }
+                    />
                 </Grid>
             </Collapse>
         </Grid>

@@ -7,7 +7,7 @@ import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button, Link, Lis
 import vibingSun from '../../images/vibingSun.jpg'
 import bossAsk from '../../images/bossAsk.jpg'
 import youAsk from '../../images/youAsk.jpg'
-import {ReactComponent as Polygon } from '../../images/polygon.svg'
+import { ReactComponent as Polygon } from '../../images/polygon.svg'
 import { ReactComponent as Polygon2 } from '../../images/polygon2.svg'
 import { ReactComponent as Polygon3 } from '../../images/polygon3.svg'
 
@@ -100,7 +100,7 @@ function RestDayCard() {
                             </Grid>
                             <Grid item>
                                 <Button size="large" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }}>
-                                    <Polygon/>
+                                    <Polygon />
                                     {/* <PlayArrowIcon color="primary" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }} /> */}
                                 </Button>
                             </Grid>
@@ -124,11 +124,11 @@ function RestDayCard() {
                             <Typography variant="h6" fontWeight="bold">
                                 {steps[activeStep].labelIndian}
                             </Typography>
-                            <Box component="img" src={steps[activeStep].image} mt={2} sx={{ borderRadius: "6px", maxWidth:"100%", p: 1 }} />
+                            <Box component="img" src={steps[activeStep].image} mt={2} sx={{ borderRadius: "6px", maxWidth: "100%", p: 1 }} />
                             <Grid pt={1} p={3}>
-                            {steps[activeStep].link ?
-                                    <Link href = {steps[activeStep].link} target="_blank" sx ={{color:"#0065FD", textDecoration: 'underline'}}>
-                                        <Typography variant = "subtitle1">
+                                {steps[activeStep].link ?
+                                    <Link href={steps[activeStep].link} target="_blank" sx={{ color: "#0065FD", textDecoration: 'underline' }}>
+                                        <Typography variant="subtitle1">
                                             {steps[activeStep].descriptionEnglishObject['headerDescription']}
                                         </Typography>
                                     </Link>
@@ -137,18 +137,18 @@ function RestDayCard() {
                                         {steps[activeStep].descriptionEnglishObject['headerDescription']}
                                     </Typography>
                                 }
-                                <List sx={{ listStyleType: 'disc', pl: 3, mb:3}} disablePadding>
+                                <List sx={{ listStyleType: 'disc', pl: 3, mb: 3 }} disablePadding>
                                     {steps[activeStep].descriptionEnglishObject['listComponent'].length !== 0 ?
                                         steps[activeStep].descriptionEnglishObject['listComponent'].map(description => {
-                                        return (
-                                            <ListItem key={description} sx={{ display: 'list-item', pb: 0}}>
-                                                <Typography variant="subtitle1">
-                                                    {description}
-                                                </Typography>
-                                            </ListItem>
-                                        )
-                                    }) : <>
-                                    </>}
+                                            return (
+                                                <ListItem key={description} sx={{ display: 'list-item', pb: 0 }}>
+                                                    <Typography variant="subtitle1">
+                                                        {description}
+                                                    </Typography>
+                                                </ListItem>
+                                            )
+                                        }) : <>
+                                        </>}
                                 </List>
                                 <Typography variant="subtitle1">
                                     {steps[activeStep].descriptionIndianObject['headerDescription']}
@@ -168,7 +168,7 @@ function RestDayCard() {
                             {steps[activeStep].linkEnglish ?
                                 <>
                                     <Link href="https://www.mom.gov.sg/employment-practices/salary/calculate-pay-for-work-on-rest-day" target="_blank" variant="text" sx={{ color: "#0065FD", textDecoration: 'underline', pb: 0 }}>
-                                        <Box sx={{ flexDirection: 'column', borderTop: 1, borderColor:'black'}} mb={2} pt={2}>
+                                        <Box sx={{ flexDirection: 'column', borderTop: 1, borderColor: 'black' }} mb={2} pt={2}>
                                             <Typography variant="subtitle1">{steps[activeStep].linkEnglish}</Typography>
                                             <Typography variant="subtitle1">{steps[activeStep].linkIndian}</Typography>
                                         </Box>
@@ -181,39 +181,39 @@ function RestDayCard() {
                                 :
                                 <></>
                             }
-                            <MobileStepper
-                                variant="progress"
-                                steps={maxSteps}
-                                position="static"
-                                activeStep={activeStep}
-                                sx={{ width: '100%', flexGrow: 1 }}
-                                backButton={
-                                    <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-                                        {activeStep === 0 ?
-                                            <SvgIcon sx={{ display: 'none' }}>
-                                                <Polygon3 />
-                                            </SvgIcon>
-                                            :
-                                            <SvgIcon>
-                                                <Polygon3 />
-                                            </SvgIcon>
-                                        }
-                                    </Button>
-                                }
-                                nextButton={
-                                    <Button size="small" onClick={handleNext} disabled={activeStep === (maxSteps - 1)}>
-                                        {activeStep === (maxSteps - 1) ?
-                                            <Box sx={{ display: 'none' }}>
-                                                <Polygon2 />
-                                            </Box>
-                                            :
-                                            <Polygon2 />
-                                        }
-                                    </Button>
-                                }
-                            />
                         </Grid>
                     </Box>
+                    <MobileStepper
+                        variant="progress"
+                        steps={maxSteps}
+                        position="static"
+                        activeStep={activeStep}
+                        sx={{ width: '100%', flexGrow: 1, pt: 2, pb: 2 }}
+                        backButton={
+                            <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+                                {activeStep === 0 ?
+                                    <SvgIcon sx={{ display: 'none' }}>
+                                        <Polygon3 />
+                                    </SvgIcon>
+                                    :
+                                    <SvgIcon>
+                                        <Polygon3 />
+                                    </SvgIcon>
+                                }
+                            </Button>
+                        }
+                        nextButton={
+                            <Button size="small" onClick={handleNext} disabled={activeStep === (maxSteps - 1)}>
+                                {activeStep === (maxSteps - 1) ?
+                                    <Box sx={{ display: 'none' }}>
+                                        <Polygon2 />
+                                    </Box>
+                                    :
+                                    <Polygon2 />
+                                }
+                            </Button>
+                        }
+                    />
                 </Grid>
             </Collapse>
         </Grid>

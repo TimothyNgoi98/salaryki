@@ -7,9 +7,9 @@ import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button, Link, Lis
 import shakeHands from '../../images/shakeHands.jpg'
 import noticePerod from '../../images/noticePeriod.jpg'
 import termination from '../../images/termination.jpg'
-import {ReactComponent as Polygon } from '../../images/polygon.svg'
-import {ReactComponent as Polygon2 } from '../../images/polygon2.svg'
-import {ReactComponent as Polygon3 } from '../../images/polygon3.svg'
+import { ReactComponent as Polygon } from '../../images/polygon.svg'
+import { ReactComponent as Polygon2 } from '../../images/polygon2.svg'
+import { ReactComponent as Polygon3 } from '../../images/polygon3.svg'
 
 const steps = [
     {
@@ -99,7 +99,7 @@ function NoticePeriodCard() {
                             </Grid>
                             <Grid item>
                                 <Button size="large" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }}>
-                                    <Polygon/>
+                                    <Polygon />
                                     {/* <PlayArrowIcon color="primary" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }} /> */}
                                 </Button>
                             </Grid>
@@ -123,7 +123,7 @@ function NoticePeriodCard() {
                             <Typography variant="h6" fontWeight="bold">
                                 {steps[activeStep].labelIndian}
                             </Typography>
-                            <Box component="img" src={steps[activeStep].image} mt={2} sx={{ borderRadius: "6px", maxWidth:"100%", p: 1  }} />
+                            <Box component="img" src={steps[activeStep].image} mt={2} sx={{ borderRadius: "6px", maxWidth: "100%", p: 1 }} />
                             <Grid pt={1} p={3}>
                                 {steps[activeStep].link ?
                                     <Link href={steps[activeStep].link} target="_blank" sx={{ color: "#0065FD", textDecoration: 'underline' }}>
@@ -136,12 +136,12 @@ function NoticePeriodCard() {
                                         {steps[activeStep].descriptionEnglishObject['headerDescription']}
                                     </Typography>
                                 }
-                                {steps[activeStep].descriptionEnglishObject['headerDescription2'] ? 
-                                <>
-                                    <br/>
-                                    <Typography variant="subtitle1" mb={1}>
-                                        {steps[activeStep].descriptionEnglishObject['headerDescription2']}
-                                    </Typography>
+                                {steps[activeStep].descriptionEnglishObject['headerDescription2'] ?
+                                    <>
+                                        <br />
+                                        <Typography variant="subtitle1" mb={1}>
+                                            {steps[activeStep].descriptionEnglishObject['headerDescription2']}
+                                        </Typography>
                                     </>
                                     :
                                     null
@@ -149,81 +149,81 @@ function NoticePeriodCard() {
                                 {/* <Typography variant="subtitle1">
                                     {steps[activeStep].descriptionEnglish}
                                 </Typography> */}
-                                <List sx={{ listStyleType: 'disc', pl: 3, mb:3}} disablePadding>
+                                <List sx={{ listStyleType: 'disc', pl: 3, mb: 3 }} disablePadding>
                                     {steps[activeStep].descriptionEnglishObject['listComponent'].length !== 0 ?
                                         steps[activeStep].descriptionEnglishObject['listComponent'].map(description => {
-                                        return (
-                                            <ListItem key={description} sx={{ display: 'list-item', pb: 0}}>
-                                                <Link href = {steps[activeStep].linkList} target="_blank" sx ={{color:"#0065FD", textDecoration: 'underline'}}>
-                                                    <Typography variant="subtitle1">
-                                                        {description}
-                                                    </Typography>
-                                                </Link>
-                                            </ListItem>
-                                        )
-                                    }) : <>
-                                    </>}
+                                            return (
+                                                <ListItem key={description} sx={{ display: 'list-item', pb: 0 }}>
+                                                    <Link href={steps[activeStep].linkList} target="_blank" sx={{ color: "#0065FD", textDecoration: 'underline' }}>
+                                                        <Typography variant="subtitle1">
+                                                            {description}
+                                                        </Typography>
+                                                    </Link>
+                                                </ListItem>
+                                            )
+                                        }) : <>
+                                        </>}
                                 </List>
                                 <Typography variant="subtitle1">
                                     {steps[activeStep].descriptionIndianObject['headerDescription']}
                                 </Typography>
-                                {steps[activeStep].descriptionIndianObject['headerDescription2'] ? 
-                                <>
-                                    <br/>
-                                    <Typography variant="subtitle1" mb={1}>
-                                        {steps[activeStep].descriptionIndianObject['headerDescription2']}
-                                    </Typography>
+                                {steps[activeStep].descriptionIndianObject['headerDescription2'] ?
+                                    <>
+                                        <br />
+                                        <Typography variant="subtitle1" mb={1}>
+                                            {steps[activeStep].descriptionIndianObject['headerDescription2']}
+                                        </Typography>
                                     </>
                                     :
                                     null
                                 }
-                                <List sx={{ listStyleType: 'disc', pl: 3, mb:3}} disablePadding>
+                                <List sx={{ listStyleType: 'disc', pl: 3, mb: 3 }} disablePadding>
                                     {steps[activeStep].descriptionIndianObject['listComponent'].length !== 0 ?
                                         steps[activeStep].descriptionIndianObject['listComponent'].map(description => {
-                                        return (
-                                            <ListItem key={description} sx={{ display: 'list-item', pb: 0}}>
-                                                <Typography variant="subtitle1">
-                                                    {description}
-                                                </Typography>
-                                            </ListItem>
-                                        )
-                                    }) : <>
-                                    </>}
+                                            return (
+                                                <ListItem key={description} sx={{ display: 'list-item', pb: 0 }}>
+                                                    <Typography variant="subtitle1">
+                                                        {description}
+                                                    </Typography>
+                                                </ListItem>
+                                            )
+                                        }) : <>
+                                        </>}
                                 </List>
                             </Grid>
-                            <MobileStepper
-                                variant="progress"
-                                steps={maxSteps}
-                                position="static"
-                                activeStep={activeStep}
-                                sx={{ width: '100%', flexGrow: 1 }}
-                                backButton={
-                                    <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-                                        {activeStep === 0 ?
-                                            <SvgIcon sx={{ display: 'none'}}>
-                                                <Polygon3 />
-                                            </SvgIcon>
-                                            :
-                                            <SvgIcon>
-                                                <Polygon3/>    
-                                            </SvgIcon>
-                                        }
-                                    </Button>
-                                }
-                                nextButton={
-                                    <Button size="small" onClick={handleNext} disabled={activeStep === (maxSteps - 1)}>
-                                        {activeStep === (maxSteps - 1) ?
-                                            <Box sx={{ display: 'none'}}>
-                                                <Polygon2/>
-                                            </Box>
-                                            :
-                                            <Polygon2/>
-                                        }
-                                    </Button>
-                                }
-                            />
                         </Grid>
                     </Box>
+                    <MobileStepper
+                        variant="progress"
+                        steps={maxSteps}
+                        position="static"
+                        activeStep={activeStep}
+                        sx={{ width: '100%', flexGrow: 1, pt: 2, pb: 2 }}
+                        backButton={
+                            <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+                                {activeStep === 0 ?
+                                    <SvgIcon sx={{ display: 'none' }}>
+                                        <Polygon3 />
+                                    </SvgIcon>
+                                    :
+                                    <SvgIcon>
+                                        <Polygon3 />
+                                    </SvgIcon>
+                                }
+                            </Button>
+                        }
+                        nextButton={
+                            <Button size="small" onClick={handleNext} disabled={activeStep === (maxSteps - 1)}>
+                                {activeStep === (maxSteps - 1) ?
+                                    <Box sx={{ display: 'none' }}>
+                                        <Polygon2 />
+                                    </Box>
+                                    :
+                                    <Polygon2 />
+                                }
+                            </Button>
+                        }
+                    />
                 </Grid>
             </Collapse>
         </Grid>

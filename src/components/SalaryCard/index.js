@@ -225,40 +225,39 @@ function SalaryCard() {
                                     </Grid>
                                 </Grid>
                             }
-
-                            <MobileStepper
-                                variant="progress"
-                                steps={maxSteps}
-                                position="static"
-                                activeStep={activeStep}
-                                sx={{ width: '100%', flexGrow: 1 }}
-                                backButton={
-                                    <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-                                        {activeStep === 0 ?
-                                            <SvgIcon sx={{ display: 'none' }}>
-                                                <Polygon3 />
-                                            </SvgIcon>
-                                            :
-                                            <SvgIcon>
-                                                <Polygon3 />
-                                            </SvgIcon>
-                                        }
-                                    </Button>
-                                }
-                                nextButton={
-                                    <Button size="small" onClick={handleNext} disabled={activeStep === (maxSteps - 1)}>
-                                        {activeStep === (maxSteps - 1) ?
-                                            <Box sx={{ display: 'none' }}>
-                                                <Polygon2 />
-                                            </Box>
-                                            :
-                                            <Polygon2 />
-                                        }
-                                    </Button>
-                                }
-                            />
                         </Grid>
                     </Box>
+                    <MobileStepper
+                        variant="progress"
+                        steps={maxSteps}
+                        position="static"
+                        activeStep={activeStep}
+                        sx={{ width: '100%', flexGrow: 1, pt: 2, pb: 2 }}
+                        backButton={
+                            <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+                                {activeStep === 0 ?
+                                    <SvgIcon sx={{ display: 'none' }}>
+                                        <Polygon3 />
+                                    </SvgIcon>
+                                    :
+                                    <SvgIcon>
+                                        <Polygon3 />
+                                    </SvgIcon>
+                                }
+                            </Button>
+                        }
+                        nextButton={
+                            <Button size="small" onClick={handleNext} disabled={activeStep === (maxSteps - 1)}>
+                                {activeStep === (maxSteps - 1) ?
+                                    <Box sx={{ display: 'none' }}>
+                                        <Polygon2 />
+                                    </Box>
+                                    :
+                                    <Polygon2 />
+                                }
+                            </Button>
+                        }
+                    />
                 </Grid>
             </Collapse>
         </Grid>
