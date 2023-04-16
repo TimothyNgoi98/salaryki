@@ -12,8 +12,8 @@ function EmploymentRightsSection() {
             <Paper sx={{ width: '100%', height: 'auto', borderRadius: '8px' }} elevation={4} mb = {2}>
                 <Grid container alignItems='center' pr={2} pl = {2} pt ={1}>
                     <Box sx={{ flexDirection: 'column' }}>
-                        <Typography variant="h6" sx={{fontWeight:"bold"}}>Employment rights</Typography>
-                        <Typography variant="h6" sx={{fontWeight:"bold"}}>কর্মসংস্থান অধিকার</Typography>
+                        <Typography variant="h5" sx={{fontWeight:"bold"}}>Employment rights</Typography>
+                        <Typography variant="h5" sx={{fontWeight:"bold"}}>কর্মসংস্থান অধিকার</Typography>
                     </Box>
                 </Grid>
                 <OverTimeCard/>
