@@ -127,9 +127,9 @@ function OverTimeCard() {
                                 {steps[activeStep].labelIndian}
                             </Typography>
                             <Box component="img" src={steps[activeStep].image} mt={2} sx={{ borderRadius: "6px", maxWidth: "100%", p: 1 }} />
-                            <Grid pt={1} p={3}>
+                            <Grid pt={1} p={3} pb = {1} container justifyContent="center" alignItems="center" direction="column"> 
                                 {steps[activeStep].link ?
-                                    <Link href={steps[activeStep].link} target="_blank" sx={{ color: "#0065FD", textDecoration: 'underline' }}>
+                                    <Link href={steps[activeStep].link} target="_blank" sx={{ color: "#0065FD", textDecoration: 'underline', pb: 1 }}>
                                         <Typography variant="subtitle1">
                                             {steps[activeStep].descriptionEnglishObject['headerDescription']}
                                         </Typography>
@@ -167,67 +167,26 @@ function OverTimeCard() {
                                         )
                                     })}
                                 </List>
-                                {/* {steps[activeStep].link ?
-                                    <Link href = {steps[activeStep].link} target="_blank" sx ={{color:"#0065FD", textDecoration: 'underline'}}>
-                                        {steps[activeStep].descriptionIndianObject['headerDescription']}
-                                    </Link>
-                                    :
-                                    <Typography variant="subtitle1">
-                                        {steps[activeStep].descriptionIndianObject['headerDescription']}
-                                    </Typography>
-                                }
-                                <List sx={{ listStyleType: 'disc', pl: 3 }} disablePadding>
-                                    {steps[activeStep].descriptionIndianObject['listComponent'].map(description => {
-                                        return (
-                                            <ListItem key={description} sx={{ display: 'list-item' }}>
-                                                <Typography variant="subtitle1">
-                                                    {description}
-                                                </Typography>
-                                            </ListItem>
-                                        )
-                                    })}
-                                </List> */}
                             </Grid>
-                            {/* <Grid pt={1} p={3}>
-                                {steps[activeStep].link ?
-                                    <Link href = {steps[activeStep].link} target="_blank" sx ={{color:"#0065FD", textDecoration: 'underline'}}>
-                                        {steps[activeStep].descriptionIndianObject['headerDescription']}
-                                    </Link>
+                            <Grid pt={0} p={3} container justifyContent="center" alignItems="center" direction="column">
+                                {steps[activeStep].image2 ?
+                                    <Box component="img" src={steps[activeStep].image2} mb={1} sx={{ borderRadius: "6px", maxWidth: "100%", p: 1 }} />
                                     :
-                                    <Typography variant="subtitle1">
-                                        {steps[activeStep].descriptionIndianObject['headerDescription']}
-                                    </Typography>
+                                    <Box></Box>
                                 }
-                                <List sx={{ listStyleType: 'disc', pl: 3 }} disablePadding>
-                                    {steps[activeStep].descriptionIndianObject['listComponent'].map(description => {
-                                        return (
-                                            <ListItem key={description} sx={{ display: 'list-item' }}>
-                                                <Typography variant="subtitle1">
-                                                    {description}
-                                                </Typography>
-                                            </ListItem>
-                                        )
-                                    })}
-                                </List>
-                            </Grid> */}
-                            {steps[activeStep].image2 ?
-                                <Box component="img" src={steps[activeStep].image2} mt={2} mb={1} sx={{ borderRadius: "6px" }} />
-                                :
-                                <Box></Box>
-                            }
-                            {steps[activeStep].descriptionEnglish2 ?
-                                <>
-                                    <Typography variant="subtitle1">
-                                        {steps[activeStep].descriptionEnglish2}
-                                    </Typography>
-                                    <br />
-                                    <Typography variant="subtitle1">
-                                        {steps[activeStep].descriptionIndian2}
-                                    </Typography>
-                                </>
-                                :
-                                <></>
-                            }
+                                {steps[activeStep].descriptionEnglish2 ?
+                                    <Grid container justifyContent="center" alignItems="center" direction="column">
+                                        <Typography variant="subtitle1" pb={1}>
+                                            {steps[activeStep].descriptionEnglish2}
+                                        </Typography>
+                                        <Typography variant="subtitle1">
+                                            {steps[activeStep].descriptionIndian2}
+                                        </Typography>
+                                    </Grid>
+                                    :
+                                    <></>
+                                }
+                            </Grid>
                             {steps[activeStep].linkEnglish ?
                                 <>
                                     <Button href="https://www.mom.gov.sg/employment-practices/salary/calculate-overtime-pay" target="_blank" variant="text" sx={{ color: "#0065FD", textDecoration: 'underline' }}>
