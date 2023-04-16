@@ -43,7 +43,7 @@ function GetHelp() {
                                 </Box>
                             </Grid>
                             <Grid container item xs={4} alignItems="center" justifyContent="flex-end">
-                                <Box component="img" src={locationUnknown} sx={{ maxWidth: '32px', maxHeight: "46px" }} mr={2} />
+                                <Box component="img" src={locationUnknown} sx={{ maxWidth: '32px', maxHeight: "46px" }} mr={3} />
                             </Grid>
                             <Grid item xs={8} mb = {4}>
                             <Box sx={{ flexDirection: 'column' }}>
