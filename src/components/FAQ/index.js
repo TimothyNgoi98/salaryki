@@ -6,7 +6,6 @@ function FAQ() {
     const handleClick = () => {
         window.location.href = `tel:${phoneNumber}`;
       };
-    //   sx = {{borderBottom: 1, borderColor:'black'}}
     return (
         <>
             <Grid container pt={4} spacing={2} sx={{ maxWidth: '85%', margin: 'auto' }} pb={2}>
