@@ -47,14 +47,14 @@ theme.typography.h5 = {
 
 
 theme.typography.subtitle1 = {
-    fontSize: '22px',
+    fontSize: '24px',
     fontWeight: '500',
 
     [theme.breakpoints.between('xs', 'sm')]: {
-        fontSize: '12px',
+        fontSize: '14px',
     },
     [theme.breakpoints.between('sm', 'md')]: {
-        fontSize: '15px',
+        fontSize: '17px',
     }
 }
 
