@@ -1,9 +1,6 @@
 import React from "react";
 import { useState } from 'react';
 import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button, List, ListItem, Link, SvgIcon } from "@mui/material";
-// import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-// import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-// import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import money from '../../images/money.jpg'
 import salaryCalculator from '../../images/salaryCalculator.jpg'
 import salaryInfo from '../../images/salaryInfo.jpg'
@@ -55,8 +52,6 @@ const steps = [
             red: true,
             link: "https://www.mom.gov.sg/employment-practices/salary/salary-deductions#:~:text=Your%20employer%20is%20not%20allowed%20to%20make%20deductions%20to%20your%20salaries%20under%20any%20circumstances%2C%20for%20the%20following%20purposes%20as%20specified%20in%20the%20Employment%20of%20Foreign%20Manpower%20Act%3A"
         }
-        // descriptionEnglish: "Your boss cannot cut your IPA salary without your written permission! Your boss is not allowed to cut salary for these cases: Work pass renewal Medical insurance/fees Repatriation (send home) Others",
-        // descriptionIndian: "আপনার বস আপনার লিখিত অনুমতি ছাড়া আপনার IPA বেতন কাটতে পারবেন না! আপনার বসকে এই ক্ষেত্রে বেতন কাটার অনুমতি নেই: কাজের পাস নবায়ন চিকিৎসা বীমা/ফি প্রত্যাবাসন (বাসায় পাঠান) অন্যান্য"
     },
     {
         labelEnglish: "Count your salary!",
@@ -99,7 +94,7 @@ function SalaryCard() {
 
     return (
         <Grid container pt={2} pb={2}>
-            <Card sx={{ backgroundColor: 'background.card', width: '95%', margin: 'auto', borderRadius: '12px' }} expand={expanded} onClick={handleExpandClick}>
+            <Card sx={{ backgroundColor: 'background.card', width: '95%', margin: 'auto', borderRadius: '12px' }} onClick={handleExpandClick}>
                 <Grid container direction='row' justifyContent="space-between">
                     <Grid item xs={9}>
                         <Box sx={{ flexDirection: 'column' }} ml={1} mb={1} p={1} pt={2}>
@@ -108,18 +103,11 @@ function SalaryCard() {
                         </Box>
                     </Grid>
                     <Grid item xs={3} align='center'>
-                        <Grid container direction="column" justifyContent="center" alignItems="center" mt={1}>
-                            <Grid item>
-                                :nbsp;
-                            </Grid>
-                            <Grid item>
+                        <Grid container direction="column" justifyContent="center" alignItems="center" sx={{ height: '100%' }}>
+                            <Grid item sx={{ marginTop: 'auto', marginBottom: 'auto' }}>
                                 <Button size="large" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }}>
                                     <Polygon />
-                                    {/* <PlayArrowIcon color="primary" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }} /> */}
                                 </Button>
-                            </Grid>
-                            <Grid item>
-                                :nbsp;
                             </Grid>
                         </Grid>
                     </Grid>
@@ -138,9 +126,9 @@ function SalaryCard() {
                             <Typography variant="h6" fontWeight="bold">
                                 {steps[activeStep].labelIndian}
                             </Typography>
-                            <Box component="img" src={steps[activeStep].image} mt={2} sx={{ borderRadius: "6px" }} />
+                            <Box component="img" src={steps[activeStep].image} mt={2} sx={{ borderRadius: "6px", maxWidth: "100%", pt: 0, p:1}} />
                             {steps[activeStep].image2 ?
-                                <Box component="img" src={steps[activeStep].image2} mt={2} sx={{ borderRadius: "6px" }} />
+                                <Box component="img" src={steps[activeStep].image2} mt={2} sx={{ borderRadius: "6px", maxWidth: "100%", p: 1 }} />
                                 :
                                 <Box></Box>
                             }

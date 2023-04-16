@@ -25,7 +25,7 @@ const theme = createTheme({
 
 theme.typography.h4 = {
     fontSize: '34px',
-    fontWeight: 'normal',
+    fontWeight: '500',
     [theme.breakpoints.between('xs', 'sm')]: {
         fontSize: '20px',
     },
@@ -35,20 +35,20 @@ theme.typography.h4 = {
 }
 
 theme.typography.subtitle1 = {
-    fontSize: '20px',
+    fontSize: '22px',
     fontWeight: '500',
 
     [theme.breakpoints.between('xs', 'sm')]: {
-        fontSize: '11px',
+        fontSize: '12px',
     },
     [theme.breakpoints.between('sm', 'md')]: {
-        fontSize: '14px',
+        fontSize: '15px',
     }
 }
 
 theme.typography.h6 = {
     fontSize: '22px',
-    fontWeight: 'normal',
+    fontWeight: '500',
     [theme.breakpoints.between('xs', 'sm')]: {
         fontSize: '14px',
     },

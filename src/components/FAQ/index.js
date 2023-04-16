@@ -6,7 +6,7 @@ function FAQ() {
     const handleClick = () => {
         window.location.href = `tel:${phoneNumber}`;
       };
-
+    //   sx = {{borderBottom: 1, borderColor:'black'}}
     return (
         <>
             <Grid container pt={4} spacing={2} sx={{ maxWidth: '85%', margin: 'auto' }} pb={2}>
@@ -19,7 +19,7 @@ function FAQ() {
                             </Grid>
                             <Typography variant="h6" sx={{ fontWeight: 'bold' }}>সচরাচর জিজ্ঞাস্য</Typography>
                         </Box>
-                        <Grid container p={3} pt={2} alignItems="center" justifyContent="flex-start" sx = {{borderBottom: 1, borderColor:'black'}}>
+                        <Grid container p={3} pt={2} alignItems="center" justifyContent="flex-start">
                             <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
                                 <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
                                     Q: I have salary problem, but I am scared to tell my boss. I am afraid I will get more problems, or get sent back.
@@ -37,8 +37,10 @@ function FAQ() {
                                 </Typography>
                             </Box>
                         </Grid>
-                        {/* <Divider variant = "fullWidth" sx = {{border: "4px solid black"}}/> */}
-                        <Grid container p={3} pt={2} alignItems="center" justifyContent="flex-start" sx = {{borderBottom: 1, borderColor:'black'}}>
+                        <Grid container alignItems="center" justifyContent="center" mb={1}>
+                            <Divider flexItem sx ={{width: "90%", borderBottomWidth: 2, borderColor: "black"}}/>
+                        </Grid>
+                        <Grid container p={3} pt={2} alignItems="center" justifyContent="flex-start">
                             <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                                 <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
                                     Q : I am working in new company, but previous company still have not paid me. What should I do?
@@ -55,6 +57,9 @@ function FAQ() {
                                     আপনি আপনার আগের কোম্পানির বিরুদ্ধে বেতন দাবি করতে পারেন। বৈধ হওয়ার জন্য আপনাকে কম বেতনের পরে 1 বছরের মধ্যে একটি দাবি দায়ের করতে হবে                                
                                 </Typography>
                             </Box>
+                        </Grid>
+                        <Grid container alignItems="center" justifyContent="center" mb={1}>
+                            <Divider flexItem sx ={{width: "90%", borderBottomWidth: 2, borderColor: "black"}}/>
                         </Grid>
                         <Grid container p={3} pt={2} alignItems="center" justifyContent="flex-start">
                             <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>

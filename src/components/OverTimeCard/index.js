@@ -94,7 +94,7 @@ function OverTimeCard() {
 
     return (
         <Grid container pt={2} pb={1}>
-            <Card sx={{ color: 'primary.main', backgroundColor: 'background.cardOverTime', width: '95%', margin: 'auto', borderRadius: '12px' }} expand={expanded} onClick={handleExpandClick} >
+            <Card sx={{ color: 'primary.main', backgroundColor: 'background.cardOverTime', width: '95%', margin: 'auto', borderRadius: '12px' }} onClick={handleExpandClick} >
                 <Grid container direction='row' justifyContent="space-between">
                     <Grid item xs={9}>
                         <Box sx={{ flexDirection: 'column' }} ml={1} mb={1} p={1} pt={2}>
@@ -103,18 +103,11 @@ function OverTimeCard() {
                         </Box>
                     </Grid>
                     <Grid item xs={3} align='center'>
-                        <Grid container direction="column" justifyContent="center" alignItems="center" mt={1}>
-                            <Grid item sx={{ color: '#3C7DE0' }}>
-                                :nbsp;
-                            </Grid>
-                            <Grid item>
+                        <Grid container direction="column" justifyContent="center" alignItems="center" sx={{ height: '100%' }}>
+                            <Grid item sx={{ marginTop: 'auto', marginBottom: 'auto' }}>
                                 <Button size="large" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }}>
                                     <Polygon />
-                                    {/* <PlayArrowIcon color="primary" sx={{ transform: expanded ? 'rotate(90deg)' : 'none' }} /> */}
                                 </Button>
-                            </Grid>
-                            <Grid item sx={{ color: '#3C7DE0' }}>
-                                :nbsp;
                             </Grid>
                         </Grid>
                     </Grid>
