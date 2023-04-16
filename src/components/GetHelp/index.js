@@ -27,7 +27,7 @@ function GetHelp() {
                     <Grid container direction="column"
                         justifyContent="center"
                         alignItems="center" pt={2}>
-                        <Typography variant="subtitle1" sx={{ fontWeight: 'bold' }}>TWC2 (Transient Workers Count Too)</Typography>
+                        <Typography variant="h5" sx={{ fontWeight: 'bold' }}>TWC2 (Transient Workers Count Too)</Typography>
                         {/* <BestBrosSVG/> */}
                         {/* <SvgIcon component={BestBrosSVG} viewBox="0 0 100 100"/> */}
                         <Box component="img" src={bestBros} sx={{ maxWidth: '90%', borderRadius: '6px' }} p={1} mt={1} />
@@ -83,7 +83,7 @@ function GetHelp() {
                     <Grid container direction="column"
                         justifyContent="center"
                         alignItems="center" pt={2}>
-                        <Typography variant="h6" sx={{ fontWeight: 'bold' }}>About SalaryKi</Typography>
+                        <Typography variant="h5" sx={{ fontWeight: 'bold' }}>About SalaryKi</Typography>
                         <Grid container p={3} alignItems="center" justifyContent="center">
                             <Typography variant="subtitle1">
                                 SalaryKi is a website built by Lucas, a final year student from the National University of Singapore's
