@@ -35,13 +35,13 @@ theme.typography.h4 = {
 }
 
 theme.typography.h5 = {
-    fontSize: '32px',
+    fontSize: '31px',
     fontWeight: '500',
     [theme.breakpoints.between('xs', 'sm')]: {
-        fontSize: '18px',
+        fontSize: '17px',
     },
     [theme.breakpoints.between('sm', 'md')]: {
-        fontSize: '22px',
+        fontSize: '21px',
     }
 }
 
