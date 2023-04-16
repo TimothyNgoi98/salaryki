@@ -188,15 +188,15 @@ function OverTimeCard() {
                                 }
                             </Grid>
                             {steps[activeStep].linkEnglish ?
-                                <>
-                                    <Button href="https://www.mom.gov.sg/employment-practices/salary/calculate-overtime-pay" target="_blank" variant="text" sx={{ color: "#0065FD", textDecoration: 'underline' }}>
-                                        {steps[activeStep].linkEnglish}
-                                    </Button>
-
-                                    <Typography href="https://www.mom.gov.sg/employment-practices/salary/calculate-overtime-pay" target="_blank" variant="text" sx={{ color: "#0065FD", textDecoration: 'underline' }}>
-                                        {steps[activeStep].linkIndian}
-                                    </Typography>
-                                </>
+                            <Grid container justifyContent="center" alignItem="center">
+                                <Link href="https://www.mom.gov.sg/employment-practices/salary/calculate-overtime-pay" target="_blank" variant="text" sx={{ color: "#0065FD", textDecoration: 'underline' }}>
+                                    <Box sx={{ flexDirection: 'column', borderTop: 1, borderColor: 'black', justifyContent:"center" ,alignItem:"center" }} mb={2} pt={2}>
+                                            <Typography variant="subtitle1">{steps[activeStep].linkEnglish}</Typography>
+                                            <Typography variant="subtitle1">{steps[activeStep].linkIndian}</Typography>
+                                    </Box>
+                                </Link>
+                            </Grid>
+                                
                                 :
                                 <></>
                             }
