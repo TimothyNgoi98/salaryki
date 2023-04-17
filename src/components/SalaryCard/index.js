@@ -110,7 +110,7 @@ function SalaryCard() {
 
     return (
         <Grid container pt={2} pb={2}>
-            <Card sx={{ backgroundColor: 'background.card', width: '95%', margin: 'auto', borderRadius: '12px' }} onClick={ () => {handleExpandClick(); salaryCardEvent()}}>
+            <Card sx={{ backgroundColor: 'background.card', width: '95%', margin: 'auto', borderRadius: '12px' }} onClick={handleExpandClick}>
                 <Grid container direction='row' justifyContent="space-between">
                     <Grid item xs={9}>
                         <Box sx={{ flexDirection: 'column' }} ml={1} mb={1} p={1} pt={2}>
