@@ -7,8 +7,10 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/index';
 import NotFound from './pages/notFound'
+import ReactGA from "react-ga4"
 
 function App() {
+  ReactGA.initialize("G-3KY9QVJ1DP");
   
   return (
     <ThemeProvider theme = {theme}>
