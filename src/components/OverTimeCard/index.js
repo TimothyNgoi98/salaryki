@@ -9,6 +9,8 @@ import rateGuy from '../../images/rateGuy.jpg'
 import { ReactComponent as Polygon } from '../../images/polygon.svg'
 import { ReactComponent as Polygon2 } from '../../images/polygon2.svg'
 import { ReactComponent as Polygon3 } from '../../images/polygon3.svg'
+import ReactGA from 'react-ga4'
+
 const steps = [
     {
         labelEnglish: "What is overtime?",
@@ -77,6 +79,11 @@ function OverTimeCard() {
     const [expanded, setExpanded] = useState(false);
     const handleExpandClick = () => {
         setExpanded(!expanded);
+        ReactGA.event({
+            category: "overtime card",
+            action: "overtime card clicked",
+            label: "ur a fag"
+        })
     };
 
     //steps
