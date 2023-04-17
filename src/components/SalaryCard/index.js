@@ -101,6 +101,7 @@ function SalaryCard() {
             catergory: "Salary Card",
             action: "Salary Card Clicked"
         })
+        console.log('fk')
     }
 
     return (
