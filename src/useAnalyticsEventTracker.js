@@ -4,7 +4,7 @@ const useAnalyticsEventTracker = (category="Blog category") => {
   const eventTracker = (action = "test action", label = "test label") => {
     let event = ReactGA.event({category, action, label});
     console.log('hello: ', event)
-    console.log("Fuck!")
+    console.log("Fuck!1")
   }
   return eventTracker;
 }

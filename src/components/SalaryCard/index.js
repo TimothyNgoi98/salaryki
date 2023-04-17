@@ -79,6 +79,10 @@ function SalaryCard() {
     const [expanded, setExpanded] = useState(false);
     const handleExpandClick = () => {
         setExpanded(!expanded);
+        ReactGA.event({
+            category: "salary card",
+            action: "salary card clicked"
+        })
     };
 
     //steps
@@ -96,13 +100,13 @@ function SalaryCard() {
     //GA tracker
     // const gaEventTracker = useAnalyticsEventTracker('Salary Card');
 
-    const salaryCardEvent = () => {
-        ReactGA.event({
-            catergory: "Salary Card",
-            action: "Salary Card Clicked"
-        })
-        console.log('fk')
-    }
+    // const salaryCardEvent = () => {
+    //     ReactGA.event({
+    //         catergory: "Salary Card",
+    //         action: "Salary Card Clicked"
+    //     })
+    //     console.log('fk')
+    // }
 
     return (
         <Grid container pt={2} pb={2}>
