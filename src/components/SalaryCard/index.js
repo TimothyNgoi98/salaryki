@@ -94,6 +94,7 @@ function SalaryCard() {
 
     //GA tracker
     const gaEventTracker = useAnalyticsEventTracker('Salary Card');
+    console.log(gaEventTracker);
 
     return (
         <Grid container pt={2} pb={2}>

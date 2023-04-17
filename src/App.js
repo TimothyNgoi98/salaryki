@@ -18,7 +18,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} exact/>
         <Route path='*' element={<NotFound />}/>
-
       </Routes>
     </ThemeProvider>
   );
