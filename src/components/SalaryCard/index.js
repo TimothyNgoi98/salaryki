@@ -79,10 +79,11 @@ function SalaryCard() {
     const [expanded, setExpanded] = useState(false);
     const handleExpandClick = () => {
         setExpanded(!expanded);
+        console.log('handle expand clicked')
         ReactGA.event({
-            "category": "salary card",
-            "action": "salary card clicked",
-            "label": "ur mom's gay"
+            category: "salary card",
+            action: "salary card clicked",
+            label: "ur mom's gay"
         })
     };
 
