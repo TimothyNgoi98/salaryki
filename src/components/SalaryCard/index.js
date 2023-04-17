@@ -11,7 +11,7 @@ import { ReactComponent as Polygon } from '../../images/polygon.svg'
 import { ReactComponent as Polygon2 } from '../../images/polygon2.svg'
 import { ReactComponent as Polygon3 } from '../../images/polygon3.svg'
 // import useAnalyticsEventTracker from "../../useAnalyticsEventTracker";
-import { ReactGA } from "react-ga4";
+import  ReactGA from "react-ga4";
 
 const steps = [
     {
