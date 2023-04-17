@@ -10,6 +10,7 @@ import countPay from '../../images/countPay.jpg'
 import { ReactComponent as Polygon } from '../../images/polygon.svg'
 import { ReactComponent as Polygon2 } from '../../images/polygon2.svg'
 import { ReactComponent as Polygon3 } from '../../images/polygon3.svg'
+import useAnalyticsEventTracker from "../../useAnalyticsEventTracker";
 
 const steps = [
     {
@@ -91,10 +92,12 @@ function SalaryCard() {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
 
+    //GA tracker
+    const gaEventTracker = useAnalyticsEventTracker('Salary Card');
 
     return (
         <Grid container pt={2} pb={2}>
-            <Card sx={{ backgroundColor: 'background.card', width: '95%', margin: 'auto', borderRadius: '12px' }} onClick={handleExpandClick}>
+            <Card sx={{ backgroundColor: 'background.card', width: '95%', margin: 'auto', borderRadius: '12px' }} onClick={ () => {handleExpandClick(); gaEventTracker("Salary Card Clicked")}}>
                 <Grid container direction='row' justifyContent="space-between">
                     <Grid item xs={9}>
                         <Box sx={{ flexDirection: 'column' }} ml={1} mb={1} p={1} pt={2}>

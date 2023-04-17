@@ -7,8 +7,9 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/index';
 import NotFound from './pages/notFound'
-function App() {
 
+function App() {
+  
   return (
     <ThemeProvider theme = {theme}>
       <CssBaseline />

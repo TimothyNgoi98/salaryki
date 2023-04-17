@@ -3,8 +3,12 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import "typeface-roboto"
 import { BrowserRouter } from 'react-router-dom';
+import ReactGA from "react-ga4"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+ReactGA.initialize('G-3KY9QVJ1DP');
+
 root.render(
   <BrowserRouter>
     <App/>
