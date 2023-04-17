@@ -80,8 +80,9 @@ function SalaryCard() {
     const handleExpandClick = () => {
         setExpanded(!expanded);
         ReactGA.event({
-            category: "salary card",
-            action: "salary card clicked"
+            "category": "salary card",
+            "action": "salary card clicked",
+            "label": "ur mom's gay"
         })
     };
 
