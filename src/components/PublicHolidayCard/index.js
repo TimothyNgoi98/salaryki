@@ -9,6 +9,7 @@ import phPay from '../../images/phPay.jpg'
 import { ReactComponent as Polygon } from '../../images/polygon.svg'
 import { ReactComponent as Polygon2 } from '../../images/polygon2.svg'
 import { ReactComponent as Polygon3 } from '../../images/polygon3.svg'
+import ReactGA from 'react-ga4'
 
 const steps = [
     {
@@ -47,6 +48,11 @@ function PublicHolidayCard() {
     const [expanded, setExpanded] = useState(false);
     const handleExpandClick = () => {
         setExpanded(!expanded);
+        ReactGA.event({
+            category: "public holiday card",
+            action: "public holiday card clicked",
+            label: "time to ph"
+        })
     };
 
     //steps
