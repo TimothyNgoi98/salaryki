@@ -1,11 +1,11 @@
 import React from "react";
 import { useState } from 'react';
 import { Grid, Box, Typography, Card, Button, Collapse, MobileStepper, Link, ListItem, List, SvgIcon } from "@mui/material";
-import workNight from '../../images/workNight.jpg'
-import toBar from '../../images/ToBar.jpg'
-import calculateOT from '../../images/calculateOT.jpg'
-import rateOT from '../../images/rateOT.jpg'
-import rateGuy from '../../images/rateGuy.jpg'
+import workNight from '../../images/workNight.webp'
+import toBar from '../../images/ToBar.webp'
+import calculateOT from '../../images/calculateOT.webp'
+import rateOT from '../../images/rateOT.webp'
+import rateGuy from '../../images/rateGuy.webp'
 import { ReactComponent as Polygon } from '../../images/polygon.svg'
 import { ReactComponent as Polygon2 } from '../../images/polygon2.svg'
 import { ReactComponent as Polygon3 } from '../../images/polygon3.svg'
