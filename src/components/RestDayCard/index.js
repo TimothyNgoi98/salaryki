@@ -1,12 +1,9 @@
 import React from "react";
 import { useState } from 'react';
 import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button, Link, List, ListItem, SvgIcon } from "@mui/material";
-// import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-// import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-// import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import vibingSun from '../../images/vibingSun.jpg'
-import bossAsk from '../../images/bossAsk.jpg'
-import youAsk from '../../images/youAsk.jpg'
+import vibingSun from '../../images/vibingSun.webp'
+import bossAsk from '../../images/bossAsk.webp'
+import youAsk from '../../images/youAsk.webp'
 import { ReactComponent as Polygon } from '../../images/polygon.svg'
 import { ReactComponent as Polygon2 } from '../../images/polygon2.svg'
 import { ReactComponent as Polygon3 } from '../../images/polygon3.svg'
