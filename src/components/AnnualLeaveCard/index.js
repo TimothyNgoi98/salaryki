@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from 'react';
 import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button, Link, SvgIcon } from "@mui/material";
-import goHoliday from '../../images/goHoliday.jpg'
-import chartYears from '../../images/chartYears.jpg'
-import compensationUnpaid from '../../images/compensationUnpaid.jpg'
+import goHoliday from '../../images/goHoliday.webp'
+import chartYears from '../../images/chartYears.webp'
+import compensationUnpaid from '../../images/compensationUnpaid.webp'
 import { ReactComponent as Polygon } from '../../images/polygon.svg'
 import { ReactComponent as Polygon2 } from '../../images/polygon2.svg'
 import { ReactComponent as Polygon3 } from '../../images/polygon3.svg'
