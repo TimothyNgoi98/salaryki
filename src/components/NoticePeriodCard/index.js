@@ -35,8 +35,6 @@ const steps = [
             listComponent: []
         },
         link: "https://www.mom.gov.sg/employment-practices/termination-of-employment/termination-with-notice#:~:text=No%20notice%20period%20in%20contract"
-        // descriptionEnglish:"If your contract no have notice period, the notice period depends on how long you work for company.",
-        // descriptionIndian:"যখন আপনার বস আপনার কাজের চুক্তি বাতিল করে দেন, তখন আপনি কোম্পানি ছেড়ে যাওয়ার আগে তাকে অবশ্যই আপনাকে নোটিশ সময়ের জন্য কাজ করতে দিতে হবে।",
     },
     {
         labelEnglish: "Termination without notice",
@@ -52,9 +50,7 @@ const steps = [
             headerDescription: "যদি বস নোটিশ ছাড়াই আপনার চুক্তি বাতিল করেন, তাহলে তাকে অবশ্যই আপনাকে 'নোটিস পে' দিতে হবে।",
             headerDescription2: "আপনি যদি নোটিশ ছাড়াই পদত্যাগ করেন, তাহলে আপনাকে অবশ্যই আপনার বসকে 'নোটিস পে' দিতে হবে।",
             listComponent: ["এটি সেই বেতন যা আপনি নোটিশের সময়কালে উপার্জন করতেন।"]
-        },
-        // descriptionEnglish:"If boss cancel your contract without notice, he must pay you “notice pay”.If you resign without notice, you must pay your boss “notice pay”. This is salary that you would have earned during the notice period.",
-        // descriptionIndian:"যদি বস নোটিশ ছাড়াই আপনার চুক্তি বাতিল করেন, তাহলে তাকে অবশ্যই আপনাকে 'নোটিস পে' দিতে হবে। আপনি যদি নোটিশ ছাড়াই পদত্যাগ করেন, তাহলে আপনাকে অবশ্যই আপনার বসকে 'নোটিস পে' দিতে হবে।এটি সেই বেতন যা আপনি নোটিশের সময়কালে উপার্জন করতেন।",
+        }
     }
 ]
 
@@ -136,9 +132,6 @@ function NoticePeriodCard() {
                                     :
                                     null
                                 }
-                                {/* <Typography variant="subtitle1">
-                                    {steps[activeStep].descriptionEnglish}
-                                </Typography> */}
                                 <List sx={{ listStyleType: 'disc', pl: 3, mb: 3 }} disablePadding>
                                     {steps[activeStep].descriptionEnglishObject['listComponent'].length !== 0 ?
                                         steps[activeStep].descriptionEnglishObject['listComponent'].map(description => {

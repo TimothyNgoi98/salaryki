@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
-// import { NavLink } from 'react-router-dom'
 import { AppBar, Toolbar, Typography, Box, Button } from '@mui/material'
 import HeaderSalaryRights from '../HeaderSalaryRights';
 import EmploymentRightsSection from '../EmploymentRightsSection';
@@ -9,9 +8,7 @@ import FAQ from '../FAQ';
 
 
 function NavBar() {
-    // const [displayMain, setDisplayMain] = useState(true);
-    // const [displayGetHelp, setDisplayGetHelp] = useState(false);
-    // const [displayFAQ, setDisplayFAQ] = useState(false);
+
     const [activeButton, setActiveButton] = useState('Salary Rights');
     const handleButtonClick = (buttonName) => {
         setActiveButton(buttonName);

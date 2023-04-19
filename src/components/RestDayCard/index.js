@@ -22,8 +22,6 @@ const steps = [
             listComponent: []
         },
         link: "https://www.mom.gov.sg/employment-practices/hours-of-work-overtime-and-rest-days#:~:text=Your%20employer%20must%20provide%201%20rest%20day%20per%20week.",
-        // descriptionEnglish: "Your boss must provide 1 (unpaid) rest day per week.",
-        // descriptionIndian: "আপনার নিয়োগকর্তাকে অবশ্যই প্রতি সপ্তাহে 1টি (অপেইড) বিশ্রাম দিন প্রদান করতে হবে।",
         linkEnglish: "MOM rest day calculator",
         linkIndian: "বিশ্রামের দিন ক্যালকুলেটর"
     },
@@ -40,8 +38,6 @@ const steps = [
             listComponent: []
         },
         link: "https://www.mom.gov.sg/employment-practices/hours-of-work-overtime-and-rest-days#:~:text=How%20pay%20for%20work%20on%20a%20rest%20day%20is%20calculated",
-        // descriptionEnglish: "If boss ask you work on rest day, boss must pay you like this.",
-        // descriptionIndian: "যদি বস আপনাকে বিশ্রামের দিনে কাজ করতে বলে, তাহলে তারা আপনাকে এইভাবে অর্থ প্রদান করবে।",
     },
     {
         labelEnglish: "Rest day work pay",
@@ -56,8 +52,6 @@ const steps = [
             listComponent: []
         },
         link: "https://www.mom.gov.sg/employment-practices/hours-of-work-overtime-and-rest-days#:~:text=How%20pay%20for%20work%20on%20a%20rest%20day%20is%20calculated",
-        // descriptionEnglish: "If you ask to work on rest day, boss must pay you like this.",
-        // descriptionIndian: "আপনি যদি বিশ্রামের দিনে কাজ করতে বলেন, আপনার বস আপনাকে অবশ্যই এইভাবে অর্থ প্রদান করবেন",
     }
 ]
 function RestDayCard() {
@@ -163,10 +157,6 @@ function RestDayCard() {
                                             <Typography variant="subtitle1">{steps[activeStep].linkIndian}</Typography>
                                         </Box>
                                     </Link>
-
-                                    {/* <Typography href="https://www.mom.gov.sg/employment-practices/salary/calculate-pay-for-work-on-rest-day" target="_blank" variant="text" sx={{ color: "#0065FD", textDecoration: 'underline' }}>
-                                        {steps[activeStep].linkIndian}
-                                    </Typography> */}
                                 </>
                                 :
                                 <></>

@@ -139,13 +139,6 @@ function PublicHolidayCard() {
                                         )
                                     })}
                                 </List>
-                                {/* <Typography variant="subtitle1">
-                                    {steps[activeStep].descriptionEnglish}
-                                </Typography>
-                                <br />
-                                <Typography variant="subtitle1">
-                                    {steps[activeStep].descriptionIndian}
-                                </Typography> */}
                             </Grid>
                         </Grid>
                     </Box>

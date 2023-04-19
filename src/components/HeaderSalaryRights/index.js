@@ -1,6 +1,5 @@
 import React from "react";
 import { Paper, Grid, Box, Typography } from "@mui/material";
-// import man1 from '../../images/man1.jpg'
 import {ReactComponent as Worker}  from '../../images/worker.svg'
 import SalaryCard from "../SalaryCard";
 
@@ -12,10 +11,6 @@ function HeaderSalaryRights() {
                     <Grid item xs={4}>
                         <Grid container justifyContent="center" alignItems="flex-start">
                             <Worker/>
-                            {/* <Box component="img" src={man1} sx={{
-                                height: { xs: '100%', sm: "85%", md: "75%", lg: "65%", xl: "50%" },
-                                width: { xs: '50%', sm: "45%", md: "35%", lg: "25%", xl: "20%" },
-                            }} /> */}
                         </Grid>
                     </Grid>
                     <Grid item xs={8}>

@@ -11,7 +11,6 @@ import countPay from '../../images/countPay.webp'
 import { ReactComponent as Polygon } from '../../images/polygon.svg'
 import { ReactComponent as Polygon2 } from '../../images/polygon2.svg'
 import { ReactComponent as Polygon3 } from '../../images/polygon3.svg'
-// import useAnalyticsEventTracker from "../../useAnalyticsEventTracker";
 import  ReactGA from "react-ga4";
 
 const steps = [
@@ -70,8 +69,6 @@ const steps = [
             descriptionBeginning: "এখানে অনুসরণ করার জন্য কিছু ভাল অভ্যাস আছে:",
             descriptionList: ["টাইমকার্ড এবং সমস্ত পেস্লিপের ছবি রাখুন/তুলুন", "প্রতিদিন আপনার কাজের সময় একটি ডায়েরিতে লিখুন", "আপনার বেতন এবং কাজের সময় ঠিক থাকলে মাসের শেষে গণনা করুন"]
         }
-        // descriptionEnglish: "It is good to track how many hours and days you work every month, and if you are getting paid correct salary. Here are some good habits to follow: Keep/take photo of timecards and all payslips Write down your work hours every day in a diary Count at the end of the month if your salary and work hours are ok",
-        // descriptionIndian: "আপনি প্রতি মাসে কত ঘন্টা এবং দিন কাজ করেন এবং আপনি সঠিক বেতন পাচ্ছেন কিনা তা ট্র্যাক করা ভাল। এখানে অনুসরণ করার জন্য কিছু ভাল অভ্যাস আছে: টাইমকার্ড এবং সমস্ত পেস্লিপের ছবি রাখুন/তুলুন প্রতিদিন আপনার কাজের সময় একটি ডায়েরিতে লিখুন আপনার বেতন এবং কাজের সময় ঠিক থাকলে মাসের শেষে গণনা করুন"
     }
 ]
 
@@ -99,17 +96,6 @@ function SalaryCard() {
     const handleBack = () => {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
-
-    //GA tracker
-    // const gaEventTracker = useAnalyticsEventTracker('Salary Card');
-
-    // const salaryCardEvent = () => {
-    //     ReactGA.event({
-    //         catergory: "Salary Card",
-    //         action: "Salary Card Clicked"
-    //     })
-    //     console.log('fk')
-    // }
 
     return (
         <Grid container pt={2} pb={2}>
