@@ -13,11 +13,7 @@ function NavBar() {
     const handleButtonClick = (buttonName) => {
         setActiveButton(buttonName);
         console.log(activeButton)
-        ReactGA.event({
-            category: activeButton,
-            action: `${activeButton} clicked`,
-            label: "page navigation"
-        })
+        ReactGA.modalview(`/${activeButton}`)
     };
     useEffect(() => {
         console.log('active button is now', activeButton)
