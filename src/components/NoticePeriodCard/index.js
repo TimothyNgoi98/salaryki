@@ -7,6 +7,7 @@ import termination from '../../images/termination.webp'
 import { ReactComponent as Polygon } from '../../images/polygon.svg'
 import { ReactComponent as Polygon2 } from '../../images/polygon2.svg'
 import { ReactComponent as Polygon3 } from '../../images/polygon3.svg'
+import ReactGA from 'react-ga4'
 
 const steps = [
     {
@@ -60,6 +61,11 @@ function NoticePeriodCard() {
     const [expanded, setExpanded] = useState(false);
     const handleExpandClick = () => {
         setExpanded(!expanded);
+        ReactGA.event({
+            category: "notice period card",
+            action: "notice period card clicked",
+            label: "time to notice"
+        })
     };
 
     //steps

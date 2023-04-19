@@ -7,6 +7,7 @@ import compensationUnpaid from '../../images/compensationUnpaid.webp'
 import { ReactComponent as Polygon } from '../../images/polygon.svg'
 import { ReactComponent as Polygon2 } from '../../images/polygon2.svg'
 import { ReactComponent as Polygon3 } from '../../images/polygon3.svg'
+import ReactGA from 'react-ga4'
 
 const steps = [
     {
@@ -39,6 +40,11 @@ function AnnualLeaveCard() {
     const [expanded, setExpanded] = useState(false);
     const handleExpandClick = () => {
         setExpanded(!expanded);
+        ReactGA.event({
+            category: "annual leave card",
+            action: "annual leave card clicked",
+            label: "time to annual leave"
+        })
     };
     //steps
     const [activeStep, setActiveStep] = useState(0);

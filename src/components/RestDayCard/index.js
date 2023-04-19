@@ -7,6 +7,7 @@ import youAsk from '../../images/youAsk.webp'
 import { ReactComponent as Polygon } from '../../images/polygon.svg'
 import { ReactComponent as Polygon2 } from '../../images/polygon2.svg'
 import { ReactComponent as Polygon3 } from '../../images/polygon3.svg'
+import ReactGA from 'react-ga4'
 
 const steps = [
     {
@@ -60,6 +61,11 @@ function RestDayCard() {
     const [expanded, setExpanded] = useState(false);
     const handleExpandClick = () => {
         setExpanded(!expanded);
+        ReactGA.event({
+            category: "rest day card",
+            action: "rest day card clicked",
+            label: "time to rest"
+        })
     };
 
     //steps

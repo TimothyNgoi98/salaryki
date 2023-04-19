@@ -5,7 +5,7 @@ import HeaderSalaryRights from '../HeaderSalaryRights';
 import EmploymentRightsSection from '../EmploymentRightsSection';
 import GetHelp from '../GetHelp';
 import FAQ from '../FAQ';
-
+import ReactGA from 'react-ga4'
 
 function NavBar() {
 
@@ -13,6 +13,11 @@ function NavBar() {
     const handleButtonClick = (buttonName) => {
         setActiveButton(buttonName);
         console.log(activeButton)
+        ReactGA.event({
+            category: activeButton,
+            action: `${activeButton} clicked`,
+            label: "page navigation"
+        })
     };
     useEffect(() => {
         console.log('active button is now', activeButton)
