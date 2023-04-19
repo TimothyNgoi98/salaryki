@@ -1,12 +1,13 @@
 import React from "react";
 import { useState } from 'react';
 import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button, List, ListItem, Link, SvgIcon } from "@mui/material";
-import money from '../../images/money.jpg'
-import salaryCalculator from '../../images/salaryCalculator.jpg'
-import salaryInfo from '../../images/salaryInfo.jpg'
-import ratePay from '../../images/ratePay.jpg'
-import deductPay from '../../images/deductPay.jpg'
-import countPay from '../../images/countPay.jpg'
+
+import money from '../../images/money.webp'
+import salaryCalculator from '../../images/salaryCalculator.webp'
+import salaryInfo from '../../images/salaryInfo.webp'
+import ratePay from '../../images/ratePay.webp'
+import deductPay from '../../images/deductPay.webp'
+import countPay from '../../images/countPay.webp'
 import { ReactComponent as Polygon } from '../../images/polygon.svg'
 import { ReactComponent as Polygon2 } from '../../images/polygon2.svg'
 import { ReactComponent as Polygon3 } from '../../images/polygon3.svg'
