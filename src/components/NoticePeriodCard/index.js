@@ -1,12 +1,9 @@
 import React from "react";
 import { useState } from 'react';
 import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button, Link, List, ListItem, SvgIcon } from "@mui/material";
-// import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-// import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-// import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import shakeHands from '../../images/shakeHands.jpg'
-import noticePerod from '../../images/noticePeriod.jpg'
-import termination from '../../images/termination.jpg'
+import shakeHands from '../../images/shakeHands.webp'
+import noticePerod from '../../images/noticePeriod.webp'
+import termination from '../../images/termination.webp'
 import { ReactComponent as Polygon } from '../../images/polygon.svg'
 import { ReactComponent as Polygon2 } from '../../images/polygon2.svg'
 import { ReactComponent as Polygon3 } from '../../images/polygon3.svg'
