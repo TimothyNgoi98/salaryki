@@ -14,9 +14,7 @@ function GetHelp() {
             <Grid container pt={4} spacing={2} sx={{ maxWidth: '85%', margin: 'auto' }}>
                 <Paper sx={{ width: '100%', height: 'auto', borderRadius: '8px' }} elevation={4} mb={2} >
                     <Grid container alignContent="center" justifyContent="center" pb={1}>
-                        {/* <SalaryFlowSVG/> */}
                         <Box component="img" src={massive} mt={2} sx={{ borderRadius: "6px", maxWidth: "100%", p: 1 }} />
-                        {/* <Box component="img" src={salaryFlow} sx={{ width: '100%' }} p={1} /> */}
                     </Grid>
                 </Paper>
             </Grid>
@@ -26,8 +24,6 @@ function GetHelp() {
                         justifyContent="center"
                         alignItems="center" pt={2}>
                         <Typography variant="h5" sx={{ fontWeight: 'bold' }}>TWC2 (Transient Workers Count Too)</Typography>
-                        {/* <BestBrosSVG/> */}
-                        {/* <SvgIcon component={BestBrosSVG} viewBox="0 0 100 100"/> */}
                         <Box component="img" src={bestBros} sx={{ maxWidth: '90%', borderRadius: '6px' }} p={1} mt={1} />
                         <Grid container direction='row' justifyContent="space-between" sx={{ maxWidth: '90%', mb:2, mt: 2}}>
                             <Grid container item xs={4} alignItems="center" justifyContent="flex-end">
