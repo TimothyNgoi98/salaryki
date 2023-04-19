@@ -1,11 +1,8 @@
 import React from "react";
 import { useState } from 'react';
 import { Card, Grid, Typography, Box, Collapse, MobileStepper, Button, Link, List, ListItem, SvgIcon } from "@mui/material";
-// import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import nationalDay from '../../images/nationalDay.jpg'
-import phPay from '../../images/phPay.jpg'
-// import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-// import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+import nationalDay from '../../images/nationalDay.webp'
+import phPay from '../../images/phPay.webp'
 import { ReactComponent as Polygon } from '../../images/polygon.svg'
 import { ReactComponent as Polygon2 } from '../../images/polygon2.svg'
 import { ReactComponent as Polygon3 } from '../../images/polygon3.svg'
