@@ -1,14 +1,12 @@
 import React from "react";
 import { Grid, Paper, Box, Typography, Link} from "@mui/material";
-// import salaryFlow from '../../images/salaryFlow.jpg'
-// import { ReactComponent as SalaryFlowSVG } from '../../images/salaryflow3.svg'
-import bestBros from '../../images/bestBros.jpg'
-import callMe from '../../images/callMe.jpg'
-import locationUnknown from '../../images/locationUnknown.jpg'
-import www from '../../images/www.jpg'
-import facebook from '../../images/facebook.jpg'
-import footer from '../../images/footer.jpg'
-import massive from '../../images/massive_journey.png'
+import bestBros from '../../images/bestBros.webp'
+import callMe from '../../images/callMe.webp'
+import locationUnknown from '../../images/locationUnknown.webp'
+import www from '../../images/www.webp'
+import facebook from '../../images/facebook.webp'
+import footer from '../../images/footer.webp'
+import massive from '../../images/massive_journey.webp'
 
 function GetHelp() {
     return (
