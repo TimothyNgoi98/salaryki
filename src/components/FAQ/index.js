@@ -41,7 +41,7 @@ function FAQ() {
                     <Grid container p={3} pt={2} alignItems="center" justifyContent="flex-start">
                         <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                             <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
-                                Q : I am working in new company, but previous company still have not paid me. What should I do?
+                                Q: I am working in new company, but previous company still have not paid me. What should I do?
                             </Typography>
                             <Typography variant="subtitle1">
                                 আমি নতুন কোম্পানিতে কাজ করছি, কিন্তু আগের কোম্পানি এখনও আমাকে বেতন দেয়নি। আমার কি করা উচিৎ?
@@ -49,10 +49,10 @@ function FAQ() {
                         </Box>
                         <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: 'background.cardOverTime', }} mt={2}>
                             <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
-                                A: You can file a salary claim against your previous company. You must file a claim within 1 year after you were underpaid for it to be valid.
+                                A: You can file a salary claim against your previous company. You must file a claim within 6 months of leaving the previous company.
                             </Typography>
                             <Typography variant="subtitle1" mb={4}>
-                                আপনি আপনার আগের কোম্পানির বিরুদ্ধে বেতন দাবি করতে পারেন। বৈধ হওয়ার জন্য আপনাকে কম বেতনের পরে 1 বছরের মধ্যে একটি দাবি দায়ের করতে হবে
+                                আপনি আপনার আগের কোম্পানির বিরুদ্ধে বেতন দাবি করতে পারেন। পূর্ববর্তী কোম্পানি ছেড়ে যাওয়ার 6 মাসের মধ্যে আপনাকে অবশ্যই একটি দাবি দায়ের করতে হবে
                             </Typography>
                         </Box>
                     </Grid>
@@ -65,15 +65,15 @@ function FAQ() {
                                 Q: My boss want to send me back when I have salary problem. What should I do?
                             </Typography>
                             <Typography variant="subtitle1">
-                                আমি নতুন কোম্পানিতে কাজ করছি, কিন্তু আগের কোম্পানি এখনও আমাকে বেতন দেয়নি। আমার কি করা উচিৎ?
+                                আমার বেতন সমস্যা হলে আমার বস আমাকে ফেরত পাঠাতে চান। আমার কি করা উচিৎ?
                             </Typography>
                         </Box>
                         <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: 'background.cardOverTime' }} mt={2}>
                             <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
-                                A: Your boss cannot send you back home when you have salary problem. Come and talk to us at TWC2 and we will help you!
+                                A: Your boss cannot send you back home when you have salary problem. Report to MOM if your boss tries to send you back while you have an ongoing salary problem. You can also come and talk to us at TWC2, and we will help you!
                             </Typography>
                             <Typography variant="subtitle1">
-                                আপনার বেতন সমস্যা হলে আপনার বস আপনাকে বাড়িতে ফেরত পাঠাতে পারবেন না। আসুন TWC2 এ আমাদের সাথে কথা বলুন এবং আমরা আপনাকে সাহায্য করব।!
+                                আপনার বেতন সমস্যা হলে আপনার বস আপনাকে বাড়ি ফেরত পাঠাতে পারবেন না। M.O.M কে রিপোর্ট করুন যদি আপনার বস আপনাকে ফেরত পাঠানোর চেষ্টা করেন যখন আপনার চলমান বেতন সমস্যা থাকে। আপনি আসতে পারেন এবং আমাদের সাথে TWC2 এ কথা বলতে পারেন, এবং আমরা আপনাকে সাহায্য করব!
                             </Typography>
                         </Box>
                     </Grid>

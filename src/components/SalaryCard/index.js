@@ -18,8 +18,8 @@ const steps = [
         labelEnglish: "Understand your salary",
         labelIndian: "আপনার বেতন বুঝে নিন",
         image: money,
-        descriptionEnglish: "Your boss must pay you salary every month, latest by the 7th of the next month. You can find your salary details in your IPA.",
-        descriptionIndian: "আপনার বসকে প্রতি মাসে আপনাকে বেতন দিতে হবে, পরবর্তী মাসের 7 তারিখের মধ্যে। আপনি আপনার IPA-তে আপনার বেতনের বিবরণ খুঁজে পেতে পারেন"
+        descriptionEnglish: "Your boss must pay you salary every month, latest by the 7th of the next month. Your boss must send you payslip when you get your salary. You can find your salary details in your IPA.",
+        descriptionIndian: "আপনার বসকে প্রতি মাসে আপনাকে বেতন দিতে হবে, পরবর্তী মাসের 7 তারিখের মধ্যে। যখন আপনি আপনার বেতন পাবেন তখন আপনার বস আপনাকে অবশ্যই আপনার পেস্লিপ পাঠাবেন। আপনি আপনার IPA-তে আপনার বেতনের বিবরণ খুঁজে পেতে পারেন।"
     },
     {
         labelEnglish: "IPA Salary",
