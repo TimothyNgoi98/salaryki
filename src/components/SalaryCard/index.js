@@ -225,7 +225,7 @@ function SalaryCard() {
                         steps={maxSteps}
                         position="static"
                         activeStep={activeStep}
-                        sx={{ maxWidth: '95%', flexGrow: 1, pt: 2, pb: 2 }}
+                        sx={{ width: '100%', flexGrow: 1, pt: 2, pb: 2 }}
                         backButton={
                             <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
                                 {activeStep === 0 ?
