@@ -11,28 +11,28 @@ import ReactGA from 'react-ga4'
 const steps = [
     {
         labelEnglish: "Singapore public holidays",
-        labelIndian: "সিঙ্গাপুর পাবলিক ছুটি",
+        labelIndian: "সিঙ্গাপুরের সরকারী ছুটি",
         image: nationalDay,
         descriptionEnglishObject: {
             headerDescription: "Singapore has 11 public holidays a year.",
             listComponent: ["You will be paid even if not working on PH!"]
         },
         descriptionIndianObject: {
-            headerDescription: "সিঙ্গাপুরে এক বছরে 11 টি পাবলিক ছুটি রয়েছে।",
-            listComponent: ["P.H. এ কাজ না করলেও আপনাকে বেতন দেওয়া হবে!"]
+            headerDescription: "সিঙ্গাপুরে এক বছরে ১১ দিন সরকারী ছুটি রয়েছে",
+            listComponent: ["সরকারী ছুটির দিনে কাজ না করলেও আপনাকে বেতন দেওয়া হবে!"]
         },
         link: "https://www.mom.gov.sg/employment-practices/public-holidays-entitlement-and-pay#:~:text=The%2011%20public%20holidays",
     },
     {
         labelEnglish: "Public holiday pay",
-        labelIndian: "সরকারী ছুটি বেতন",
+        labelIndian: "সরকারী ছুটির দিনের বেতন",
         image: phPay,
         descriptionEnglishObject: {
             headerDescription: "If you are working on P.H., you get extra day of salary.",
             listComponent: []
         },
         descriptionIndianObject: {
-            headerDescription: "আপনি যদি সরকারী ছুটিতে কাজ করেন তবে আপনাকে বেতনের অতিরিক্ত দিন দেওয়া হবে",
+            headerDescription: "আপনি যদি সরকারী ছুটির দিনে কাজ করেন তাহলে আপনাকে অতিরিক্ত একদিনের বেতন দেওয়া হবে",
             listComponent: []
         },
         link: "https://www.mom.gov.sg/employment-practices/public-holidays-entitlement-and-pay#:~:text=If%20you%20work%20on%20a%20public%20holiday%2C%20by%20default%2C%20your%20employer%20should%20pay%20you%20an%20additional%20day%27s%20pay."
