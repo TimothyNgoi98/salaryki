@@ -225,12 +225,12 @@ function SalaryCard() {
                         steps={maxSteps}
                         position="static"
                         activeStep={activeStep}
-                        sx={{ width: '100%', flexGrow: 1, pt: 2, pb: 2 }}
+                        sx={{ maxWidth: '95%', flexGrow: 1, pt: 2, pb: 2 }}
                         backButton={
                             <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
                                 {activeStep === 0 ?
                                     <SvgIcon sx={{ display: 'none' }}>
-                                        <Polygon3 />
+                                        <Polygon3 sx={{fontSize:80}} />
                                     </SvgIcon>
                                     :
                                     <SvgIcon>
