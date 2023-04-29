@@ -22,8 +22,8 @@ const steps = [
             listComponent: ["Work more than this is overtime/OT."]
         },
         descriptionIndianObject: {
-            headerDescription: "M.O.M অনুযায়ী, সপ্তাহে স্বাভাবিক কাজের সময় 44 ঘন্টা।",
-            listComponent: ["এর চেয়ে বেশি কাজ করা ওভারটাইম।"]
+            headerDescription: "এমওএম এর মতে, সপ্তাহে স্বাভাবিক কাজের সময় 88 ঘন্টা",
+            listComponent: ["এর চেয়ে বেশি কাজ করলে সেটাকে ওভারটাইম বলা হয়"]
         }
     },
     {
@@ -35,13 +35,13 @@ const steps = [
             listComponent: ["Mon - Fri full day working", "Saturday half day", "Sunday rest day"]
         },
         descriptionIndianObject: {
-            headerDescription: "এটি একটি সপ্তাহের সময়সূচীর একটি উদাহরণ।",
-            listComponent: ["সোম-শুক্র সারাদিন কাজ", "শনিবার অর্ধেক দিন", "রবিবার বিশ্রামের দিন"]
+            headerDescription: "এটি একটি সপ্তাহের কাজের সময়সূচীর একটি উদাহরণ",
+            listComponent: ["সোম থেকে শুক্রঃ সারাদিন কাজ", "শনিবারঃ অর্ধেক দিন", "রবিবারঃ বিশ্রামের দিন"]
         }
     },
     {
         labelEnglish: "Overtime calculation",
-        labelIndian: "ওভারটাইম গণনা",
+        labelIndian: "ওভারটাইম হিসাব করা",
         image: calculateOT,
         image2: rateOT,
         link: "https://www.mom.gov.sg/employment-practices/hours-of-work-overtime-and-rest-days#:~:text=must%20pay%20you-,at%20least%201.5%20times,-the%20hourly%20basic",
@@ -50,24 +50,24 @@ const steps = [
             listComponent: []
         },
         descriptionIndianObject: {
-            headerDescription: "ওভারটাইম বেতনের হার কমপক্ষে 1.5x প্রতি ঘন্টা।",
+            headerDescription: "ওভারটাইম বেতনের হার প্রতি ঘন্টায় কমপক্ষে দেড়গুণ হবে",
             listComponent: []
         },
         descriptionEnglish2: "You can find your OT rate in your IPA.",
-        descriptionIndian2: "আপনি আপনার IPA-তে আপনার OT রেট খুঁজে পেতে পারেন।",
+        descriptionIndian2: "আপনার আইপিএ তে ওভারটাইম এর রেট দেয়া আছে। আপনি খুঁজলেই পেয়ে যাবেন",
         linkEnglish: "MOM OT calculator",
         linkIndian: "ওভারটাইম ক্যালকুলেটর"
     },
     {
         labelEnglish: "Check payslip",
-        labelIndian: "পেস্লিপ চেক করুন",
+        labelIndian: "পে স্লিপ চেক করুন",
         image: rateGuy,
         descriptionEnglishObject: {
             headerDescription: "Count your salary every month to check your payslip is correct!",
             listComponent: []
         },
         descriptionIndianObject: {
-            headerDescription: "আপনার পেস্লিপ সঠিক কিনা তা নিশ্চিত করতে প্রতি মাসে আপনার বেতন গণনা করুন!",
+            headerDescription: "আপনার পে স্লিপে উল্লিখিত বেতন ঠিক আছে কিনা তা নিশ্চিত হতে চাইলে প্রতি মাসে আপনি আপনার বেতন নিজে নিজেই হিসেব করে করে ফেলুন!",
             listComponent: []
         }
     }
