@@ -19,7 +19,7 @@ const steps = [
             listComponent: []
         },
         descriptionIndianObject: {
-            headerDescription: "যখন আপনি/আপনার বস আপনার কাজের চুক্তি বাতিল করেন, তখন আপনাকে অবশ্যই কোম্পানি ছেড়ে যাওয়ার আগে নোটিশের সময়কালের জন্য কাজ করতে হবে।",
+            headerDescription: "যখন আপনি অথবা আপনার বস আপনার কাজের চুক্তি বাতিল করবেন, তখন আপনাকে অবশ্যই কোম্পানি ছেড়ে যাওয়ার আগে একটি নির্দিষ্ট সময়কালের জন্য কাজ করে যেতে হবে। এই সময়টাকেই নোটিশ পিরিয়ড বলে",
             listComponent: []
         }
     },
@@ -48,9 +48,9 @@ const steps = [
             listComponent: ["This is salary that you would have earned during the notice period."]
         },
         descriptionIndianObject: {
-            headerDescription: "যদি বস নোটিশ ছাড়াই আপনার চুক্তি বাতিল করেন, তাহলে তাকে অবশ্যই আপনাকে 'নোটিস পে' দিতে হবে।",
-            headerDescription2: "আপনি যদি নোটিশ ছাড়াই পদত্যাগ করেন, তাহলে আপনাকে অবশ্যই আপনার বসকে 'নোটিস পে' দিতে হবে।",
-            listComponent: ["এটি সেই বেতন যা আপনি নোটিশের সময়কালে উপার্জন করতেন।"]
+            headerDescription: `যদি বস নোটিশ ছাড়াই আপনার চুক্তি বাতিল করেন, তাহলে তাকে অবশ্যই আপনাকে নোটিশ পিরিয়ডের সময়ের জন্য বেতন বা "নোটিস পে" দিতে হবে`,
+            headerDescription2: `আর আপনি যদি নোটিশ ছাড়াই পদত্যাগ করেন, তাহলে আপনাকে অবশ্যই আপনার বসকে নোটিশ পিরিয়ডের জন্য টাকা বা "নোটিস পে" দিতে হবে`,
+            listComponent: ["এটি সেই বেতন বা টাকা যা আপনি নোটিশের সময়কালে উপার্জন করতেন"]
         }
     }
 ]
@@ -88,7 +88,7 @@ function NoticePeriodCard() {
                     <Grid item xs={9}>
                         <Box sx={{ flexDirection: 'column' }} ml={1} mb={1} p={1} pt={2}>
                             <Typography variant='h4'>Notice period</Typography>
-                            <Typography variant='h4'>বিজ্ঞপ্তি পরিবেশন</Typography>
+                            <Typography variant='h4'>নোটিশ পিরিয়ড</Typography>
                         </Box>
                     </Grid>
                     <Grid item xs={3} align='center'>
