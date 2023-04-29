@@ -15,41 +15,41 @@ const steps = [
         labelIndian: "সাপ্তাহিক বিশ্রামের দিন",
         image: vibingSun,
         descriptionEnglishObject: {
-            headerDescription: "Your boss must provide 1 (unpaid) rest day per week.",
+            headerDescription: "Your boss must provide 1 rest day per week.",
             listComponent: []
         },
         descriptionIndianObject: {
-            headerDescription: "আপনার নিয়োগকর্তাকে অবশ্যই প্রতি সপ্তাহে 1টি (অপেইড) বিশ্রাম দিন প্রদান করতে হবে।",
+            headerDescription: "আপনার নিয়োগকর্তাকে অবশ্যই আপনাকে প্রতি সপ্তাহে এক দিন বিশ্রাম প্রদান করতে হবে",
             listComponent: []
         },
         link: "https://www.mom.gov.sg/employment-practices/hours-of-work-overtime-and-rest-days#:~:text=Your%20employer%20must%20provide%201%20rest%20day%20per%20week.",
         linkEnglish: "MOM rest day calculator",
-        linkIndian: "বিশ্রামের দিন ক্যালকুলেটর"
+        linkIndian: "এমওএম এর বিশ্রামের দিন ক্যালকুলেটর"
     },
     {
         labelEnglish: "Rest day work pay",
-        labelIndian: "বিশ্রাম দিনের কাজের বেতন",
+        labelIndian: "বিশ্রামের দিনের কাজের বেতন",
         image: bossAsk,
         descriptionEnglishObject: {
             headerDescription: "If boss ask you work on rest day, boss must pay you like this.",
             listComponent: []
         },
         descriptionIndianObject: {
-            headerDescription: "যদি বস আপনাকে বিশ্রামের দিনে কাজ করতে বলে, তাহলে তারা আপনাকে এইভাবে অর্থ প্রদান করবে।",
+            headerDescription: "যদি বস আপনাকে বিশ্রামের দিনে কাজ করতে বলে, তাহলে তারা আপনাকে এইভাবে বেতন দিবেন",
             listComponent: []
         },
         link: "https://www.mom.gov.sg/employment-practices/hours-of-work-overtime-and-rest-days#:~:text=How%20pay%20for%20work%20on%20a%20rest%20day%20is%20calculated",
     },
     {
         labelEnglish: "Rest day work pay",
-        labelIndian: "বিশ্রাম দিনের কাজের বেতন",
+        labelIndian: "বিশ্রামের দিনের কাজের বেতন",
         image: youAsk,
         descriptionEnglishObject: {
             headerDescription: "If you ask to work on rest day, boss must pay you like this.",
             listComponent: []
         },
         descriptionIndianObject: {
-            headerDescription: "আপনি যদি বিশ্রামের দিনে কাজ করতে বলেন, আপনার বস আপনাকে অবশ্যই এইভাবে অর্থ প্রদান করবেন",
+            headerDescription: "আর আপনি যদি বিশ্রামের দিনে কাজ করতে বলেন, আপনার বস আপনাকে অবশ্যই এইভাবে অর্থ প্রদান করবেন",
             listComponent: []
         },
         link: "https://www.mom.gov.sg/employment-practices/hours-of-work-overtime-and-rest-days#:~:text=How%20pay%20for%20work%20on%20a%20rest%20day%20is%20calculated",
