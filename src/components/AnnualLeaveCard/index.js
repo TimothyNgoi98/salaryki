@@ -15,7 +15,7 @@ const steps = [
         labelIndian: "",
         image: goHoliday,
         descriptionEnglish: "You have paid annual leave if you have worked for at least 3 months.",
-        descriptionIndian: "আপনি যদি কমপক্ষে 3 মাস কাজ করে থাকেন তবে আপনি বার্ষিক ছুটি পরিশোধ করেছেন।",
+        descriptionIndian: "আপনি যদি কমপক্ষে ৩ মাস কাজ করে থাকেন তবে আপনি বার্ষিক ছুটি পাওয়ার উপযুক্ত হবেন",
     },
     {
         labelEnglish: "Compensation for unused leave",
