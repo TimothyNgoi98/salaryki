@@ -32,8 +32,9 @@ function GetHelp() {
                             <Grid item xs={8} mb = {4}>
                                 <Box sx={{ flexDirection: 'column' }}>
                                     <Typography variant='subtitle1' sx = {{fontWeight:'bold', mb:1}}>Call/WhatsApp us now</Typography>
-
-                                    <Typography variant='subtitle1'>+65 6297 7564</Typography>
+                                    <Link href = "https://api.whatsapp.com/send?phone=6562977564" target="_blank" sx={{ color: "#0065FD", textDecoration: 'underline' }}>
+                                        <Typography variant='subtitle1'>+65 6297 7564</Typography>
+                                    </Link>
                                 </Box>
                             </Grid>
                             <Grid container item xs={4} alignItems="center" justifyContent="flex-end">
@@ -85,9 +86,9 @@ function GetHelp() {
                                 aims to present important salary and employment information accessibly to migrant workers.
                             </Typography>
                             <Typography variant="subtitle1" mt={3}>
-                                SalaryKi হল একটি ওয়েবসাইট যা Lucas দ্বারা নির্মিত, ন্যাশনাল ইউনিভার্সিটি অফ সিঙ্গাপুরের ডিভিশন অফ ইন্ডাস্ট্রিয়াল ডিজাইনের
-                                শেষ বর্ষের ছাত্র তার শেষ বছরের থিসিসের অংশ হিসাবে। SalaryKi হল কয়েক মাসের স্বেচ্ছাসেবী এবং TWC2 এর সাথে সহযোগিতার ফল, এবং অভিবাসী কর্মীদের কাছে
-                                গুরুত্বপূর্ণ বেতন এবং কর্মসংস্থানের তথ্য সহজলভ্যভাবে উপস্থাপন করার লক্ষ্য
+                                SalaryKi হল একটি ওয়েবসাইট। এটি ন্যাশনাল ইউনিভার্সিটি অফ সিঙ্গাপুরের ডিভিশন অফ ইন্ডাস্ট্রিয়াল ডিজাইনের মিঃ লুকাস তার শেষ বছরের থিসিসের অংশ হিসাবে 
+                                তৈরি করেছেন। কয়েক মাস ধরে দেয়া স্বেচ্ছাসেবা এবং টিডব্লিউসি২ এর সাথে সহযোগিতার ফলে এই ওয়েবসাইটটি নির্মিত হয়েছে। অভিবাসী শ্রমিকদের কাছে তাদের বেতন এবং 
+                                চাকুরি সংক্রান্ত তথ্য সহজভাবে উপস্থাপন করার লক্ষে এই ওয়েবসাইটটির সূচনা
                             </Typography>
                             <Box component="img" src={footer} mt={3} sx={{ maxWidth: '100%' }} />
                         </Grid>
