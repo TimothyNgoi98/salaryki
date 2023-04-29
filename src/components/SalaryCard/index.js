@@ -16,25 +16,25 @@ import  ReactGA from "react-ga4";
 const steps = [
     {
         labelEnglish: "Understand your salary",
-        labelIndian: "আপনার বেতন বুঝে নিন",
+        labelIndian: "আপনার বেতন সংক্রান্ত তথ্য বুঝে নিন",
         image: money,
         descriptionEnglish: "Your boss must pay you salary every month, latest by the 7th of the next month. Your boss must send you payslip when you get your salary. You can find your salary details in your IPA.",
-        descriptionIndian: "আপনার বসকে প্রতি মাসে আপনাকে বেতন দিতে হবে, পরবর্তী মাসের 7 তারিখের মধ্যে। যখন আপনি আপনার বেতন পাবেন তখন আপনার বস আপনাকে অবশ্যই আপনার পেস্লিপ পাঠাবেন। আপনি আপনার IPA-তে আপনার বেতনের বিবরণ খুঁজে পেতে পারেন।"
+        descriptionIndian: "আপনার বসকে প্রতি মাসে আপনাকে পরবর্তী মাসের ৭ তারিখের মধ্যে বেতন দিতে হবে। যখন আপনি আপনার বেতন পাবেন তখন আপনার বস আপনাকে অবশ্যই একটি পে স্লিপ দিবেন। আপনি আপনার আইপিএ তে আপনার বেতন সংক্রান্ত বিস্তারিত তথ্য জানতে পারবেন"
     },
     {
         labelEnglish: "IPA Salary",
-        labelIndian: "আপনার বেতন বুঝে নিন",
+        labelIndian: "আইপিএ স্যালারি",
         image: salaryInfo,
         image2: salaryCalculator,
         descriptionEnglish: "Your monthly salary is in employment details page of IPA. Deductions could include housing fees, for example.",
-        descriptionIndian: "আপনার মাসিক বেতন IPA-এর কর্মসংস্থান বিবরণ পৃষ্ঠায় রয়েছে। কর্তনের মধ্যে আবাসন ফি অন্তর্ভুক্ত থাকতে পারে, উদাহরণস্বরূপ"
+        descriptionIndian: "আপনার মাসিক বেতন আইপিএ এর চাকুরি সংক্রান্ত বিস্তারিত পৃষ্ঠায় রয়েছে। আপনার কর্তনের মধ্যে হাউজিং ফি অন্তর্ভুক্ত থাকতে পারে"
     },
     {
         labelEnglish: "Daily basic pay",
-        labelIndian: "দৈনিক মৌলিক বেতন",
+        labelIndian: "দৈনিক বেসিক বেতন",
         image: ratePay,
         descriptionEnglish: "Your daily basic pay is used to calculate work done on rest day/public holiday.",
-        descriptionIndian: " আপনার দৈনিক মৌলিক বেতন বিশ্রামের দিন/পাবলিক ছুটির দিনে করা কাজ গণনা করতে ব্যবহৃত হয়"
+        descriptionIndian: "আপনি বিশ্রামের দিন বা সরকারি ছুটির দিনে যেই কাজ করেন সেই কাজের স্যলারী হিসেব করার জন্য আপনার দৈনিক বেসিক বেতন কত সেটি জানা প্রয়োজন"
     },
     {
         labelEnglish: "Salary deductions",
@@ -48,16 +48,16 @@ const steps = [
             link: "https://www.mom.gov.sg/employment-practices/salary/salary-deductions#:~:text=Your%20employer%20is%20not%20allowed%20to%20make%20deductions%20to%20your%20salaries%20under%20any%20circumstances%2C%20for%20the%20following%20purposes%20as%20specified%20in%20the%20Employment%20of%20Foreign%20Manpower%20Act%3A"
         },
         descriptionIndianObject: {
-            headerDescription: "আপনার বস আপনার লিখিত অনুমতি ছাড়া আপনার IPA বেতন কাটতে পারবেন না!",
-            descriptionBeginning: "আপনার বসকে এই ক্ষেত্রে বেতন কাটার অনুমতি নেই:",
-            descriptionList: ["কাজের পাস নবায়ন", "চিকিৎসা বীমা/ফি", "প্রত্যাবাসন (বাসায় পাঠান)", "অন্যান্য"],
+            headerDescription: "আপনার বস আপনার লিখিত অনুমতি ছাড়া আপনার আইপিএ তে উল্লেখিত বেতন কমাতে পারবেন না",
+            descriptionBeginning: "নিম্নলিখিত ক্ষেত্রে আপনার বসের বেতন কর্তন করার কোন অনুমতি নেইঃ",
+            descriptionList: ["ওয়ার্ক পারমিট নবায়ন করা", "চিকিৎসা বীমা/ফি", "দেশে ফেরত পাঠানো বাবদ খরচ", "অন্যান্য"],
             red: true,
             link: "https://www.mom.gov.sg/employment-practices/salary/salary-deductions#:~:text=Your%20employer%20is%20not%20allowed%20to%20make%20deductions%20to%20your%20salaries%20under%20any%20circumstances%2C%20for%20the%20following%20purposes%20as%20specified%20in%20the%20Employment%20of%20Foreign%20Manpower%20Act%3A"
         }
     },
     {
         labelEnglish: "Count your salary!",
-        labelIndian: "আপনার বেতন গণনা!",
+        labelIndian: "আপনার বেতনের হিসাব করুন!",
         image: countPay,
         descriptionEnglishObject: {
             headerDescription: "It is good to track how many hours and days you work every month, and if you are getting paid correct salary.",
@@ -65,9 +65,9 @@ const steps = [
             descriptionList: ["Keep/take photo of timecards and all payslips", "Write down your work hours every day in a diary", "Count at the end of the month if your salary and work hours are ok"]
         },
         descriptionIndianObject: {
-            headerDescription: "আপনি প্রতি মাসে কত ঘন্টা এবং দিন কাজ করেন এবং আপনি সঠিক বেতন পাচ্ছেন কিনা তা ট্র্যাক করা ভাল।",
-            descriptionBeginning: "এখানে অনুসরণ করার জন্য কিছু ভাল অভ্যাস আছে:",
-            descriptionList: ["টাইমকার্ড এবং সমস্ত পেস্লিপের ছবি রাখুন/তুলুন", "প্রতিদিন আপনার কাজের সময় একটি ডায়েরিতে লিখুন", "আপনার বেতন এবং কাজের সময় ঠিক থাকলে মাসের শেষে গণনা করুন"]
+            headerDescription: "আপনি প্রতি মাসে কত ঘন্টা এবং কত দিন কাজ করেন এবং আপনি সঠিক বেতন পাচ্ছেন কিনা তা সবসময় হিসেব করা ভাল",
+            descriptionBeginning: "নিচে কিছু ভালো অভ্যাসের তালিকা দেয়া হলো। আপনি ইচ্ছে করলে সেগুলো অনুসরন করতে পারেনঃ",
+            descriptionList: ["সমস্ত টাইমকার্ড এবং পে স্লিপের ছবি রাখা", "প্রতিদিন কাজের সময় একটি ডায়েরিতে লিখে রাখা", "আপনার বেতন এবং কাজের সময় ঠিক থাকলে মাসের শেষে আপনার বেতন কত হয় সেটা হিসেব করা"]
         }
     }
 ]

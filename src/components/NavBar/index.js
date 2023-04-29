@@ -31,19 +31,19 @@ function NavBar() {
                         <Button sx={{ color: "black" }} onClick={() => handleButtonClick('Salary Rights')}>
                             <Box sx={{ flexDirection: 'column', borderBottom: activeButton === "Salary Rights" && "2px solid black" }}>
                                 <Typography variant='subtitle1' sx={{ fontWeight: activeButton === 'Salary Rights' && "bold" }}>Salary Rights</Typography>
-                                <Typography variant='subtitle1' sx={{ fontWeight: activeButton === 'Salary Rights' && "bold" }}>বেতন অধিকার</Typography>
+                                <Typography variant='subtitle1' sx={{ fontWeight: activeButton === 'Salary Rights' && "bold" }}>বেতনের অধিকার</Typography>
                             </Box>
                         </Button>
                         <Button sx={{ color: "black" }} onClick={() => handleButtonClick('Get Help')}>
                             <Box sx={{ flexDirection: 'column', borderBottom: activeButton === "Get Help" && "2px solid black" }} >
                                 <Typography variant='subtitle1' sx={{ fontWeight: activeButton === 'Get Help' && "bold" }}>Get Help</Typography>
-                                <Typography variant='subtitle1' sx={{ fontWeight: activeButton === 'Get Help' && "bold" }}>সাহায্য পান</Typography>
+                                <Typography variant='subtitle1' sx={{ fontWeight: activeButton === 'Get Help' && "bold" }}>সাহায্য নিন</Typography>
                             </Box>
                         </Button>
                         <Button sx={{ color: "black" }} onClick={() => handleButtonClick('FAQ')}>
                             <Box sx={{ flexDirection: 'column', borderBottom: activeButton === "FAQ" && "2px solid black" }} >
                                 <Typography variant='subtitle1' sx={{ fontWeight: activeButton === 'FAQ' && "bold" }}>FAQ</Typography>
-                                <Typography variant='subtitle1' sx={{ fontWeight: activeButton === 'FAQ' && "bold" }}>সচরাচর জিজ্ঞাস্য</Typography>
+                                <Typography variant='subtitle1' sx={{ fontWeight: activeButton === 'FAQ' && "bold" }}>সচরাচর জিজ্ঞাসা</Typography>
                             </Box>
                         </Button>
                     </Box>

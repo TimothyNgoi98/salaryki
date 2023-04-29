@@ -20,7 +20,7 @@ function HeaderSalaryRights() {
                             </Typography>
                             <br />
                             <Typography variant='h6'>
-                                <Box fontWeight='bold' display='inline-block'>SalaryKi</Box> এর সাথে আপনার বেতনের অধিকারগুলি বুঝুন
+                                <Box fontWeight='bold' display='inline-block'>SalaryKi</Box>এর মাধ্যমে আপনার বেতন সংক্রান্ত অধিকারগুলি বুঝে নিন
                             </Typography>
                         </Box>
                     </Grid>
