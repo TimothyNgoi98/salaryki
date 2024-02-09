@@ -39,14 +39,13 @@
   <p align="center">
     Salary Ki is a website targetted at migrant workers working in Singapore. This site aims to help them understand their employment and salary rights better. 
     <br />
-    <a href="https://github.com/TimothyNgoi98/salaryki"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <!-- <a href="https://github.com/github_username/repo_name">View Demo</a> -->
     <!-- · -->
     <!-- <a href="https://github.com/github_username/repo_name/issues">Report Bug</a> -->
     <!-- · -->
-    <a href="[https://github.com/github_username/repo_name/issues](https://github.com/TimothyNgoi98/salaryki/issues)">Request For A Feature</a>
+    <a href="https://github.com/TimothyNgoi98/salaryki/issues">Request For A Feature</a>
   </p>
 </div>
 
