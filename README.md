@@ -46,7 +46,7 @@
     <!-- · -->
     <!-- <a href="https://github.com/github_username/repo_name/issues">Report Bug</a> -->
     <!-- · -->
-    <a href="https://github.com/github_username/repo_name/issues">Request For A Feature</a>
+    <a href="[https://github.com/github_username/repo_name/issues](https://github.com/TimothyNgoi98/salaryki/issues)">Request For A Feature</a>
   </p>
 </div>
 
