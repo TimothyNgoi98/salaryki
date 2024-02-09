@@ -194,7 +194,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Timothy - timmyngoi@gmail.com
+Timothy Ngoi - timmyngoi@gmail.com
 
 Project Link: [https://github.com/TimothyNgoi98/salaryki]
 
